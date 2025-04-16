@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sklep - Mateusz Dudzik Gas</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body style="background-color: #000; color: #fff; font-family: Arial, sans-serif;">
+  <header style="text-align: center; padding: 20px;">
+    <img src="/images/logo.png" alt="Logo" style="max-height: 80px;" />
+    <h1>Sklep</h1>
+    <p>Nowoczesne kotły, analizatory gazu i akcesoria</p>
+  </header>
+
+  <main style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 40px;">
+    <div class="product">
+      <img src="/images/viessmann-vitodens-100.jpg" alt="Viessmann Vitodens 100-W" />
+      <h3>Viessmann Vitodens 100-W</h3>
+      <p>Kocioł kondensacyjny 25kW</p>
+      <strong>£1,250.00</strong><br>
+      <button onclick="addToCart('Viessmann Vitodens 100-W', 1250)">Dodaj do koszyka</button>
+    </div>
+
+    <div class="product">
+      <img src="/images/vaillant-ecotec.jpg" alt="Vaillant ecoTEC Plus" />
+      <h3>Vaillant ecoTEC Plus</h3>
+      <p>Wysokowydajny kocioł 30kW</p>
+      <strong>£1,400.00</strong><br>
+      <button onclick="addToCart('Vaillant ecoTEC Plus', 1400)">Dodaj do koszyka</button>
+    </div>
+
+    <div class="product">
+      <img src="/images/ideal-logic.jpg" alt="Ideal Logic Combi C30" />
+      <h3>Ideal Logic Combi C30</h3>
+      <p>Ekonomiczny wybór z 7-letnią gwarancją</p>
+      <strong>£999.00</strong><br>
+      <button onclick="addToCart('Ideal Logic Combi C30', 999)">Dodaj do koszyka</button>
+    </div>
+  </main>
+
+  <footer style="text-align: center; padding: 20px; background-color: #111;">
+    <p>&copy; 2025 Mateusz Dudzik Gas. All rights reserved.</p>
+    <a href="/" style="color: red;">Powrót na stronę główną</a>
+  </footer>
+
+  <script>
+    function addToCart(product, price) {
+      let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+      cart.push({ product, price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(product + " dodano do koszyka!");
+    }
+  </script>
+</body>
+</html>
