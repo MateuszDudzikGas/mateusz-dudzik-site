@@ -1,123 +1,199 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mateusz Dudzik | Instalacje Gazowe, Ogrzewanie, Hydraulika</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateusz Dudzik – Gaz, Hydraulika, Ogrzewanie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(145deg, #f7f7f7, #e2e2e2);
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background: #fefefe;
       color: #333;
-      line-height: 1.6;
     }
     header {
-      background: #ff3c3c;
+      background: linear-gradient(90deg, #ff3333, #cc0000);
       color: white;
-      padding: 1.5rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      padding: 2rem;
+      text-align: center;
     }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    header img {
+      width: 100px;
     }
-    .logo img {
-      height: 50px;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      background: #fff;
+      border-bottom: 1px solid #eee;
     }
     nav a {
-      color: white;
       text-decoration: none;
-      margin-left: 1.5rem;
-      font-weight: 600;
+      color: #cc0000;
+      font-weight: bold;
     }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 4rem 2rem;
-      background: white;
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
     }
-    .hero img {
-      max-width: 220px;
-      border-radius: 2rem;
+    h2 {
+      color: #cc0000;
     }
-    .hero h1 {
-      margin-top: 1.5rem;
-      font-size: 2.5rem;
-      color: #ff3c3c;
+    .about img {
+      width: 300px;
+      border-radius: 1rem;
+      float: right;
+      margin-left: 2rem;
     }
-    .hero p {
-      max-width: 700px;
-      margin-top: 1rem;
-      font-size: 1.2rem;
+    .certs img {
+      height: 50px;
+      margin: 0.5rem;
     }
-    .button {
-      margin-top: 2rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #ff3c3c;
+    .form input, .form textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+    }
+    .diy-videos iframe {
+      width: 100%;
+      height: 315px;
+      margin-bottom: 2rem;
+    }
+    .boiler {
+      border: 1px solid #eee;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .boiler h3 {
+      margin-top: 0;
+    }
+    .boiler button {
+      background: #cc0000;
       color: white;
       border: none;
-      font-size: 1rem;
-      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
       cursor: pointer;
-      transition: 0.3s ease;
-    }
-    .button:hover {
-      background-color: #cc2f2f;
     }
     footer {
-      background: #1a1a1a;
-      color: #ccc;
-      text-align: center;
+      background: #222;
+      color: white;
       padding: 2rem;
-      margin-top: 4rem;
-    }
-    footer a {
-      color: #ff3c3c;
-      text-decoration: none;
+      text-align: center;
     }
   </style>
 </head>
-<body>
 
-<header>
-  <div class="logo">
-    <img src="logo.png" alt="Mateusz Dudzik Logo">
-    <h2>Mateusz Dudzik</h2>
-  </div>
+<body>
+  <header>
+    <img src="Photoroom-20241202_112653 (1).png" alt="Mateusz Dudzik logo">
+    <h1>Mateusz Dudzik</h1>
+    <p>Gaz • Hydraulika • Ogrzewanie</p>
+    <p>Doncaster, UK</p>
+    <img src="gas-safe-logo.png" alt="Gas Safe Register">
+  </header>
+
   <nav>
     <a href="#about">O mnie</a>
-    <a href="#services">Usługi</a>
-    <a href="#quote">Wycena</a>
+    <a href="#certs">Akredytacje</a>
+    <a href="#services">Cennik</a>
+    <a href="#quote">Szybka wycena</a>
+    <a href="#shop">Sklep</a>
+    <a href="#diy">DIY</a>
     <a href="#contact">Kontakt</a>
   </nav>
-</header>
 
-<section class="hero">
-  <img src="mateusz.png" alt="Mateusz Dudzik">
-  <h1>Gaz · Hydraulika · Ogrzewanie</h1>
-  <p>
-    Cześć! Jestem Mateusz Dudzik – wykwalifikowany inżynier gazowy i hydraulik z Doncaster. 
-    Specjalizuję się w nowoczesnych instalacjach grzewczych, boilerach oraz systemach podłogowych. Działam szybko, profesjonalnie i z pasją!
-  </p>
-  <a href="#quote" class="button">Poproś o wycenę</a>
-</section>
+  <section id="about" class="about">
+    <h2>O mnie</h2>
+    <img src="20250417_133155 (1).jpg" alt="Mateusz Dudzik">
+    <p>Nazywam się Mateusz Dudzik i jestem certyfikowanym inżynierem gazowym, hydraulicznym i specjalistą od ogrzewania. Działam na terenie Doncaster i okolic, oferując profesjonalne usługi w zakresie montażu, napraw i serwisu urządzeń grzewczych.</p>
+    <img src="gas-safe-logo.png" alt="Gas Safe Register">
+  </section>
 
-<footer>
-  <p>© 2025 Mateusz Dudzik · Doncaster, UK</p>
-  <p>Email: <a href="mailto:mateuszdudzik000@gmail.com">mateuszdudzik000@gmail.com</a> | Tel: 07857708990</p>
-</footer>
+  <section id="certs" class="certs">
+    <h2>Akredytacje</h2>
+    <img src="gas-safe-logo.png" alt="Gas Safe Register">
+    <img src="vaillant.png" alt="Vaillant">
+    <img src="ideal.png" alt="Ideal">
+    <img src="viessmann.png" alt="Viessmann">
+  </section>
 
+  <section id="services">
+    <h2>Cennik usług</h2>
+    <ul>
+      <li>Wymiana boilera – od £1800</li>
+      <li>Serwis boilera i urządzeń gazowych – od £70</li>
+      <li>Landlord certyfikat – £60</li>
+      <li>Naprawy urządzeń gazowych – od £90</li>
+      <li>Ogrzewanie podłogowe (Polypipe Overlay Plus) – od £140/m²</li>
+    </ul>
+  </section>
+
+  <section id="quote" class="form">
+    <h2>Szybka wycena</h2>
+    <form>
+      <input type="text" placeholder="Imię i nazwisko" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Telefon" required>
+      <input type="file" accept="image/*">
+      <textarea placeholder="Opisz swój obecny boiler / potrzeby"></textarea>
+      <button type="submit">Wyślij</button>
+    </form>
+  </section>
+
+  <section id="shop">
+    <h2>Sklep z boilerami</h2>
+    <p>Wybierz nowoczesny pakiet z boilerem, flue i smart termostatem:</p>
+    <div class="boiler">
+      <h3>Viessmann Vitodens 050-W – £2000</h3>
+      <p>Kompaktowy, cichy, energooszczędny. W zestawie: boiler, flue, smart termostat.</p>
+      <button>Dodaj do koszyka</button>
+    </div>
+    <div class="boiler">
+      <h3>Ideal Logic Max – £1900</h3>
+      <p>Sprawdzona wydajność, 10-letnia gwarancja. W zestawie: boiler, flue, smart termostat.</p>
+      <button>Dodaj do koszyka</button>
+    </div>
+    <div class="boiler">
+      <h3>Vaillant ecoTEC Plus – £2100</h3>
+      <p>Najwyższa jakość i cicha praca. W zestawie: boiler, flue, smart termostat.</p>
+      <button>Dodaj do koszyka</button>
+    </div>
+  </section>
+
+  <section id="diy">
+    <h2>Instalator pomaga za darmo – Wideo DIY</h2>
+    <p>10 praktycznych filmików z poradami domowymi:</p>
+    <div class="diy-videos">
+      <iframe src="https://www.youtube.com/embed/b2z5YOq2yXA" title="Jak odpowietrzyć grzejnik"></iframe>
+      <iframe src="https://www.youtube.com/embed/vQfWArEgmQw" title="Resetowanie boilera"></iframe>
+      <iframe src="https://www.youtube.com/embed/oNvq8rTBGIY" title="Sprawdzanie ciśnienia w systemie"></iframe>
+      <iframe src="https://www.youtube.com/embed/NGvNOkoHutM" title="Programowanie termostatu"></iframe>
+      <iframe src="https://www.youtube.com/embed/QzGQ8FoFVnA" title="Jak odłączyć wodę w awaryjnej sytuacji"></iframe>
+      <iframe src="https://www.youtube.com/embed/rwXQntQTuAY" title="Jak odczytać licznik gazu"></iframe>
+      <iframe src="https://www.youtube.com/embed/B1m8quxzrd0" title="Usuwanie powietrza z systemu"></iframe>
+      <iframe src="https://www.youtube.com/embed/BiDNxhZCUl8" title="Instalacja głowic termostatycznych"></iframe>
+      <iframe src="https://www.youtube.com/embed/GfNoGv7aBLc" title="Jak wymienić uszczelkę w kranie"></iframe>
+      <iframe src="https://www.youtube.com/embed/FFzeHCVBLbs" title="Jak ustawić timer na boilerze"></iframe>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <p>Email: <a href="mailto:mateuszdudzik000@gmail.com">mateuszdudzik000@gmail.com</a></p>
+    <p>Telefon: <a href="tel:07857708990">07857708990</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mateusz Dudzik | Doncaster</p>
+    <img src="gas-safe-logo.png" alt="Gas Safe Register">
+  </footer>
 </body>
 </html>
