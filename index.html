@@ -3,79 +3,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mateusz Dudzik | Gas & Heating Installations</title>
-  <link rel="icon" href="logo.png" />
+  <link rel="icon" href="/img/logo.png" />
   <meta name="description" content="Professional gas and heating installations, servicing and repairs in Doncaster and across Yorkshire." />
   <meta property="og:title" content="Mateusz Dudzik - Gas & Heating Engineer" />
   <meta property="og:description" content="Trusted and efficient gas and heating solutions in Doncaster and surrounding areas." />
-  <meta property="og:image" content="mateusz-logo-transparent.png" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: #101010; color: white; }
-    header, section, footer { padding: 40px 20px; max-width: 1200px; margin: auto; }
-    .logo { max-height: 100px; display: block; margin: 0 auto 20px; }
-    h1, h2, h3 { text-align: center; }
-    .cta { text-align: center; margin: 30px 0; }
-    .btn-main { background: #c40000; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-    .section { margin-top: 40px; background: #1c1c1c; padding: 30px; border-radius: 10px; }
-    .service-box, .product-box { display: inline-block; width: 30%; margin: 1%; padding: 15px; background: #2b2b2b; border-radius: 8px; vertical-align: top; text-align: center; }
-    .product-box img, .logos img, .photo img { max-width: 100%; border-radius: 5px; margin-bottom: 10px; }
-    .photo { text-align: center; margin-bottom: 20px; }
-    .contact-info, .form, .review, footer { background: #151515; padding: 20px; border-radius: 10px; text-align: center; }
-    input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; background: #111; color: white; border: none; border-radius: 5px; }
-    button { padding: 10px 20px; background: #c40000; border: none; color: white; border-radius: 5px; cursor: pointer; font-weight: bold; }
-    nav { text-align: right; padding: 10px 20px; }
-    nav a { color: #f1c40f; text-decoration: none; margin-left: 10px; }
-    .cart { margin-top: 20px; text-align: center; }
-    .cart span { display: block; margin: 10px 0; }
-  </style>
+  <meta property="og:image" content="/img/mateusz-logo-transparent.png" />
+  <link rel="stylesheet" href="/css/base.css">
+  <script defer src="/js/main.js"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
   <script>
-    let cart = [];
-    function addToCart(productName, price) {
-      cart.push({ name: productName, price });
-      updateCart();
-    }
-    function updateCart() {
-      const cartBox = document.getElementById('cart');
-      if (!cartBox) return;
-      if (cart.length === 0) {
-        cartBox.innerHTML = '<span>Your cart is empty.</span>';
-      } else {
-        let html = '<h3>Shopping Cart</h3>';
-        let total = 0;
-        cart.forEach(item => {
-          html += `<span>${item.name} – £${item.price}</span>`;
-          total += item.price;
-        });
-        html += `<strong>Total: £${total}</strong>`;
-        cartBox.innerHTML = html;
-      }
-    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
   </script>
 </head>
-<body>  <nav>
-    <a href="/index.html">PL</a> | <a href="/en/index.html">EN</a>
-  </nav>  <header>
-    <img src="mateusz-logo-transparent.png" alt="Logo" class="logo">
+<body>
+  <!-- Navigation with language switch -->
+  <nav class="top-nav">
+    <a href="/pl/index.html">PL</a> | <a href="/en/index.html">EN</a>
+  </nav>  <!-- Header -->  <header>
+    <img src="/img/mateusz-logo-transparent.png" alt="Logo" class="logo">
     <h1>Mateusz Dudzik<br>Gas & Heating Engineer</h1>
     <p class="cta"><a href="#contact-form" class="btn-main">Get a Free Quote</a></p>
-  </header>  <section class="section">
+  </header>  <!-- About Section -->  <section class="section">
     <h2>About Me</h2>
     <div class="photo">
-      <img src="mateusz-photo.png" alt="Mateusz Dudzik">
+      <img src="/img/mateusz-photo.png" alt="Mateusz Dudzik">
     </div>
     <p>My name is Mateusz Dudzik – certified Gas Safe engineer with 10+ years of hands-on experience. I handle boiler installations, gas system maintenance, underfloor heating, plumbing, and all things heating. I take pride in clean work, honest pricing, and long-lasting results. Your home is in safe hands.</p>
-  </section>  <section class="section">
+  </section>  <!-- Certifications Section -->  <section class="section">
     <h2>Certifications</h2>
     <div class="logos">
-      <img src="gas-safe-logo.png" alt="Gas Safe">
-      <img src="viessmann-logo.png" alt="Viessmann">
-      <img src="ideal-logo.png" alt="Ideal">
-      <img src="vaillant-logo.png" alt="Vaillant">
+      <img src="/img/gas-safe-logo.png" alt="Gas Safe">
+      <img src="/img/viessmann-logo.png" alt="Viessmann">
+      <img src="/img/ideal-logo.png" alt="Ideal">
+      <img src="/img/vaillant-logo.png" alt="Vaillant">
     </div>
     <p><strong>Viessmann:</strong> German technology – efficiency and reliability.<br>
     <strong>Ideal:</strong> Designed in the UK – easy to maintain and support.<br>
     <strong>Vaillant:</strong> Silent, smart, energy-saving boilers with top-tier performance.</p>
-  </section>  <section class="section">
+  </section>  <!-- Price Guide Section -->  <section class="section">
     <h2>Service Price Guide</h2>
     <ul>
       <li>Boiler replacement: from £1,600</li>
@@ -86,75 +55,70 @@
       <li>New gas & water installations: from £300</li>
       <li>All professional plumbing works – priced individually</li>
     </ul>
-  </section>  <section class="section">
+  </section>  <!-- Shop Section -->  <section class="section">
     <h2>Shop – Top Boilers</h2>
-    <div class="product-box">
-      <img src="viessmann-boiler.png" alt="Viessmann">
-      <h3>Viessmann Vitodens 050-W</h3>
-      <p>£1,699 – Compact, reliable and energy-efficient</p>
-      <button onclick="addToCart('Viessmann Vitodens 050-W', 1699)">Add to Cart</button>
-    </div>
-    <div class="product-box">
-      <img src="ideal-vogue.png" alt="Ideal Vogue">
-      <h3>Ideal Vogue 32kW</h3>
-      <p>£1,749 – UK-built, smart-ready & premium finish</p>
-      <button onclick="addToCart('Ideal Vogue 32kW', 1749)">Add to Cart</button>
-    </div>
-    <div class="product-box">
-      <img src="vaillant-boiler.png" alt="Vaillant">
-      <h3>Vaillant ecoTEC Plus</h3>
-      <p>£1,799 – Ultra-quiet, efficient, with smart control</p>
-      <button onclick="addToCart('Vaillant ecoTEC Plus', 1799)">Add to Cart</button>
+    <div class="product-grid">
+      <!-- Individual product boxes will go here dynamically -->
     </div>
     <div id="cart" class="cart"></div>
-  </section>  <section class="section">
+  </section>  <!-- Green World -->  <section class="section">
     <h2>Green World – Eco Heating</h2>
     <p>We care about the planet. Our solutions help you save energy and reduce your carbon footprint. All boilers are A-rated for efficiency and compatible with smart thermostats. Let's heat homes without heating the planet.</p>
-  </section>  <section class="form" id="booking">
+  </section>  <!-- DIY Videos -->  <section class="section">
+    <h2>DIY Heating Tips</h2>
+    <div class="video-list">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>  <!-- Booking Form -->  <section class="form" id="booking">
     <h2>Book a Service</h2>
     <form action="https://formsubmit.co/mateuszdudzik000@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Nowa rezerwacja ze strony">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="box"><select name="Service" required>
-    <option value="">-- Select a service --</option>
-    <option value="Boiler installation">Boiler installation</option>
-    <option value="Service & maintenance">Service & maintenance</option>
-    <option value="Repair">Repair</option>
-    <option value="Underfloor heating">Underfloor heating</option>
-    <option value="Other">Other</option>
-  </select>
-
-  <input type="date" name="Date" required>
-  <input type="time" name="Time" required>
-  <input type="text" name="Name" placeholder="Your name" required>
-  <input type="tel" name="Phone" placeholder="Phone number" required>
-  <input type="email" name="Email" placeholder="Email address" required>
-  <textarea name="Details" placeholder="Describe the issue or service..." rows="5"></textarea>
-
-  <button type="submit">BOOK NOW</button>
-</form>
-
-  </section>  <section class="form" id="contact-form">
+      <input type="hidden" name="_template" value="box">
+      <select name="Service" required>
+        <option value="">-- Select a service --</option>
+        <option value="Boiler installation">Boiler installation</option>
+        <option value="Service & maintenance">Service & maintenance</option>
+        <option value="Repair">Repair</option>
+        <option value="Underfloor heating">Underfloor heating</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="date" name="Date" required>
+      <input type="time" name="Time" required>
+      <input type="text" name="Name" placeholder="Your name" required>
+      <input type="tel" name="Phone" placeholder="Phone number" required>
+      <input type="email" name="Email" placeholder="Email address" required>
+      <textarea name="Details" placeholder="Describe the issue or service..." rows="5"></textarea>
+      <button type="submit">BOOK NOW</button>
+    </form>
+  </section>  <!-- Contact Form -->  <section class="form" id="contact-form">
     <h2>Contact Form</h2>
     <form action="https://formsubmit.co/mateuszdudzik000@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Nowa wiadomość z formularza kontaktowego">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="box"><input type="text" name="Name" placeholder="Your name" required>
-  <input type="tel" name="Phone" placeholder="Phone number" required>
-  <input type="email" name="Email" placeholder="Your email" required>
-  <textarea name="Message" placeholder="Type your message here..." rows="5" required></textarea>
-
-  <button type="submit">SEND MESSAGE</button>
-</form>
-
-  </section>  <section class="contact-info">
+      <input type="hidden" name="_template" value="box">
+      <input type="text" name="Name" placeholder="Your name" required>
+      <input type="tel" name="Phone" placeholder="Phone number" required>
+      <input type="email" name="Email" placeholder="Your email" required>
+      <textarea name="Message" placeholder="Type your message here..." rows="5" required></textarea>
+      <button type="submit">SEND MESSAGE</button>
+    </form>
+  </section>  <!-- Contact Info -->  <section class="contact-info">
     <h2>Contact</h2>
     <p>Email: mateuszdudzik000@gmail.com</p>
     <p>Phone: 07857708990</p>
-  </section>  <section class="review">
+  </section>  <!-- Reviews -->  <section class="review">
     <h2>Customer Reviews</h2>
     <p>“Mateusz did an excellent installation. A real professional.”<br><em>– John S.</em></p>
-  </section>  <footer>
+  </section>  <!-- Blog Section -->  <section class="section">
+    <h2>Blog</h2>
+    <ul>
+      <li><a href="/blog/boiler-upgrade-benefits.html">Why upgrade your old boiler?</a></li>
+      <li><a href="/blog/underfloor-vs-radiators.html">Underfloor heating vs traditional radiators</a></li>
+    </ul>
+  </section>  <!-- Footer -->  <footer>
     &copy; 2025 Mateusz Dudzik – Gas & Heating Engineer | Doncaster UK
-  </footer></body>
+  </footer>
+</body>
 </html>
