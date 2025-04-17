@@ -1,15 +1,22 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mateusz Dudzik | Gas & Heating Installations</title>
-  <link rel="icon" href="/img/logo.png" />
-  <meta name="description" content="Professional gas and heating installations, servicing and repairs in Doncaster and across Yorkshire." />
-  <meta property="og:title" content="Mateusz Dudzik - Gas & Heating Engineer" />
-  <meta property="og:description" content="Trusted and efficient gas and heating solutions in Doncaster and surrounding areas." />
-  <meta property="og:image" content="/img/mateusz-logo-transparent.png" />
+  <title>Mateusz Dudzik | Gaz • Hydraulika • Ogrzewanie</title>
+  <meta name="description" content="Profesjonalne usługi gazowe i hydrauliczne – Mateusz Dudzik, Doncaster i okolice." />
+  <meta property="og:title" content="Mateusz Dudzik - Gaz, Hydraulika, Ogrzewanie" />
+  <meta property="og:description" content="Zaufany instalator gazu i ogrzewania w Doncaster i całym Yorkshire." />
+  <meta property="og:image" content="/img/mateusz-logo.png" />
+  <link rel="icon" href="/img/mateusz-logo.png" />
   <link rel="stylesheet" href="/css/base.css">
-  <script defer src="/js/main.js"></script>
+
+  <!-- Google Fonts (nowoczesna czcionka) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Ikonki np. koszyk, checki itd -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
   <script>
@@ -18,107 +25,318 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXX');
   </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #b80000, #ff5733);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .logo {
+      max-width: 120px;
+    }
+
+    nav.top-nav {
+      background-color: #111;
+      color: white;
+      padding: 0.5rem;
+      text-align: right;
+    }
+
+    nav.top-nav a {
+      color: #fff;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav.top-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-main {
+      background-color: #fff;
+      color: #b80000;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .section {
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    .section h2 {
+      color: #b80000;
+      border-bottom: 2px solid #b80000;
+      padding-bottom: 0.3rem;
+    }
+
+    .photo img {
+      max-width: 300px;
+      border-radius: 16px;
+    }
+  </style>
 </head>
+
 <body>
-  <!-- Navigation with language switch -->
+  <!-- Nawigacja językowa -->
   <nav class="top-nav">
-    <a href="/pl/index.html">PL</a> | <a href="/en/index.html">EN</a>
-  </nav>  <!-- Header -->  <header>
-    <img src="/img/mateusz-logo-transparent.png" alt="Logo" class="logo">
-    <h1>Mateusz Dudzik<br>Gas & Heating Engineer</h1>
-    <p class="cta"><a href="#contact-form" class="btn-main">Get a Free Quote</a></p>
-  </header>  <!-- About Section -->  <section class="section">
-    <h2>About Me</h2>
+    <a href="/pl/index.html">Polski</a> | <a href="/en/index.html">English</a>
+  </nav>
+
+  <!-- Nagłówek strony -->
+  <header>
+    <img src="/img/mateusz-logo.png" alt="Logo Mateusz Dudzik" class="logo">
+    <h1>Mateusz Dudzik<br><span style="font-weight: 300;">Gaz • Hydraulika • Ogrzewanie</span></h1>
+    <a href="#kontakt" class="btn-main">Umów usługę</a>
+  </header>
+  <!-- Sekcja: O mnie -->
+  <section class="section" id="o-mnie">
+    <h2>O mnie</h2>
     <div class="photo">
       <img src="/img/mateusz-photo.png" alt="Mateusz Dudzik">
     </div>
-    <p>My name is Mateusz Dudzik – certified Gas Safe engineer with 10+ years of hands-on experience. I handle boiler installations, gas system maintenance, underfloor heating, plumbing, and all things heating. I take pride in clean work, honest pricing, and long-lasting results. Your home is in safe hands.</p>
-  </section>  <!-- Certifications Section -->  <section class="section">
-    <h2>Certifications</h2>
-    <div class="logos">
-      <img src="/img/gas-safe-logo.png" alt="Gas Safe">
-      <img src="/img/viessmann-logo.png" alt="Viessmann">
-      <img src="/img/ideal-logo.png" alt="Ideal">
-      <img src="/img/vaillant-logo.png" alt="Vaillant">
+    <p>
+      Nazywam się <strong>Mateusz Dudzik</strong> – jestem certyfikowanym inżynierem <strong>Gas Safe</strong> z ponad 10-letnim doświadczeniem. Specjalizuję się w instalacjach gazowych, modernizacji systemów grzewczych, podłogówkach, serwisach i naprawach.
+      Zawsze stawiam na <strong>uczciwość, czystość pracy i trwałość wykonania</strong>. Twoje ciepło – moja robota!
+    </p>
+  </section>
+
+  <!-- Sekcja: Akredytacje -->
+  <section class="section" id="akredytacje">
+    <h2>Akredytacje</h2>
+    <div class="logos" style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+      <img src="/img/gas-safe-logo.png" alt="Gas Safe" style="max-height: 60px;">
+      <img src="/img/viessmann-logo.png" alt="Viessmann" style="max-height: 60px;">
+      <img src="/img/ideal-logo.png" alt="Ideal" style="max-height: 60px;">
+      <img src="/img/vaillant-logo.png" alt="Vaillant" style="max-height: 60px;">
     </div>
-    <p><strong>Viessmann:</strong> German technology – efficiency and reliability.<br>
-    <strong>Ideal:</strong> Designed in the UK – easy to maintain and support.<br>
-    <strong>Vaillant:</strong> Silent, smart, energy-saving boilers with top-tier performance.</p>
-  </section>  <!-- Price Guide Section -->  <section class="section">
-    <h2>Service Price Guide</h2>
-    <ul>
-      <li>Boiler replacement: from £1,600</li>
-      <li>Boiler & gas appliance servicing: from £80</li>
-      <li>Landlord Gas Safety Certificates: from £60</li>
-      <li>Boiler repairs: from £100</li>
-      <li>Emergency call out 24/7: from £120</li>
-      <li>New gas & water installations: from £300</li>
-      <li>All professional plumbing works – priced individually</li>
+    <p>
+      <strong>Viessmann</strong> – niemiecka jakość, wysoka efektywność, bezawaryjna praca.<br>
+      <strong>Ideal</strong> – projektowane w UK, łatwe w obsłudze i serwisowaniu.<br>
+      <strong>Vaillant</strong> – nowoczesne, ciche i energooszczędne systemy.<br>
+      <strong>Gas Safe</strong> – gwarancja bezpieczeństwa Twojej instalacji.
+    </p>
+  </section>
+
+  <!-- Sekcja: Ogrzewanie podłogowe -->
+  <section class="section" id="podlogowka">
+    <h2>Ogrzewanie podłogowe – Polypipe</h2>
+    <p>
+      Oferuję montaż nowoczesnych systemów ogrzewania podłogowego <strong>Polypipe Overlay Plus</strong> – idealnych do remontów i nowych inwestycji. Cienki profil, szybki montaż i równomierne ciepło – komfort na lata.
+    </p>
+    <img src="/img/polypipe.png" alt="System Polypipe Overlay Plus" style="max-width: 100%; border-radius: 16px;">
+  </section>
+
+  <!-- Sekcja: Cennik -->
+  <section class="section" id="cennik">
+    <h2>Cennik usług</h2>
+    <ul style="list-style: none; padding-left: 0;">
+      <li><strong>Wymiana boilera:</strong> od £1,600</li>
+      <li><strong>Serwis boilera i urządzeń gazowych:</strong> od £80</li>
+      <li><strong>Certyfikat Landlord (Gas Safety):</strong> od £60</li>
+      <li><strong>Naprawa boilera:</strong> od £100</li>
+      <li><strong>Awaryjne wezwanie 24/7:</strong> od £120</li>
+      <li><strong>Instalacje gazu i wody:</strong> od £300</li>
+      <li><strong>Instalacja ogrzewania podłogowego Polypipe:</strong> indywidualna wycena</li>
     </ul>
-  </section>  <!-- Shop Section -->  <section class="section">
-    <h2>Shop – Top Boilers</h2>
-    <div class="product-grid">
-      <!-- Individual product boxes will go here dynamically -->
+  </section>
+  <!-- Sekcja: Szybka Wycena -->
+  <section class="section" id="szybka-wycena">
+    <h2>Szybka Wycena Nowoczesnego Boilera</h2>
+    <p>
+      Chcesz wymienić stary boiler na nowoczesny i oszczędny model? Wypełnij formularz, a wrócę z wyceną w ciągu 24h.
+    </p>
+
+    <form action="mailto:mateuszdudzik000@gmail.com" method="post" enctype="text/plain" class="form">
+      <label for="name">Imię i nazwisko:</label>
+      <input type="text" id="name" name="Imię" required>
+
+      <label for="email">Adres e-mail:</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="phone">Telefon:</label>
+      <input type="tel" id="phone" name="Telefon">
+
+      <label for="address">Adres instalacji:</label>
+      <input type="text" id="address" name="Adres">
+
+      <label for="boiler-info">Opis obecnej instalacji:</label>
+      <textarea id="boiler-info" name="Opis instalacji" rows="4"></textarea>
+
+      <label for="photo">Zdjęcie obecnego boilera:</label>
+      <input type="file" id="photo" name="Zdjęcie boilera" accept="image/*">
+
+      <button type="submit">Wyślij zapytanie</button>
+    </form>
+  </section>
+  <!-- Sekcja: Sklep z Boilerami -->
+  <section class="section" id="sklep">
+    <h2>Sklep – Zestawy Boilerów Combi</h2>
+    <p>
+      Najnowocześniejsze zestawy grzewcze gotowe do instalacji – <strong>boiler + flue + smart termostat</strong>. Sprawdzone marki, najwyższa efektywność.
+    </p>
+
+    <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+
+      <!-- Viessmann -->
+      <div class="product-card" style="border: 1px solid #eee; padding: 1rem; border-radius: 12px; background: #fff;">
+        <img src="/img/viessmann-product.png" alt="Viessmann Combi" style="width: 100%; height: auto; border-radius: 8px;">
+        <h3>Viessmann Vitodens 100-W</h3>
+        <ul>
+          <li>24kW Combi Boiler</li>
+          <li>Standard Flue Kit</li>
+          <li>ViCare Smart Thermostat</li>
+        </ul>
+        <p><strong>£1,950</strong> (z VAT, bez montażu)</p>
+        <button>Zamów</button>
+      </div>
+
+      <!-- Ideal -->
+      <div class="product-card" style="border: 1px solid #eee; padding: 1rem; border-radius: 12px; background: #fff;">
+        <img src="/img/ideal-product.png" alt="Ideal Combi" style="width: 100%; height: auto; border-radius: 8px;">
+        <h3>Ideal Logic+ Combi</h3>
+        <ul>
+          <li>30kW Combi Boiler</li>
+          <li>Standard Flue Kit</li>
+          <li>Halo Smart Wireless Thermostat</li>
+        </ul>
+        <p><strong>£1,850</strong> (z VAT, bez montażu)</p>
+        <button>Zamów</button>
+      </div>
+
+      <!-- Vaillant -->
+      <div class="product-card" style="border: 1px solid #eee; padding: 1rem; border-radius: 12px; background: #fff;">
+        <img src="/img/vaillant-product.png" alt="Vaillant Combi" style="width: 100%; height: auto; border-radius: 8px;">
+        <h3>Vaillant ecoTEC Plus</h3>
+        <ul>
+          <li>32kW Combi Boiler</li>
+          <li>Standard Flue Kit</li>
+          <li>vSMART WiFi Thermostat</li>
+        </ul>
+        <p><strong>£2,100</strong> (z VAT, bez montażu)</p>
+        <button>Zamów</button>
+      </div>
+
     </div>
-    <div id="cart" class="cart"></div>
-  </section>  <!-- Green World -->  <section class="section">
-    <h2>Green World – Eco Heating</h2>
-    <p>We care about the planet. Our solutions help you save energy and reduce your carbon footprint. All boilers are A-rated for efficiency and compatible with smart thermostats. Let's heat homes without heating the planet.</p>
-  </section>  <!-- DIY Videos -->  <section class="section">
-    <h2>DIY Heating Tips</h2>
-    <div class="video-list">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+  </section>
+  <!-- Sekcja: Instalator pomaga za darmo -->
+  <section class="section" id="diy-filmy">
+    <h2>Instalator pomaga za darmo – Filmy DIY</h2>
+    <p>
+      Obejrzyj proste poradniki wideo i sprawdź, czy możesz samodzielnie rozwiązać drobny problem bez kosztów.
+    </p>
+
+    <div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+      
+      <!-- PRZYKŁADOWE FILMY -->
+      <div class="video">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/_zX1vDVFZ-8" title="Odpowietrzanie grzejnika" frameborder="0" allowfullscreen></iframe>
+        <p>Odpowietrzanie grzejnika</p>
+      </div>
+
+      <div class="video">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/k4gN5lKhq6A" title="Resetowanie boilera" frameborder="0" allowfullscreen></iframe>
+        <p>Resetowanie boilera</p>
+      </div>
+
+      <div class="video">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/NTOG1NHYzE0" title="Sprawdzanie ciśnienia w systemie" frameborder="0" allowfullscreen></iframe>
+        <p>Sprawdzanie ciśnienia w systemie</p>
+      </div>
+
+      <div class="video">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/syYm7gK1x2s" title="Obsługa termostatu smart" frameborder="0" allowfullscreen></iframe>
+        <p>Obsługa termostatu smart</p>
+      </div>
+
+      <!-- Możesz dodać do 20 filmów -->
+      <!-- Dodaj więcej <div class="video"> z kolejnymi iframe z YouTube -->
+
     </div>
-  </section>  <!-- Booking Form -->  <section class="form" id="booking">
-    <h2>Book a Service</h2>
-    <form action="https://formsubmit.co/mateuszdudzik000@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Nowa rezerwacja ze strony">
+  </section>
+  <!-- Sekcja: Kontakt -->
+  <section class="section" id="kontakt">
+    <h2>Kontakt</h2>
+    <p><strong>Email:</strong> <a href="mailto:mateuszdudzik000@gmail.com">mateuszdudzik000@gmail.com</a></p>
+    <p><strong>Telefon:</strong> <a href="tel:07857708990">07857 708 990</a></p>
+    <img src="/img/gas-safe-logo.png" alt="Gas Safe Register" style="width: 120px; margin-top: 1rem;" />
+
+    <h3>Napisz wiadomość bezpośrednio</h3>
+    <form action="https://formsubmit.co/mateuszdudzik000@gmail.com" method="POST" style="max-width: 600px; margin-top: 1rem;">
+      <input type="hidden" name="_subject" value="Wiadomość z formularza kontaktowego">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
-      <select name="Service" required>
-        <option value="">-- Select a service --</option>
-        <option value="Boiler installation">Boiler installation</option>
-        <option value="Service & maintenance">Service & maintenance</option>
-        <option value="Repair">Repair</option>
-        <option value="Underfloor heating">Underfloor heating</option>
-        <option value="Other">Other</option>
-      </select>
-      <input type="date" name="Date" required>
-      <input type="time" name="Time" required>
-      <input type="text" name="Name" placeholder="Your name" required>
-      <input type="tel" name="Phone" placeholder="Phone number" required>
-      <input type="email" name="Email" placeholder="Email address" required>
-      <textarea name="Details" placeholder="Describe the issue or service..." rows="5"></textarea>
-      <button type="submit">BOOK NOW</button>
+
+      <input type="text" name="Imię" placeholder="Twoje imię" required style="width: 100%; margin-bottom: 1rem; padding: 0.5rem;">
+      <input type="tel" name="Telefon" placeholder="Numer telefonu" required style="width: 100%; margin-bottom: 1rem; padding: 0.5rem;">
+      <input type="email" name="Email" placeholder="Adres e-mail" required style="width: 100%; margin-bottom: 1rem; padding: 0.5rem;">
+      <textarea name="Wiadomość" placeholder="Wpisz wiadomość..." rows="5" required style="width: 100%; padding: 0.5rem;"></textarea>
+      <button type="submit" style="margin-top: 1rem; padding: 0.5rem 1.5rem;">Wyślij</button>
     </form>
-  </section>  <!-- Contact Form -->  <section class="form" id="contact-form">
-    <h2>Contact Form</h2>
-    <form action="https://formsubmit.co/mateuszdudzik000@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Nowa wiadomość z formularza kontaktowego">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="box">
-      <input type="text" name="Name" placeholder="Your name" required>
-      <input type="tel" name="Phone" placeholder="Phone number" required>
-      <input type="email" name="Email" placeholder="Your email" required>
-      <textarea name="Message" placeholder="Type your message here..." rows="5" required></textarea>
-      <button type="submit">SEND MESSAGE</button>
-    </form>
-  </section>  <!-- Contact Info -->  <section class="contact-info">
-    <h2>Contact</h2>
-    <p>Email: mateuszdudzik000@gmail.com</p>
-    <p>Phone: 07857708990</p>
-  </section>  <!-- Reviews -->  <section class="review">
-    <h2>Customer Reviews</h2>
-    <p>“Mateusz did an excellent installation. A real professional.”<br><em>– John S.</em></p>
-  </section>  <!-- Blog Section -->  <section class="section">
-    <h2>Blog</h2>
+  </section>
+  <!-- Sekcja: Opinie klientów -->
+  <section class="section" id="opinie">
+    <h2>Opinie klientów</h2>
+    <blockquote>
+      <p>„Mateusz wymienił nasz stary boiler na nowoczesny model. Pełna profeska, wszystko czysto i sprawnie.”</p>
+      <footer>– Anna R., Doncaster</footer>
+    </blockquote>
+
+    <blockquote>
+      <p>„Zgłosiliśmy awarię wieczorem, a rano boiler już działał! Mega szybka reakcja. Polecam każdemu.”</p>
+      <footer>– Kamil Z., Rotherham</footer>
+    </blockquote>
+
+    <blockquote>
+      <p>„Instalacja ogrzewania podłogowego Polypipe wykonana perfekcyjnie. Mateusz zna się na rzeczy.”</p>
+      <footer>– Grażyna i Wojtek, Barnsley</footer>
+    </blockquote>
+
+    <img src="/img/gas-safe-logo.png" alt="Gas Safe" style="width: 100px; margin-top: 1rem;">
+  </section>
+
+  <!-- Sekcja: Blog -->
+  <section class="section" id="blog">
+    <h2>Blog – Porady i wiedza</h2>
     <ul>
-      <li><a href="/blog/boiler-upgrade-benefits.html">Why upgrade your old boiler?</a></li>
-      <li><a href="/blog/underfloor-vs-radiators.html">Underfloor heating vs traditional radiators</a></li>
+      <li><a href="/blog/boiler-upgrade-benefits.html">Dlaczego warto wymienić stary boiler na nowoczesny?</a></li>
+      <li><a href="/blog/underfloor-vs-radiators.html">Ogrzewanie podłogowe vs. tradycyjne grzejniki</a></li>
+      <li><a href="/blog/smart-heating.html">Jak działa smart heating i jak może obniżyć Twoje rachunki?</a></li>
     </ul>
-  </section>  <!-- Footer -->  <footer>
-    &copy; 2025 Mateusz Dudzik – Gas & Heating Engineer | Doncaster UK
+  </section>
+  <!-- Stopka -->
+  <footer class="footer">
+    <p>&copy; 2025 Mateusz Dudzik – Gas & Heating Engineer | Doncaster, UK</p>
+    <p>
+      <a href="#kontakt">Kontakt</a> | 
+      <a href="#o-mnie">O mnie</a> | 
+      <a href="#cennik">Cennik</a> | 
+      <a href="#boilery">Boilery</a>
+    </p>
+    <img src="/img/gas-safe-logo.png" alt="Gas Safe Logo" style="width: 80px; margin-top: 1rem;">
   </footer>
+
 </body>
 </html>
