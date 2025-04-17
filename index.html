@@ -10,87 +10,102 @@
   <meta property="og:image" content="mateusz-logo-transparent.png">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: #0b0b0b; color: white; }
+    body { font-family: 'Segoe UI', sans-serif; background: #101010; color: white; }
     header, section, footer { padding: 40px 20px; max-width: 1200px; margin: auto; }
     .logo { max-height: 100px; display: block; margin: 0 auto 20px; }
-    h1 { font-size: 2.5rem; text-align: center; color: white; }
-    p.lead { text-align: center; margin-top: 10px; color: #ccc; }
+    h1, h2, h3 { text-align: center; }
     .cta { text-align: center; margin: 30px 0; }
     .btn-main { background: #c40000; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-    .btn-main:hover { background: #e60000; }
-    .section-title { font-size: 1.8rem; margin-bottom: 20px; color: white; }
-    .services, .contact-info, .review, .form, .products, .eco, .benefits { margin-top: 40px; background: #1a1a1a; padding: 30px; border-radius: 10px; }
-    .service-box, .product-box { display: inline-block; width: 30%; margin: 1%; padding: 15px; background: #2a2a2a; border-radius: 8px; vertical-align: top; text-align: center; }
-    .product-box img { max-width: 100%; border-radius: 5px; margin-bottom: 10px; }
-    .form input, .form textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; background: #111; color: white; }
-    .form button { background: #c40000; border: none; padding: 10px 20px; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; }
-    footer { text-align: center; background: #111; padding: 20px; margin-top: 40px; }
+    .section { margin-top: 40px; background: #1c1c1c; padding: 30px; border-radius: 10px; }
+    .service-box, .product-box { display: inline-block; width: 30%; margin: 1%; padding: 15px; background: #2b2b2b; border-radius: 8px; vertical-align: top; text-align: center; }
+    .product-box img, .logos img, .photo img { max-width: 100%; border-radius: 5px; margin-bottom: 10px; }
+    .photo { text-align: center; margin-bottom: 20px; }
+    .contact-info, .form, .review, footer { background: #151515; padding: 20px; border-radius: 10px; text-align: center; }
+    input, textarea { width: 100%; padding: 10px; margin: 10px 0; background: #111; color: white; border: none; border-radius: 5px; }
+    button { padding: 10px 20px; background: #c40000; border: none; color: white; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    nav { text-align: right; padding: 10px 20px; }
+    nav a { color: #f1c40f; text-decoration: none; margin-left: 10px; }
   </style>
 </head>
 <body>
-  <header>
-    <img src="mateusz-logo-transparent.png" alt="Logo Mateusz Dudzik" class="logo">
+  <nav>
+    <a href="/index.html">PL</a> | <a href="/en/index.html">EN</a>
+  </nav>  <header>
+    <img src="mateusz-logo-transparent.png" alt="Logo" class="logo">
     <h1>Mateusz Dudzik<br>Gas & Heating Engineer</h1>
-    <p class="lead">Profesjonalne usługi grzewcze i gazowe – Doncaster i całe Yorkshire</p>
-    <div class="cta">
-      <a href="#contact" class="btn-main">Get a Free Quote</a>
+    <p class="cta"><a href="#contact" class="btn-main">Uzyskaj Darmową Wycenę</a></p>
+  </header>  <section class="section">
+    <h2>O mnie</h2>
+    <div class="photo">
+      <img src="mateusz-photo.png" alt="Mateusz Dudzik">
     </div>
-  </header>  <section class="services">
-    <h2 class="section-title">Nasze Usługi</h2>
-    <div class="service-box">
-      <h3>Wymiana Kotła</h3>
-      <p>Od £1800 – kompleksowa wymiana z montażem.</p>
+    <p>Nazywam się Mateusz Dudzik – certyfikowany inżynier gazowy i hydrauliczny z wieloletnim doświadczeniem. Specjalizuję się w instalacji, serwisie oraz naprawie nowoczesnych kotłów kondensacyjnych. Moje podejście opiera się na rzetelności, dokładności oraz pełnym zaufaniu klienta. Każda instalacja to moja wizytówka.</p>
+  </section>  <section class="section">
+    <h2>Akredytacje</h2>
+    <div class="logos">
+      <img src="gas-safe-logo.png" alt="Gas Safe">
+      <img src="viessmann-logo.png" alt="Viessmann">
+      <img src="ideal-logo.png" alt="Ideal">
+      <img src="vaillant-logo.png" alt="Vaillant">
     </div>
-    <div class="service-box">
-      <h3>Serwis Kotła</h3>
-      <p>Od £80 – coroczna kontrola, regulacja i czyszczenie.</p>
-    </div>
-    <div class="service-box">
-      <h3>Naprawa Urządzeń Gazowych</h3>
-      <p>Od £100 – diagnoza i szybka naprawa.</p>
-    </div>
-  </section>  <section class="eco">
-    <h2 class="section-title">Zielony Świat</h2>
-    <p>Nasze kotły są ekologiczne – zmniejszają zużycie gazu i emisję CO2. Korzystając z nowoczesnych rozwiązań, pomagasz chronić planetę i oszczędzasz na rachunkach.</p>
-  </section>  <section class="benefits">
-    <h2 class="section-title">Dlaczego Warto?</h2>
+    <p><strong>Viessmann:</strong> Niemiecka precyzja, niezawodność i energooszczędność.<br>
+    <strong>Ideal:</strong> Nowoczesne technologie i szeroka dostępność serwisu.<br>
+    <strong>Vaillant:</strong> Innowacyjność, cisza pracy i elegancki wygląd.</p>
+  </section>  <section class="section">
+    <h2>Cennik usług</h2>
     <ul>
-      <li>Viessmann – niemiecka jakość, długa żywotność</li>
-      <li>Ideal – prostota obsługi i wysoka niezawodność</li>
-      <li>Vaillant – energooszczędność i elegancki design</li>
+      <li>Wymiana kotła: od £1,800</li>
+      <li>Serwis kotła/urządzeń gazowych: od £80</li>
+      <li>Landlord Certificates (Gas Safety): od £60</li>
+      <li>Naprawy boilerów: od £100</li>
+      <li>Emergency Call 24/7: od £120</li>
+      <li>Nowe instalacje wody/gazu: od £300</li>
+      <li>Kompleksowe usługi hydrauliczne – wycena indywidualna</li>
     </ul>
-  </section>  <section class="products">
-    <h2 class="section-title">Polecane Kotły</h2>
+  </section>  <section class="section">
+    <h2>Dlaczego Mateusz Dudzik?</h2>
+    <p>Bo liczy się jakość, bezpieczeństwo i zadowolenie klienta. Moje instalacje są czyste, trwałe i zawsze wykonane zgodnie z normami. Zadbam o Twój dom i portfel – oferuję nowoczesne, energooszczędne rozwiązania grzewcze, które nie tylko grzeją, ale też oszczędzają gaz i środowisko.</p>
+  </section>  <section class="section">
+    <h2>Sklep – Najnowsze Kotły</h2>
     <div class="product-box">
-      <img src="viessmann.jpg" alt="Viessmann">
+      <img src="viessmann-boiler.png" alt="Viessmann">
       <h3>Viessmann Vitodens 050-W</h3>
-      <p>£1,999 z montażem i smart termostatem</p>
+      <p>£1,999 z montażem, smart termostat, flue</p>
     </div>
     <div class="product-box">
-      <img src="ideal-vogue.jpg" alt="Ideal Vogue">
+      <img src="ideal-vogue.png" alt="Ideal Vogue">
       <h3>Ideal Vogue 32kW</h3>
-      <p>£2,049 – zestaw premium</p>
+      <p>£2,049 – pakiet premium</p>
     </div>
     <div class="product-box">
-      <img src="vaillant.jpg" alt="Vaillant">
+      <img src="vaillant-boiler.png" alt="Vaillant">
       <h3>Vaillant ecoTEC Plus</h3>
-      <p>£2,099 – kompletna instalacja</p>
+      <p>£2,099 – montaż, filtr, termostat</p>
     </div>
+  </section>  <section class="section">
+    <h2>Zarezerwuj Termin</h2>
+    <p>Kalendarz online – wybierz datę, opisz usługę. Potwierdzę termin telefonicznie.</p>
+    <!-- Tu później podpinamy kalendarz np. Calendly, Google API, itd. -->
+    <button>ZAREZERWUJ TERMIN</button>
+  </section>  <section class="section">
+    <h2>Szybka wycena – Wyślij zdjęcie</h2>
+    <p>Wyślij mi zdjęcie starego boiler'a, a przygotuję indywidualną ofertę z rabatem!</p>
+    <button>WYŚLIJ ZDJĘCIE BOILERA</button>
   </section>  <section class="contact-info" id="contact">
-    <h2 class="section-title">Kontakt</h2>
-    <p><strong>Telefon:</strong> 07857708890</p>
-    <p><strong>Email:</strong> mateuszdudzik000@gmail.com</p>
+    <h2>Kontakt</h2>
+    <p>Email: mateuszdudzik000@gmail.com</p>
+    <p>Telefon: 07857708990</p>
   </section>  <section class="review">
-    <h2 class="section-title">Opinie Klientów</h2>
+    <h2>Opinie Klientów</h2>
     <p>„Mateusz did an excellent installation. A real professional.”<br><em>– John S.</em></p>
   </section>  <section class="form">
-    <h2 class="section-title">Umów Wizytę</h2>
+    <h2>Formularz Kontaktowy</h2>
     <input type="text" placeholder="Imię">
     <input type="tel" placeholder="Telefon">
     <textarea placeholder="Wiadomość"></textarea>
     <button>WYŚLIJ WIADOMOŚĆ</button>
   </section>  <footer>
-    &copy; 2025 Mateusz Dudzik - Gas & Heating Engineer | Doncaster, UK
+    &copy; 2025 Mateusz Dudzik – Gas & Heating Engineer | Doncaster UK
   </footer>
 </body>
 </html>
