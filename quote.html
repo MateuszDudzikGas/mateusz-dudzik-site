@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Szybka wycena – Mateusz Dudzik</title>
+  <title>Quick Quote – Mateusz Dudzik</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -56,41 +56,41 @@
 
 <body>
   <header>
-    <h1>Szybka wycena</h1>
+    <h1>Quick Quote</h1>
   </header>
 
   <section>
     <form action="https://formsubmit.co/mateuszdudzik000@gmail.com" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="_subject" value="Nowa szybka wycena ze strony">
+      <input type="hidden" name="_subject" value="New Quick Quote from Website">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
 
-      <label for="service">Wybierz usługę:</label>
+      <label for="service">Select a service:</label>
       <select name="service" id="service" required>
-        <option value="">-- Wybierz usługę --</option>
-        <option value="Wymiana bojlera">Wymiana bojlera</option>
-        <option value="Serwis urządzeń gazowych">Serwis urządzeń gazowych</option>
-        <option value="Naprawa bojlera">Naprawa bojlera</option>
-        <option value="Instalacja ogrzewania podłogowego">Instalacja ogrzewania podłogowego</option>
-        <option value="Inna">Inna</option>
+        <option value="">-- Select a service --</option>
+        <option value="Boiler replacement">Boiler replacement</option>
+        <option value="Gas appliance service">Gas appliance service</option>
+        <option value="Boiler repair">Boiler repair</option>
+        <option value="Underfloor heating installation">Underfloor heating installation</option>
+        <option value="Other">Other</option>
       </select>
 
-      <label for="name">Imię i nazwisko:</label>
+      <label for="name">Full name:</label>
       <input type="text" name="name" id="name" required>
 
       <label for="email">Email:</label>
       <input type="email" name="email" id="email" required>
 
-      <label for="phone">Telefon:</label>
+      <label for="phone">Phone number:</label>
       <input type="tel" name="phone" id="phone" required>
 
-      <label for="details">Opis instalacji lub problemu:</label>
+      <label for="details">Description of the installation or issue:</label>
       <textarea name="details" id="details" rows="5"></textarea>
 
-      <label for="photo">Dodaj zdjęcie obecnego bojlera:</label>
+      <label for="photo">Upload a photo of your current boiler:</label>
       <input type="file" name="photo" id="photo" accept="image/*">
 
-      <button type="submit">Wyślij wycenę</button>
+      <button type="submit">Send Quote</button>
     </form>
   </section>
 </body>
