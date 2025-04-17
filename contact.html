@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt – Mateusz Dudzik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #28a745, #218838);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #218838;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .map {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kontakt</h1>
+    <p>Skontaktuj się ze mną – szybko i bez problemów</p>
+  </header>
+
+  <section>
+    <h2>Dane kontaktowe</h2>
+    <p><strong>📧 E-mail:</strong> <a href="mailto:mateuszdudzik000@gmail.com">mateuszdudzik000@gmail.com</a></p>
+    <p><strong>📞 Telefon:</strong> <a href="tel:+447857708990">07857 708990</a></p>
+
+    <h2>Formularz kontaktowy</h2>
+    <form action="mailto:mateuszdudzik000@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Twoje imię" required />
+      <input type="email" name="email" placeholder="Twój email" required />
+      <textarea name="message" rows="5" placeholder="Wiadomość..." required></textarea>
+      <button type="submit">Wyślij wiadomość</button>
+    </form>
+
+    <div class="map">
+      <h2>Gdzie działam?</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9462.280518085267!2d-1.1343087272876584!3d53.522823381066975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48790d8c9ba75555%3A0x4c0508f3ab55f78f!2sDoncaster!5e0!3m2!1spl!2suk!4v1713384121528"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+</body>
+</html>
