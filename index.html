@@ -1,73 +1,96 @@
-
 <!DOCTYPE html><html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Mateusz Dudzik Gas & Heating Engineer">
-  <meta property="og:description" content="Profesjonalne usługi gazowo-grzewcze w Doncaster i całym Yorkshire.">
-  <meta property="og:image" content="logo.png">
+  <title>Mateusz Dudzik | Instalacje Gazowe i Grzewcze</title>
   <link rel="icon" href="logo.png">
-  <title>Mateusz Dudzik | Inżynier Gazowo-Grzewczy</title>
+  <meta name="description" content="Profesjonalne usługi instalacji, serwisu i naprawy systemów grzewczych oraz gazowych na terenie Doncaster i Yorkshire.">
+  <meta property="og:title" content="Mateusz Dudzik - Gas & Heating Engineer">
+  <meta property="og:description" content="Profesjonalne instalacje gazowe i grzewcze w Doncaster i okolicach.">
+  <meta property="og:image" content="mateusz-logo-transparent.png">
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #0c0c0c; color: #fff; }
-    header, section, footer { padding: 20px; max-width: 1200px; margin: auto; }
-    h1, h2, h3 { color: #fff; }
-    .btn { background: #f1c40f; padding: 12px 24px; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; margin-top: 15px; }
-    .nav { text-align: right; margin-bottom: 10px; }
-    .nav a { color: #f1c40f; margin-left: 15px; text-decoration: none; }
-    .section-dark { background-color: #1a1a1a; border-radius: 10px; margin-top: 20px; padding: 20px; }
-    .service-box, .product-box { display: inline-block; width: 30%; padding: 15px; background: #2a2a2a; margin: 10px; border-radius: 8px; text-align: center; vertical-align: top; }
-    .product-box img { max-width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px; }
-    .product-box button { background: #f1c40f; border: none; padding: 10px 20px; margin-top: 10px; border-radius: 5px; cursor: pointer; }
-    .logos img { max-height: 50px; margin: 10px; }
-    .features li { margin-bottom: 10px; }
-    .features span { font-weight: bold; color: #f1c40f; margin-right: 10px; }
-    .contact { display: flex; flex-wrap: wrap; justify-content: space-between; }
-    .contact div { flex: 1 1 45%; margin: 10px 0; }
-    .form input, .form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none; }
-    .form button { width: 100%; padding: 10px; background: #f1c40f; border: none; font-weight: bold; border-radius: 5px; cursor: pointer; }
-    .cart-box { background: #2a2a2a; padding: 20px; border-radius: 8px; margin-top: 20px; }
-    .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; }
-    .cart-item span { flex: 1; }
-    .cart-item button { background: red; border: none; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
-    #cart-total { font-weight: bold; color: #f1c40f; margin-top: 10px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0b0b0b; color: white; }
+    header, section, footer { padding: 40px 20px; max-width: 1200px; margin: auto; }
+    .logo { max-height: 100px; display: block; margin: 0 auto 20px; }
+    h1 { font-size: 2.5rem; text-align: center; color: white; }
+    p.lead { text-align: center; margin-top: 10px; color: #ccc; }
+    .cta { text-align: center; margin: 30px 0; }
+    .btn-main { background: #c40000; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    .btn-main:hover { background: #e60000; }
+    .section-title { font-size: 1.8rem; margin-bottom: 20px; color: white; }
+    .services, .contact-info, .review, .form, .products, .eco, .benefits { margin-top: 40px; background: #1a1a1a; padding: 30px; border-radius: 10px; }
+    .service-box, .product-box { display: inline-block; width: 30%; margin: 1%; padding: 15px; background: #2a2a2a; border-radius: 8px; vertical-align: top; text-align: center; }
+    .product-box img { max-width: 100%; border-radius: 5px; margin-bottom: 10px; }
+    .form input, .form textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; background: #111; color: white; }
+    .form button { background: #c40000; border: none; padding: 10px 20px; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; }
+    footer { text-align: center; background: #111; padding: 20px; margin-top: 40px; }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <a href="#">PL</a> | <a href="#">EN</a>
-  </div>
   <header>
-    <img src="mateusz-logo.png" alt="Logo Mateusz Dudzik" style="max-height: 80px;">
-    <h1>Mateusz Dudzik<br>GAS & HEATING ENGINEER</h1>
-    <a class="btn" href="#contact">Uzyskaj Darmową Wycenę</a>
-    <p>Jako wykwalifikowany instalator oferuję nowoczesne rozwiązania grzewcze w Doncaster i w Yorkshire.</p>
-    <div class="logos">
-      <img src="viessmann-logo.png" alt="Viessmann">
-      <img src="ideal-logo.png" alt="Ideal">
-      <img src="vaillant-logo.png" alt="Vaillant">
+    <img src="mateusz-logo-transparent.png" alt="Logo Mateusz Dudzik" class="logo">
+    <h1>Mateusz Dudzik<br>Gas & Heating Engineer</h1>
+    <p class="lead">Profesjonalne usługi grzewcze i gazowe – Doncaster i całe Yorkshire</p>
+    <div class="cta">
+      <a href="#contact" class="btn-main">Get a Free Quote</a>
     </div>
-  </header>  <section class="section-dark">
-    <h2>Usługi Hydrauliczne i Gazowe</h2>
-    <p>Oferuję kompleksowe usługi hydrauliczne i gazowe na najwyższym poziomie. Każda usługa jest wykonywana zgodnie z przepisami, z zachowaniem najwyższych standardów bezpieczeństwa.</p>
+  </header>  <section class="services">
+    <h2 class="section-title">Nasze Usługi</h2>
+    <div class="service-box">
+      <h3>Wymiana Kotła</h3>
+      <p>Od £1800 – kompleksowa wymiana z montażem.</p>
+    </div>
+    <div class="service-box">
+      <h3>Serwis Kotła</h3>
+      <p>Od £80 – coroczna kontrola, regulacja i czyszczenie.</p>
+    </div>
+    <div class="service-box">
+      <h3>Naprawa Urządzeń Gazowych</h3>
+      <p>Od £100 – diagnoza i szybka naprawa.</p>
+    </div>
+  </section>  <section class="eco">
+    <h2 class="section-title">Zielony Świat</h2>
+    <p>Nasze kotły są ekologiczne – zmniejszają zużycie gazu i emisję CO2. Korzystając z nowoczesnych rozwiązań, pomagasz chronić planetę i oszczędzasz na rachunkach.</p>
+  </section>  <section class="benefits">
+    <h2 class="section-title">Dlaczego Warto?</h2>
     <ul>
-      <li><strong>Wymiana kotła:</strong> od £1,800 – pełna instalacja, dopasowanie do potrzeb klienta.</li>
-      <li><strong>Serwis kotłów:</strong> od £80 – roczny przegląd, optymalizacja działania, kontrola emisji.</li>
-      <li><strong>Naprawy awaryjne:</strong> od £100 – szybka interwencja w przypadku usterek.</li>
-      <li><strong>Instalacje gazowe:</strong> od £150 – nowoczesne systemy rur i podłączeń.</li>
-      <li><strong>Podłogówka i systemy ogrzewania:</strong> od £600 – pełne projektowanie i wykonanie.</li>
+      <li>Viessmann – niemiecka jakość, długa żywotność</li>
+      <li>Ideal – prostota obsługi i wysoka niezawodność</li>
+      <li>Vaillant – energooszczędność i elegancki design</li>
     </ul>
-  </section>  <section class="section-dark">
-    <h2>Zielony Świat</h2>
-    <p>Nowoczesne kotły kondensacyjne nie tylko oszczędzają pieniądze, ale też dbają o środowisko. Niższe zużycie gazu oznacza mniejszą emisję CO2. Dzięki nowym technologiom – jak inteligentne sterowanie i energooszczędne komponenty – Twój dom może być bardziej eko niż kiedykolwiek.</p>
-    <p>Wspieram zielone rozwiązania i chętnie doradzę, jak zoptymalizować Twój system grzewczy z myślą o ekologii i przyszłości naszej planety.</p>
-  </section>  <section class="section-dark">
-    <h2>Dlaczego Warto Zainwestować w Dobry Kocioł?</h2>
-    <ul>
-      <li><strong>Viessmann:</strong> niemiecka precyzja, cicha praca, długa gwarancja.</li>
-      <li><strong>Ideal:</strong> niezawodność, dostępność części, intuicyjna obsługa.</li>
-      <li><strong>Vaillant:</strong> wysoka sprawność, nowoczesny design, ekologia.</li>
-    </ul>
-    <p>Dobrze dobrany i zainstalowany kocioł to inwestycja w komfort, oszczędność i bezpieczeństwo – nie tylko na zimę, ale na lata.</p>
-  </section>  <!-- Pozostałe sekcje (sklep, kontakt, koszyk) zostają bez zmian -->  <!-- Skrypt koszyka też zostaje --></body>
+  </section>  <section class="products">
+    <h2 class="section-title">Polecane Kotły</h2>
+    <div class="product-box">
+      <img src="viessmann.jpg" alt="Viessmann">
+      <h3>Viessmann Vitodens 050-W</h3>
+      <p>£1,999 z montażem i smart termostatem</p>
+    </div>
+    <div class="product-box">
+      <img src="ideal-vogue.jpg" alt="Ideal Vogue">
+      <h3>Ideal Vogue 32kW</h3>
+      <p>£2,049 – zestaw premium</p>
+    </div>
+    <div class="product-box">
+      <img src="vaillant.jpg" alt="Vaillant">
+      <h3>Vaillant ecoTEC Plus</h3>
+      <p>£2,099 – kompletna instalacja</p>
+    </div>
+  </section>  <section class="contact-info" id="contact">
+    <h2 class="section-title">Kontakt</h2>
+    <p><strong>Telefon:</strong> 07857708890</p>
+    <p><strong>Email:</strong> mateuszdudzik000@gmail.com</p>
+  </section>  <section class="review">
+    <h2 class="section-title">Opinie Klientów</h2>
+    <p>„Mateusz did an excellent installation. A real professional.”<br><em>– John S.</em></p>
+  </section>  <section class="form">
+    <h2 class="section-title">Umów Wizytę</h2>
+    <input type="text" placeholder="Imię">
+    <input type="tel" placeholder="Telefon">
+    <textarea placeholder="Wiadomość"></textarea>
+    <button>WYŚLIJ WIADOMOŚĆ</button>
+  </section>  <footer>
+    &copy; 2025 Mateusz Dudzik - Gas & Heating Engineer | Doncaster, UK
+  </footer>
+</body>
 </html>
