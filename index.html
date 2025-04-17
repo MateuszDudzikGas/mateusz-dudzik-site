@@ -19,8 +19,14 @@
       padding: 2rem;
       text-align: center;
     }
-    header img {
-      width: 100px;
+    header img.profile {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    header img.logo {
+      width: 120px;
+      margin-top: 1rem;
     }
     nav {
       display: flex;
@@ -55,18 +61,22 @@
       padding: 2rem;
       text-align: center;
     }
+    footer img {
+      width: 100px;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 
-<body><header>
-  <img src="mateusz.jpg" alt="Mateusz Dudzik" style="width:150px; border-radius: 50%; margin-bottom: 1rem;">
-  <h1>Mateusz Dudzik</h1>
-  <p>Gaz • Hydraulika • Ogrzewanie</p>
-  <p>Doncaster, UK</p>
-  <img src="gas-safe-logo-png.png" alt="Gas Safe Register" style="width: 120px; margin-top: 1rem;">
-</header>
+<body>
+  <header>
+    <img src="mateusz.jpg" alt="Mateusz Dudzik" class="profile">
+    <h1>Mateusz Dudzik</h1>
+    <p>Gaz • Hydraulika • Ogrzewanie</p>
+    <p>Doncaster, UK</p>
+    <img src="gas-safe-logo.png" alt="Gas Safe Register" class="logo">
+  </header>
 
- 
   <nav>
     <a href="about.html">O mnie</a>
     <a href="certs.html">Akredytacje</a>
@@ -81,7 +91,7 @@
     <h2>O mnie</h2>
     <img src="20250417_133155 (1).jpg" alt="Mateusz Dudzik">
     <p>Nazywam się Mateusz Dudzik i jestem certyfikowanym inżynierem gazowym, hydraulicznym i specjalistą od ogrzewania. Działam na terenie Doncaster i okolic, oferując profesjonalne usługi w zakresie montażu, napraw i serwisu urządzeń grzewczych.</p>
-    <img src="gas-safe-logo.png" alt="Gas Safe Register">
+    <img src="gas-safe-logo.png" alt="Gas Safe Register" style="width: 100px; margin-top: 2rem;">
   </section>
 
   <footer>
@@ -89,4 +99,6 @@
     <img src="gas-safe-logo.png" alt="Gas Safe Register">
   </footer>
 </body>
+
 </html>
+
