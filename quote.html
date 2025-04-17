@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Szybka wycena – Mateusz Dudzik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #ff3333, #cc0000);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    section {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button {
+      background: #cc0000;
+      color: white;
+      border: none;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      width: 100%;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #a80000;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Szybka wycena</h1>
+  </header>
+
+  <section>
+    <form action="https://formsubmit.co/mateuszdudzik000@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="Nowa szybka wycena ze strony">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+
+      <label for="service">Wybierz usługę:</label>
+      <select name="service" id="service" required>
+        <option value="">-- Wybierz usługę --</option>
+        <option value="Wymiana bojlera">Wymiana bojlera</option>
+        <option value="Serwis urządzeń gazowych">Serwis urządzeń gazowych</option>
+        <option value="Naprawa bojlera">Naprawa bojlera</option>
+        <option value="Instalacja ogrzewania podłogowego">Instalacja ogrzewania podłogowego</option>
+        <option value="Inna">Inna</option>
+      </select>
+
+      <label for="name">Imię i nazwisko:</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="phone">Telefon:</label>
+      <input type="tel" name="phone" id="phone" required>
+
+      <label for="details">Opis instalacji lub problemu:</label>
+      <textarea name="details" id="details" rows="5"></textarea>
+
+      <label for="photo">Dodaj zdjęcie obecnego bojlera:</label>
+      <input type="file" name="photo" id="photo" accept="image/*">
+
+      <button type="submit">Wyślij wycenę</button>
+    </form>
+  </section>
+</body>
+
+</html>
