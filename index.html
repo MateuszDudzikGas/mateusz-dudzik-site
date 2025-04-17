@@ -1,6 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -27,29 +25,46 @@
     button { padding: 10px 20px; background: #c40000; border: none; color: white; border-radius: 5px; cursor: pointer; font-weight: bold; }
     nav { text-align: right; padding: 10px 20px; }
     nav a { color: #f1c40f; text-decoration: none; margin-left: 10px; }
+    .cart { margin-top: 20px; text-align: center; }
+    .cart span { display: block; margin: 10px 0; }
   </style>
+  <script>
+    let cart = [];
+    function addToCart(productName, price) {
+      cart.push({ name: productName, price });
+      updateCart();
+    }
+    function updateCart() {
+      const cartBox = document.getElementById('cart');
+      if (!cartBox) return;
+      if (cart.length === 0) {
+        cartBox.innerHTML = '<span>Your cart is empty.</span>';
+      } else {
+        let html = '<h3>Shopping Cart</h3>';
+        let total = 0;
+        cart.forEach(item => {
+          html += `<span>${item.name} – £${item.price}</span>`;
+          total += item.price;
+        });
+        html += `<strong>Total: £${total}</strong>`;
+        cartBox.innerHTML = html;
+      }
+    }
+  </script>
 </head>
-<body>
-
-  <nav>
+<body>  <nav>
     <a href="/index.html">PL</a> | <a href="/en/index.html">EN</a>
-  </nav>
-
-  <header>
+  </nav>  <header>
     <img src="mateusz-logo-transparent.png" alt="Logo" class="logo">
     <h1>Mateusz Dudzik<br>Gas & Heating Engineer</h1>
     <p class="cta"><a href="#contact-form" class="btn-main">Get a Free Quote</a></p>
-  </header>
-
-  <section class="section">
+  </header>  <section class="section">
     <h2>About Me</h2>
     <div class="photo">
       <img src="mateusz-photo.png" alt="Mateusz Dudzik">
     </div>
-    <p>My name is Mateusz Dudzik – certified Gas Safe engineer with years of experience. I specialise in boiler installations, gas system maintenance, and plumbing solutions. My work is built on reliability, neatness, and customer trust. Every job is a reflection of my professionalism.</p>
-  </section>
-
-  <section class="section">
+    <p>My name is Mateusz Dudzik – certified Gas Safe engineer with 10+ years of hands-on experience. I handle boiler installations, gas system maintenance, underfloor heating, plumbing, and all things heating. I take pride in clean work, honest pricing, and long-lasting results. Your home is in safe hands.</p>
+  </section>  <section class="section">
     <h2>Certifications</h2>
     <div class="logos">
       <img src="gas-safe-logo.png" alt="Gas Safe">
@@ -57,15 +72,13 @@
       <img src="ideal-logo.png" alt="Ideal">
       <img src="vaillant-logo.png" alt="Vaillant">
     </div>
-    <p><strong>Viessmann:</strong> German engineering, long-term reliability and efficiency.<br>
-    <strong>Ideal:</strong> Modern features with accessible support network.<br>
-    <strong>Vaillant:</strong> Quiet operation, energy-saving and premium design.</p>
-  </section>
-
-  <section class="section">
+    <p><strong>Viessmann:</strong> German technology – efficiency and reliability.<br>
+    <strong>Ideal:</strong> Designed in the UK – easy to maintain and support.<br>
+    <strong>Vaillant:</strong> Silent, smart, energy-saving boilers with top-tier performance.</p>
+  </section>  <section class="section">
     <h2>Service Price Guide</h2>
     <ul>
-      <li>Boiler replacement: from £1,800</li>
+      <li>Boiler replacement: from £1,600</li>
       <li>Boiler & gas appliance servicing: from £80</li>
       <li>Landlord Gas Safety Certificates: from £60</li>
       <li>Boiler repairs: from £100</li>
@@ -73,88 +86,75 @@
       <li>New gas & water installations: from £300</li>
       <li>All professional plumbing works – priced individually</li>
     </ul>
-  </section>
-
-  <section class="section">
-    <h2>Why Mateusz Dudzik?</h2>
-    <p>Because your comfort, safety and savings matter. I offer high-quality, energy-efficient heating solutions that help you save money and protect the environment. Every project is completed cleanly, safely and up to standard – guaranteed.</p>
-  </section>
-
-  <section class="section">
+  </section>  <section class="section">
     <h2>Shop – Top Boilers</h2>
     <div class="product-box">
       <img src="viessmann-boiler.png" alt="Viessmann">
       <h3>Viessmann Vitodens 050-W</h3>
-      <p>£1,899 – flue, smart thermostat, and filter included</p>
+      <p>£1,699 – Compact, reliable and energy-efficient</p>
+      <button onclick="addToCart('Viessmann Vitodens 050-W', 1699)">Add to Cart</button>
     </div>
     <div class="product-box">
       <img src="ideal-vogue.png" alt="Ideal Vogue">
       <h3>Ideal Vogue 32kW</h3>
-      <p>£1,949 – premium pack, flue and filter included</p>
+      <p>£1,749 – UK-built, smart-ready & premium finish</p>
+      <button onclick="addToCart('Ideal Vogue 32kW', 1749)">Add to Cart</button>
     </div>
     <div class="product-box">
       <img src="vaillant-boiler.png" alt="Vaillant">
       <h3>Vaillant ecoTEC Plus</h3>
-      <p>£1,999 – full set: flue, filter, smart control</p>
+      <p>£1,799 – Ultra-quiet, efficient, with smart control</p>
+      <button onclick="addToCart('Vaillant ecoTEC Plus', 1799)">Add to Cart</button>
     </div>
-  </section>
-  <section class="form" id="booking">
+    <div id="cart" class="cart"></div>
+  </section>  <section class="section">
+    <h2>Green World – Eco Heating</h2>
+    <p>We care about the planet. Our solutions help you save energy and reduce your carbon footprint. All boilers are A-rated for efficiency and compatible with smart thermostats. Let's heat homes without heating the planet.</p>
+  </section>  <section class="form" id="booking">
     <h2>Book a Service</h2>
     <form action="https://formsubmit.co/mateuszdudzik000@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Nowa rezerwacja ze strony">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_template" value="box"><select name="Service" required>
+    <option value="">-- Select a service --</option>
+    <option value="Boiler installation">Boiler installation</option>
+    <option value="Service & maintenance">Service & maintenance</option>
+    <option value="Repair">Repair</option>
+    <option value="Underfloor heating">Underfloor heating</option>
+    <option value="Other">Other</option>
+  </select>
 
-      <select name="Service" required>
-        <option value="">-- Select a service --</option>
-        <option value="Boiler installation">Boiler installation</option>
-        <option value="Service & maintenance">Service & maintenance</option>
-        <option value="Repair">Repair</option>
-        <option value="Underfloor heating">Underfloor heating</option>
-        <option value="Other">Other</option>
-      </select>
+  <input type="date" name="Date" required>
+  <input type="time" name="Time" required>
+  <input type="text" name="Name" placeholder="Your name" required>
+  <input type="tel" name="Phone" placeholder="Phone number" required>
+  <input type="email" name="Email" placeholder="Email address" required>
+  <textarea name="Details" placeholder="Describe the issue or service..." rows="5"></textarea>
 
-      <input type="date" name="Date" required>
-      <input type="time" name="Time" required>
-      <input type="text" name="Name" placeholder="Your name" required>
-      <input type="tel" name="Phone" placeholder="Phone number" required>
-      <input type="email" name="Email" placeholder="Email address" required>
-      <textarea name="Details" placeholder="Describe the issue or service..." rows="5"></textarea>
+  <button type="submit">BOOK NOW</button>
+</form>
 
-      <button type="submit">BOOK NOW</button>
-    </form>
-  </section>
-
-  <section class="form" id="contact-form">
+  </section>  <section class="form" id="contact-form">
     <h2>Contact Form</h2>
     <form action="https://formsubmit.co/mateuszdudzik000@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Nowa wiadomość z formularza kontaktowego">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_template" value="box"><input type="text" name="Name" placeholder="Your name" required>
+  <input type="tel" name="Phone" placeholder="Phone number" required>
+  <input type="email" name="Email" placeholder="Your email" required>
+  <textarea name="Message" placeholder="Type your message here..." rows="5" required></textarea>
 
-      <input type="text" name="Name" placeholder="Your name" required>
-      <input type="tel" name="Phone" placeholder="Phone number" required>
-      <input type="email" name="Email" placeholder="Your email" required>
-      <textarea name="Message" placeholder="Type your message here..." rows="5" required></textarea>
+  <button type="submit">SEND MESSAGE</button>
+</form>
 
-      <button type="submit">SEND MESSAGE</button>
-    </form>
-  </section>
-
-  <section class="contact-info">
+  </section>  <section class="contact-info">
     <h2>Contact</h2>
     <p>Email: mateuszdudzik000@gmail.com</p>
     <p>Phone: 07857708990</p>
-  </section>
-
-  <section class="review">
+  </section>  <section class="review">
     <h2>Customer Reviews</h2>
     <p>“Mateusz did an excellent installation. A real professional.”<br><em>– John S.</em></p>
-  </section>
-
-  <footer>
+  </section>  <footer>
     &copy; 2025 Mateusz Dudzik – Gas & Heating Engineer | Doncaster UK
-  </footer>
-
-</body>
+  </footer></body>
 </html>
