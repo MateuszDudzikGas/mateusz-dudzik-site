@@ -56,7 +56,7 @@
     }
 
     .logo-left {
-      height: 420px;
+      height: 480px;
       position: relative;
       z-index: 1;
       filter: drop-shadow(0 0 4px #fff);
@@ -92,7 +92,7 @@
       position: absolute;
       bottom: 2rem;
       right: 2rem;
-      width: 220px;
+      width: 260px;
     }
 
     nav {
@@ -113,44 +113,7 @@
     nav a:hover {
       color: #00d084;
     }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 3rem 2rem;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      color: #10242d;
-      margin-bottom: 1rem;
-    }
-
-    section p {
-      font-size: 1.1rem;
-    }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = [
-        { id: "about", file: "about.html" },
-        { id: "accreditations", file: "certs.html" },
-        { id: "pricing", file: "services.html" },
-        { id: "quote", file: "quote.html" },
-        { id: "shop", file: "shop.html" },
-        { id: "videos", file: "diy.html" },
-        { id: "contact", file: "contact.html" },
-      ];
-
-      sections.forEach(({ id, file }) => {
-        fetch(file)
-          .then(res => res.text())
-          .then(html => {
-            document.getElementById(id).innerHTML = html;
-          });
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -172,22 +135,14 @@
   </header>
 
   <nav>
-    <a href="#about">About Me</a>
-    <a href="#accreditations">Accreditations</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#quote">Quick Quote</a>
-    <a href="#shop">Boiler Shop</a>
-    <a href="#videos">DIY Videos</a>
-    <a href="#contact">Contact</a>
+    <a href="about.html">About Me</a>
+    <a href="certs.html">Accreditations</a>
+    <a href="services.html">Pricing</a>
+    <a href="quote.html">Quick Quote</a>
+    <a href="shop.html">Boiler Shop</a>
+    <a href="diy.html">DIY Videos</a>
+    <a href="contact.html">Contact</a>
   </nav>
-
-  <section id="about"></section>
-  <section id="accreditations"></section>
-  <section id="pricing"></section>
-  <section id="quote"></section>
-  <section id="shop"></section>
-  <section id="videos"></section>
-  <section id="contact"></section>
 </body>
 
 </html>
