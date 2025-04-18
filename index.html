@@ -20,7 +20,6 @@
 
     header {
       background: linear-gradient(to right, #111315, #1c1d1f);
-      text-align: center;
       padding: 4rem 2rem;
       position: relative;
     }
@@ -29,7 +28,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
+      gap: 4rem;
+      flex-wrap: wrap;
       position: relative;
     }
 
@@ -64,7 +64,6 @@
       object-fit: cover;
       border: 4px solid #00d084;
       box-shadow: 0 0 25px rgba(0, 255, 170, 0.4);
-      margin-top: 3rem;
     }
 
     .gas-safe {
@@ -76,6 +75,7 @@
 
     h1 {
       font-size: 2.8rem;
+      text-align: center;
       margin: 2rem 0 0.5rem;
       color: #00d084;
     }
@@ -83,6 +83,7 @@
     p.subtitle {
       font-size: 1.4rem;
       color: #ccc;
+      text-align: center;
     }
 
     .intro {
@@ -143,6 +144,12 @@
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
     }
+
+    @media (max-width: 768px) {
+      .top-visual {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 
@@ -185,4 +192,3 @@
   </div>
 </body>
 </html>
-
