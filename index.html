@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mateusz Dudzik | Gas & Heating Specialist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateusz Dudzik | Gas & Heating Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -14,177 +14,174 @@
 
     body {
       font-family: 'Outfit', sans-serif;
-      background: linear-gradient(to right, #1c1c1e, #2e2f31);
-      color: #f1f1f1;
+      background: linear-gradient(120deg, #1a1a1a, #222);
+      color: #fff;
+      overflow-x: hidden;
     }
 
     header {
-      background: linear-gradient(to right, #111315, #1c1d1f);
-      text-align: center;
-      padding: 4rem 2rem;
       position: relative;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
     }
 
-    .top-visual {
+    .hero {
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 3rem;
+      justify-content: center;
+      gap: 4rem;
       flex-wrap: wrap;
       position: relative;
     }
 
     .logo-container {
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      z-index: 1;
     }
 
-    .logo-bg {
+    .logo-container::before {
+      content: '';
       position: absolute;
-      width: 350px;
-      height: 350px;
-      background: rgba(255, 255, 255, 0.15);
+      top: -40px;
+      left: -40px;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 50%;
       filter: blur(80px);
       z-index: 0;
-      left: -60px;
-      top: -30px;
     }
 
-    .top-visual img.logo {
-      height: 250px;
+    .logo-container img {
+      width: 160px;
+      height: auto;
       z-index: 1;
       position: relative;
-      margin-left: -60px;
-      filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
     }
 
-    .top-visual img.profile {
-      width: 200px;
-      height: 200px;
+    .profile-img {
+      width: 230px;
+      height: 230px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #00d084;
-      box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
+      border: 4px solid #fff;
+      box-shadow: 0 0 20px #00ffae50;
+      background: #fff;
     }
 
     .gas-safe {
       position: absolute;
-      bottom: 20px;
-      right: 20px;
-      width: 130px;
+      bottom: 1rem;
+      right: 1rem;
+      width: 100px;
     }
 
     h1 {
       font-size: 2.8rem;
-      margin: 2rem 0 0.5rem;
-      color: #00d084;
+      font-weight: 800;
+      color: #00e38d;
+      margin-top: 2rem;
     }
 
-    p.subtitle {
-      font-size: 1.4rem;
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
       color: #ccc;
     }
 
-    .intro {
+    main {
       max-width: 900px;
-      margin: 4rem auto 2rem;
-      padding: 2rem;
-      background: #222326;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
-    }
-
-    .intro h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #00d084;
-    }
-
-    .intro p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #e2e2e2;
-    }
-
-    .map-section {
+      margin: 3rem auto;
+      padding: 0 1.5rem;
       text-align: center;
-      margin: 3rem 0;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #ddd;
+      margin-bottom: 2rem;
     }
 
     .map-section img {
-      width: 90%;
-      max-width: 800px;
+      max-width: 100%;
       border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0, 255, 170, 0.15);
+      margin-top: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
-    .nav-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 4rem auto;
-      padding: 2rem;
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 3rem auto;
     }
 
-    .nav-grid a {
-      display: block;
-      background: linear-gradient(135deg, #00d084 0%, #007f66 100%);
-      color: #fff;
-      padding: 1.5rem;
-      text-align: center;
-      border-radius: 12px;
+    .nav-buttons a {
+      padding: 0.9rem 1.8rem;
+      background: #00e38d;
+      color: #000;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 40px;
+      box-shadow: 0 5px 15px rgba(0, 255, 150, 0.4);
+      transition: all 0.3s ease;
     }
 
-    .nav-grid a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
+    .nav-buttons a:hover {
+      background: #00ffae;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+      .logo-container::before {
+        width: 250px;
+        height: 250px;
+        top: -30px;
+        left: -30px;
+      }
     }
   </style>
 </head>
-
 <body>
   <header>
-    <div class="top-visual">
+    <div class="hero">
       <div class="logo-container">
-        <div class="logo-bg"></div>
-        <img src="mateusz firma logo.png" alt="Mateusz Logo" class="logo">
+        <img src="mateusz firma logo.png" alt="Mateusz Dudzik Logo">
       </div>
-      <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile">
+      <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile-img">
     </div>
+    <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
     <h1>Mateusz Dudzik</h1>
     <p class="subtitle">Gas • Plumbing • Heating Engineer | Doncaster, UK</p>
-    <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
   </header>
 
-  <section class="intro">
-    <h2>Why Gas is Essential on Earth</h2>
+  <main>
     <p>
-      Gas plays a critical role in heating homes, powering appliances, and providing energy across industries.
-      It's efficient, reliable, and crucial for everyday life. At the same time, we care about our planet —
-      that’s why we offer modern, energy-efficient solutions that protect your wallet and the environment.
+      Gas is one of the most essential energy sources on Earth — powering homes, businesses, and industries. It's a cleaner alternative to many fossil fuels and plays a key role in keeping our lives warm and comfortable.
     </p>
-  </section>
+    <p>
+      At Mateusz Dudzik Heating, we not only care for your home's efficiency and your wallet — we also care for our planet. By offering modern, energy-efficient systems, we ensure lower emissions and smarter use of resources.
+    </p>
 
-  <section class="map-section">
-    <h2 style="color:#00d084; margin-bottom:1rem;">Where Natural Gas is Found</h2>
-    <img src="gas-map.jpg" alt="World Natural Gas Map">
-  </section>
+    <div class="map-section">
+      <h2>Where is natural gas most abundant?</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Natural_Gas_Reserves_Map_2014.png" alt="Natural Gas Reserves Map">
+    </div>
 
-  <div class="nav-grid">
-    <a href="about.html">About Me</a>
-    <a href="certs.html">Accreditations</a>
-    <a href="services.html">Pricing</a>
-    <a href="quote.html">Quick Quote</a>
-    <a href="shop.html">Boiler Shop</a>
-    <a href="diy.html">DIY Videos</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <div class="nav-buttons">
+      <a href="about.html">About Me</a>
+      <a href="certs.html">Accreditations</a>
+      <a href="services.html">Pricing</a>
+      <a href="quote.html">Quick Quote</a>
+      <a href="shop.html">Boiler Shop</a>
+      <a href="diy.html">DIY Videos</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </main>
 </body>
 </html>
