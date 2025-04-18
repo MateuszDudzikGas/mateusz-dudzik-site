@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mateusz Dudzik | Gas & Heating Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -11,167 +11,208 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Outfit', sans-serif;
-      line-height: 1.6;
-      background: #f4f4f4;
-      color: #333;
+      background: #f9fafa;
+      color: #1a1a1a;
+      overflow-x: hidden;
     }
-
     header {
       background: linear-gradient(to right, #10242d, #204c5e);
       color: white;
-      text-align: center;
-      padding: 4rem 1rem 6rem;
+      padding: 5rem 1rem 10rem;
       position: relative;
+      text-align: center;
+      overflow: hidden;
     }
-
-    .header-content {
+    .header-flex {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 3rem;
+      gap: 2rem;
+      animation: fadeIn 1.5s ease-out;
     }
-
-    .logo-left-container {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .logo-left-background {
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.4);
-      filter: blur(60px);
-      z-index: 0;
-    }
-
-    .logo-left {
-      height: 300px;
-      position: relative;
+    .logo-big {
+      height: 280px;
       z-index: 1;
-      filter: drop-shadow(0 0 4px #fff);
+      filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
+      animation: slideInLeft 1s ease-out;
     }
-
-    .profile {
+    .profile-img {
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      object-fit: cover;
       border: 4px solid white;
+      object-fit: cover;
+      animation: slideInRight 1s ease-out;
     }
-
-    .header-text {
-      margin-top: 2rem;
-    }
-
-    h1 {
-      font-size: 2.7rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.3rem;
-    }
-
-    .description {
-      font-size: 1.6rem;
-      margin-top: 1rem;
-    }
-
     .gas-safe-logo {
       position: absolute;
       bottom: 2rem;
       right: 2rem;
-      width: 260px;
+      width: 150px;
+      animation: fadeIn 2s ease-out;
+    }
+    .header-text {
+      margin-top: 2rem;
+      animation: fadeInUp 1.5s ease-out;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .desc {
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #ccc;
     }
 
     nav {
       background-color: white;
-      padding: 1rem;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem;
       gap: 2rem;
-      border-top: 4px solid #00d084;
+      border-bottom: 4px solid #00d084;
       font-weight: 600;
     }
-
     nav a {
-      text-decoration: none;
       color: #10242d;
+      text-decoration: none;
+      transition: color 0.3s;
+      position: relative;
     }
-
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #00d084;
+      transition: 0.3s ease-out;
+    }
     nav a:hover {
       color: #00d084;
     }
+    nav a:hover::after {
+      width: 100%;
+    }
 
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       padding: 3rem 2rem;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      color: #10242d;
-      margin-bottom: 1rem;
-    }
-
-    section p {
-      font-size: 1.1rem;
+      animation: fadeInUp 1s ease-out;
     }
 
     footer {
-      background-color: #e0f7ea;
+      background: #10242d;
+      color: white;
       text-align: center;
-      padding: 4rem 2rem;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+      animation: fadeIn 2s ease-out;
+    }
+
+    footer p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    .eco-message {
       font-size: 1.2rem;
-      color: #0f3d2e;
+      margin-top: 2rem;
+      color: #a2f5c1;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInLeft {
+      from { transform: translateX(-100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideInRight {
+      from { transform: translateX(100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = [
+        { id: "about", file: "about.html" },
+        { id: "accreditations", file: "certs.html" },
+        { id: "pricing", file: "services.html" },
+        { id: "quote", file: "quote.html" },
+        { id: "shop", file: "shop.html" },
+        { id: "videos", file: "diy.html" },
+        { id: "contact", file: "contact.html" },
+      ];
+
+      sections.forEach(({ id, file }) => {
+        fetch(file)
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById(id).innerHTML = html;
+          });
+      });
+    });
+  </script>
 </head>
 
 <body>
   <header>
-    <div class="header-content">
-      <div class="logo-left-container">
-        <div class="logo-left-background"></div>
-        <img src="mateusz firma logo.png" alt="Mateusz Logo" class="logo-left">
-      </div>
-      <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile">
+    <div class="header-flex">
+      <img src="mateusz firma logo.png" alt="Mateusz Logo" class="logo-big">
+      <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile-img">
     </div>
     <div class="header-text">
       <h1>Mateusz Dudzik</h1>
-      <p>Gas • Plumbing • Heating Engineer</p>
-      <p class="description">Specjalista od podłogówek i boilerów w całym Yorkshire</p>
-      <p>Doncaster, UK</p>
+      <p class="desc">Specjalista od podłogówek i boilerów w całym Yorkshire</p>
+      <p class="subtitle">Doncaster, UK</p>
     </div>
     <img src="gas-safe-logo.png" alt="Gas Safe Logo" class="gas-safe-logo">
   </header>
 
   <nav>
-    <a href="about.html">About Me</a>
-    <a href="certs.html">Accreditations</a>
-    <a href="services.html">Pricing</a>
-    <a href="quote.html">Quick Quote</a>
-    <a href="shop.html">Boiler Shop</a>
-    <a href="diy.html">DIY Videos</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">About Me</a>
+    <a href="#accreditations">Accreditations</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#quote">Quick Quote</a>
+    <a href="#shop">Boiler Shop</a>
+    <a href="#videos">DIY Videos</a>
+    <a href="#contact">Contact</a>
   </nav>
 
+  <section id="about"></section>
+  <section id="accreditations"></section>
+  <section id="pricing"></section>
+  <section id="quote"></section>
+  <section id="shop"></section>
+  <section id="videos"></section>
+  <section id="contact"></section>
+
   <footer>
-    <h2>Dbamy o Twój portfel i naszą planetę</h2>
-    <p>
-      W Mateusz Dudzik Heating & Plumbing wierzymy, że nowoczesne instalacje grzewcze mogą być nie tylko wydajne, ale również przyjazne dla środowiska.
-      Wybierając energooszczędne rozwiązania, oszczędzasz pieniądze każdego dnia i zmniejszasz swój ślad węglowy.
-      Nasze podejście to połączenie ekologii, komfortu i niezawodności — bo zielony świat zaczyna się od domu.
+    <h2>Dbamy o Twoją kieszeń i planetę 🌍</h2>
+    <p class="eco-message">
+      Wierzymy w przyszłość przyjazną środowisku – dlatego oferujemy nowoczesne rozwiązania grzewcze,
+      które są wydajne, oszczędne i ekologiczne. Nasze systemy nie tylko chronią Twój portfel, ale również
+      pomagają budować zielony świat dla kolejnych pokoleń.
     </p>
+    <p>&copy; 2025 Mateusz Dudzik | Doncaster, UK</p>
   </footer>
 </body>
 </html>
+
