@@ -14,23 +14,24 @@
 
     body {
       font-family: 'Outfit', sans-serif;
-      background: linear-gradient(to right, #bfc1c4, #c9cccf);
-      color: #1e1e1e;
+      background: linear-gradient(to right, #1b1c1e, #282a2d);
+      color: #f1f1f1;
     }
 
     header {
-      background: linear-gradient(to right, #babcbf, #c2c4c7);
+      background: linear-gradient(to right, #111315, #1b1c1f);
+      text-align: center;
       padding: 4rem 2rem;
       position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     .top-visual {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 4rem;
+      gap: 60px;
       flex-wrap: wrap;
-      position: relative;
     }
 
     .logo-container {
@@ -44,17 +45,17 @@
       position: absolute;
       width: 420px;
       height: 420px;
-      background: rgba(0, 0, 0, 0.06);
+      background: rgba(255, 255, 255, 0.07);
       border-radius: 50%;
-      filter: blur(60px);
+      filter: blur(70px);
       z-index: 0;
     }
 
     .top-visual img.logo {
-      height: 300px;
+      height: 280px;
       z-index: 1;
       position: relative;
-      filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+      filter: drop-shadow(0 0 20px rgba(255,255,255,0.6));
     }
 
     .top-visual img.profile {
@@ -62,8 +63,8 @@
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #00a67e;
-      box-shadow: 0 0 20px rgba(0, 166, 126, 0.2);
+      border: 4px solid #00d084;
+      box-shadow: 0 0 30px rgba(0, 255, 170, 0.4);
     }
 
     .gas-safe {
@@ -71,40 +72,43 @@
       bottom: 20px;
       right: 20px;
       width: 130px;
+      filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
     }
 
     h1 {
       font-size: 2.8rem;
-      text-align: center;
       margin: 2rem 0 0.5rem;
-      color: #009f79;
+      color: #00d084;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
     }
 
     p.subtitle {
       font-size: 1.4rem;
-      color: #333;
-      text-align: center;
+      color: #ccc;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
     }
 
     .intro {
       max-width: 900px;
       margin: 4rem auto 2rem;
       padding: 2rem;
-      background: #dadcde;
+      background: #232428;
       border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 25px rgba(0, 255, 170, 0.1);
     }
 
     .intro h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #009f79;
+      color: #00d084;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     }
 
     .intro p {
       font-size: 1.1rem;
       line-height: 1.7;
-      color: #2a2a2a;
+      color: #e2e2e2;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
     }
 
     .map-section {
@@ -112,11 +116,17 @@
       margin: 3rem 0;
     }
 
+    .map-section h2 {
+      color: #00d084;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
     .map-section img {
       width: 90%;
       max-width: 800px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 0 25px rgba(0, 255, 170, 0.2);
     }
 
     .nav-grid {
@@ -130,7 +140,7 @@
 
     .nav-grid a {
       display: block;
-      background: linear-gradient(135deg, #00b48c 0%, #008968 100%);
+      background: linear-gradient(135deg, #00d084 0%, #007f66 100%);
       color: #fff;
       padding: 1.5rem;
       text-align: center;
@@ -138,17 +148,13 @@
       text-decoration: none;
       font-weight: bold;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 15px rgba(0, 255, 170, 0.2);
     }
 
     .nav-grid a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 166, 126, 0.3);
-    }
-
-    @media (max-width: 768px) {
-      .top-visual {
-        flex-direction: column;
-      }
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 255, 170, 0.3);
     }
   </style>
 </head>
@@ -177,7 +183,7 @@
   </section>
 
   <section class="map-section">
-    <h2 style="color:#009f79; margin-bottom:1rem;">Where Natural Gas is Found</h2>
+    <h2>Where Natural Gas is Found</h2>
     <img src="gas-map.jpg" alt="World Natural Gas Map">
   </section>
 
