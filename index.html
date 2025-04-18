@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +16,7 @@
       font-family: 'Outfit', sans-serif;
       background: linear-gradient(to right, #1c1c1e, #2e2f31);
       color: #f1f1f1;
+      overflow-x: hidden;
     }
 
     header {
@@ -24,6 +24,7 @@
       text-align: center;
       padding: 4rem 2rem;
       position: relative;
+      animation: fadeIn 1s ease-in-out;
     }
 
     .top-visual {
@@ -39,27 +40,29 @@
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      flex: 1;
+      animation: slideInLeft 1s ease-out;
     }
 
     .logo-bg {
       position: absolute;
-      width: 350px;
-      height: 350px;
-      background: rgba(255, 255, 255, 0.15);
+      width: 400px;
+      height: 400px;
+      background: rgba(255, 255, 255, 0.2);
       border-radius: 50%;
-      filter: blur(80px);
+      filter: blur(100px);
       z-index: 0;
-      left: -60px;
-      top: -30px;
+      left: -100px;
+      top: -50px;
     }
 
     .top-visual img.logo {
       height: 250px;
       z-index: 1;
       position: relative;
-      margin-left: -60px;
-      filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
+      margin-left: -80px;
+      filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
     }
 
     .top-visual img.profile {
@@ -69,6 +72,7 @@
       object-fit: cover;
       border: 4px solid #00d084;
       box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
+      animation: slideInRight 1s ease-out;
     }
 
     .gas-safe {
@@ -82,11 +86,13 @@
       font-size: 2.8rem;
       margin: 2rem 0 0.5rem;
       color: #00d084;
+      animation: fadeInUp 1s ease-in-out;
     }
 
     p.subtitle {
       font-size: 1.4rem;
       color: #ccc;
+      animation: fadeInUp 1.2s ease-in-out;
     }
 
     .intro {
@@ -96,6 +102,7 @@
       background: #222326;
       border-radius: 1rem;
       box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     .intro h2 {
@@ -113,6 +120,7 @@
     .map-section {
       text-align: center;
       margin: 3rem 0;
+      animation: fadeInUp 2s ease-in-out;
     }
 
     .map-section img {
@@ -129,6 +137,7 @@
       max-width: 1000px;
       margin: 4rem auto;
       padding: 2rem;
+      animation: fadeIn 2.2s ease-in-out;
     }
 
     .nav-grid a {
@@ -146,6 +155,27 @@
     .nav-grid a:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(100px); }
+      to { opacity: 1; transform: translateX(0); }
     }
   </style>
 </head>
@@ -168,8 +198,8 @@
     <h2>Why Gas is Essential on Earth</h2>
     <p>
       Gas plays a critical role in heating homes, powering appliances, and providing energy across industries.
-      It's efficient, reliable, and crucial for everyday life. At the same time, we care about our planet —
-      that’s why we offer modern, energy-efficient solutions that protect your wallet and the environment.
+      It's efficient, reliable, and crucial for everyday life. At the same time, we care about our planet — that’s
+      why we offer modern, energy-efficient solutions that protect your wallet and the environment.
     </p>
   </section>
 
@@ -189,3 +219,4 @@
   </div>
 </body>
 </html>
+
