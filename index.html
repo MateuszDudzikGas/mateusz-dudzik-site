@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mateusz Dudzik | Gas & Heating Engineer</title>
+  <title>Mateusz Dudzik | Gas & Heating Specialist</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -11,208 +11,155 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Outfit', sans-serif;
-      background: #f9fafa;
-      color: #1a1a1a;
-      overflow-x: hidden;
+      background: linear-gradient(to right, #1c1c1e, #2e2f31);
+      color: #f1f1f1;
     }
+
     header {
-      background: linear-gradient(to right, #10242d, #204c5e);
-      color: white;
-      padding: 5rem 1rem 10rem;
-      position: relative;
+      background: linear-gradient(to right, #111315, #1c1d1f);
       text-align: center;
-      overflow: hidden;
+      padding: 4rem 2rem;
+      position: relative;
     }
-    .header-flex {
+
+    .top-visual {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      gap: 3rem;
       flex-wrap: wrap;
-      gap: 2rem;
-      animation: fadeIn 1.5s ease-out;
     }
-    .logo-big {
-      height: 280px;
-      z-index: 1;
-      filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
-      animation: slideInLeft 1s ease-out;
-    }
-    .profile-img {
-      width: 180px;
-      height: 180px;
+
+    .top-visual img.profile {
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      border: 4px solid white;
       object-fit: cover;
-      animation: slideInRight 1s ease-out;
+      border: 4px solid #00d084;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
     }
-    .gas-safe-logo {
+
+    .top-visual img.logo {
+      height: 250px;
+      filter: drop-shadow(0 0 8px rgba(255,255,255,0.2));
+    }
+
+    .gas-safe {
       position: absolute;
-      bottom: 2rem;
-      right: 2rem;
-      width: 150px;
-      animation: fadeIn 2s ease-out;
+      bottom: 20px;
+      right: 20px;
+      width: 130px;
     }
-    .header-text {
-      margin-top: 2rem;
-      animation: fadeInUp 1.5s ease-out;
-    }
+
     h1 {
-      font-size: 3rem;
-      font-weight: 700;
+      font-size: 2.8rem;
+      margin: 2rem 0 0.5rem;
+      color: #00d084;
     }
-    .desc {
+
+    p.subtitle {
       font-size: 1.4rem;
-      margin-top: 0.5rem;
-    }
-    .subtitle {
-      font-size: 1.1rem;
       color: #ccc;
     }
 
-    nav {
-      background-color: white;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 1rem;
-      gap: 2rem;
-      border-bottom: 4px solid #00d084;
-      font-weight: 600;
+    .intro {
+      max-width: 900px;
+      margin: 4rem auto 2rem;
+      padding: 2rem;
+      background: #222326;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
     }
-    nav a {
-      color: #10242d;
-      text-decoration: none;
-      transition: color 0.3s;
-      position: relative;
-    }
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: #00d084;
-      transition: 0.3s ease-out;
-    }
-    nav a:hover {
+
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
       color: #00d084;
     }
-    nav a:hover::after {
-      width: 100%;
-    }
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 3rem 2rem;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    footer {
-      background: #10242d;
-      color: white;
-      text-align: center;
-      padding: 3rem 2rem;
-      margin-top: 3rem;
-      animation: fadeIn 2s ease-out;
-    }
-
-    footer p {
+    .intro p {
       font-size: 1.1rem;
-      margin-top: 1rem;
+      line-height: 1.7;
+      color: #e2e2e2;
     }
 
-    .eco-message {
-      font-size: 1.2rem;
-      margin-top: 2rem;
-      color: #a2f5c1;
-      line-height: 1.6;
+    .map-section {
+      text-align: center;
+      margin: 3rem 0;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0 }
-      to { opacity: 1 }
+    .map-section img {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 255, 170, 0.15);
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 2rem;
     }
-    @keyframes slideInLeft {
-      from { transform: translateX(-100px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
+
+    .nav-grid a {
+      display: block;
+      background: linear-gradient(135deg, #00d084 0%, #007f66 100%);
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    @keyframes slideInRight {
-      from { transform: translateX(100px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
+
+    .nav-grid a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = [
-        { id: "about", file: "about.html" },
-        { id: "accreditations", file: "certs.html" },
-        { id: "pricing", file: "services.html" },
-        { id: "quote", file: "quote.html" },
-        { id: "shop", file: "shop.html" },
-        { id: "videos", file: "diy.html" },
-        { id: "contact", file: "contact.html" },
-      ];
-
-      sections.forEach(({ id, file }) => {
-        fetch(file)
-          .then(res => res.text())
-          .then(html => {
-            document.getElementById(id).innerHTML = html;
-          });
-      });
-    });
-  </script>
 </head>
 
 <body>
   <header>
-    <div class="header-flex">
-      <img src="mateusz firma logo.png" alt="Mateusz Logo" class="logo-big">
-      <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile-img">
+    <div class="top-visual">
+      <img src="mateusz firma logo.png" alt="Mateusz Logo" class="logo">
+      <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile">
     </div>
-    <div class="header-text">
-      <h1>Mateusz Dudzik</h1>
-      <p class="desc">Specjalista od podłogówek i boilerów w całym Yorkshire</p>
-      <p class="subtitle">Doncaster, UK</p>
-    </div>
-    <img src="gas-safe-logo.png" alt="Gas Safe Logo" class="gas-safe-logo">
+    <h1>Mateusz Dudzik</h1>
+    <p class="subtitle">Gas • Plumbing • Heating Engineer | Doncaster, UK</p>
+    <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
   </header>
 
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#accreditations">Accreditations</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#quote">Quick Quote</a>
-    <a href="#shop">Boiler Shop</a>
-    <a href="#videos">DIY Videos</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about"></section>
-  <section id="accreditations"></section>
-  <section id="pricing"></section>
-  <section id="quote"></section>
-  <section id="shop"></section>
-  <section id="videos"></section>
-  <section id="contact"></section>
-
-  <footer>
-    <h2>Dbamy o Twoją kieszeń i planetę 🌍</h2>
-    <p class="eco-message">
-      Wierzymy w przyszłość przyjazną środowisku – dlatego oferujemy nowoczesne rozwiązania grzewcze,
-      które są wydajne, oszczędne i ekologiczne. Nasze systemy nie tylko chronią Twój portfel, ale również
-      pomagają budować zielony świat dla kolejnych pokoleń.
+  <section class="intro">
+    <h2>Why Gas is Essential on Earth</h2>
+    <p>
+      Gas plays a critical role in heating homes, powering appliances, and providing energy across industries.
+      It's efficient, reliable, and crucial for everyday life. At the same time, we care about our planet —
+      that’s why we offer modern, energy-efficient solutions that protect your wallet and the environment.
     </p>
-    <p>&copy; 2025 Mateusz Dudzik | Doncaster, UK</p>
-  </footer>
+  </section>
+
+  <section class="map-section">
+    <h2 style="color:#00d084; margin-bottom:1rem;">Where Natural Gas is Found</h2>
+    <img src="gas-map.jpg" alt="World Natural Gas Map">
+  </section>
+
+  <div class="nav-grid">
+    <a href="about.html">About Me</a>
+    <a href="certs.html">Accreditations</a>
+    <a href="services.html">Pricing</a>
+    <a href="quote.html">Quick Quote</a>
+    <a href="shop.html">Boiler Shop</a>
+    <a href="diy.html">DIY Videos</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </body>
 </html>
 
