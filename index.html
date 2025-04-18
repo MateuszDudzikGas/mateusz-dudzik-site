@@ -31,6 +31,34 @@
       align-items: center;
       gap: 3rem;
       flex-wrap: wrap;
+      position: relative;
+    }
+
+    .logo-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-bg {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 0;
+      left: -60px;
+      top: -30px;
+    }
+
+    .top-visual img.logo {
+      height: 250px;
+      z-index: 1;
+      position: relative;
+      margin-left: -60px;
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
     }
 
     .top-visual img.profile {
@@ -40,11 +68,6 @@
       object-fit: cover;
       border: 4px solid #00d084;
       box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
-    }
-
-    .top-visual img.logo {
-      height: 250px;
-      filter: drop-shadow(0 0 8px rgba(255,255,255,0.2));
     }
 
     .gas-safe {
@@ -129,7 +152,10 @@
 <body>
   <header>
     <div class="top-visual">
-      <img src="mateusz firma logo.png" alt="Mateusz Logo" class="logo">
+      <div class="logo-container">
+        <div class="logo-bg"></div>
+        <img src="mateusz firma logo.png" alt="Mateusz Logo" class="logo">
+      </div>
       <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile">
     </div>
     <h1>Mateusz Dudzik</h1>
@@ -162,4 +188,3 @@
   </div>
 </body>
 </html>
-
