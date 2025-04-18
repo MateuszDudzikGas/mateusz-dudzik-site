@@ -2,130 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mateusz Dudzik – Gas, Plumbing & Heating Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Rubik', sans-serif;
-      background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-      color: #222;
-    }
-    header {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-      padding: 3rem 2rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      border-bottom: 5px solid #00c853;
-    }
-    header img.profile {
-      width: 160px;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      margin-bottom: 1rem;
-    }
-    header .logos {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    header .logos img {
-      height: 60px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      padding: 1rem;
-      background: #fff;
-      border-bottom: 1px solid #eee;
-    }
-    nav a {
-      text-decoration: none;
-      color: #2c5364;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #00c853;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h2 {
-      color: #00c853;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-    .about img {
-      width: 300px;
-      border-radius: 1rem;
-      float: right;
-      margin-left: 2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    footer {
-      background: #0f2027;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 4rem;
-    }
-    footer .logos {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    footer .logos img {
-      height: 50px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mateusz Dudzik Gas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="base.css" />
 </head>
-
 <body>
-  <header>
-    <img src="images/mateusz-transparent.png" alt="Mateusz Dudzik Logo" class="logo">
+  <!-- Top Banner -->
+  <header class="top-banner">
+    <div class="logo-row">
+      <img src="logo.png" alt="Mateusz Dudzik Logo" class="main-logo"/>
+      <img src="gas-safe-logo.png" alt="Gas Safe Register" class="main-logo"/>
+    </div>
     <h1>Mateusz Dudzik</h1>
     <p>Gas • Plumbing • Heating Engineer</p>
     <p>Doncaster, UK</p>
-    <div class="logos">
-      <img src="images/gas-safe-logo-png.png" alt="Gas Safe Register" class="logo">
-      <img src="images/mateusz-logo.png" alt="Mateusz Dudzik Logo" class="logo">
-    </div>
   </header>
 
-  <nav>
-    <a href="about.html">About Me</a>
-    <a href="certs.html">Accreditations</a>
-    <a href="services.html">Pricing</a>
-    <a href="quote.html">Quick Quote</a>
-    <a href="shop.html">Boiler Shop</a>
-    <a href="diy.html">DIY Videos</a>
-    <a href="contact.html">Contact</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#about">About Me</a>
+    <a href="#accreditations">Accreditations</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#quote">Quick Quote</a>
+    <a href="#boiler">Boiler Shop</a>
+    <a href="#videos">DIY Videos</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about" class="about">
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
     <h2>About Me</h2>
-    <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik">
-    <p>My name is Mateusz Dudzik and I’m a certified gas, plumbing, and heating engineer. I operate in Doncaster and surrounding areas, providing professional services in the installation, repair, and maintenance of heating systems and appliances.</p>
+    <div class="about-content">
+      <div class="text">
+        <p>My name is Mateusz Dudzik and I’m a certified gas, plumbing, and heating engineer. I operate in Doncaster and surrounding areas, providing professional services in the installation, repair, and maintenance of heating systems and appliances.</p>
+      </div>
+      <div class="image">
+        <img src="FB_IMG_1693051555824.jpg" alt="Mateusz Dudzik" />
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Mateusz Dudzik | Doncaster</p>
-    <div class="logos">
-      <img src="images/gas-safe-logo.png" alt="Gas Safe Register">
-      <img src="images/mateusz-logo.png" alt="Mateusz Dudzik Logo">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="logo-row small">
+      <img src="logo.png" alt="Mateusz Dudzik Logo" class="small-logo"/>
+      <img src="gas-safe-logo.png" alt="Gas Safe Register" class="small-logo"/>
     </div>
+    <p>&copy; 2025 Mateusz Dudzik. All rights reserved.</p>
   </footer>
 </body>
 </html>
