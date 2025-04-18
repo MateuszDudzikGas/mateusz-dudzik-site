@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,27 +15,32 @@
 
     body {
       font-family: 'Outfit', sans-serif;
-      background: linear-gradient(to right, #2b2c2e, #3b3c3f);
+      background: linear-gradient(to right, #202224, #2b2d30);
       color: #f1f1f1;
     }
 
     header {
-      background: linear-gradient(to right, #1e2022, #2c2e30);
-      padding: 4rem 2rem;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
+      background: linear-gradient(to right, #1a1b1d, #2a2b2d);
       text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    .top-visual {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .logo-container {
       position: relative;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
     .logo-bg {
@@ -47,21 +53,20 @@
       z-index: 0;
     }
 
-    .logo {
+    .top-visual img.logo {
       height: 300px;
       z-index: 1;
       position: relative;
-      filter: drop-shadow(0 0 14px rgba(0,255,170,0.4));
+      filter: drop-shadow(0 0 20px rgba(0,255,170,0.6));
     }
 
-    .profile {
+    .top-visual img.profile {
       width: 200px;
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #00d084;
       box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
-      flex: 0 0 auto;
     }
 
     .gas-safe {
@@ -71,39 +76,38 @@
       width: 130px;
     }
 
-    h1 {
+    h1, .intro h2, .map-section h2 {
       font-size: 2.8rem;
-      margin-top: 2rem;
-      color: #00d084;
-      text-shadow: 0 0 10px rgba(0,255,170,0.4);
+      margin: 2rem 0 0.5rem;
+      background: linear-gradient(145deg, #00ffcc, #00b894);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(0,255,170,0.6), 2px 2px 6px rgba(0,255,170,0.3);
+      filter: drop-shadow(0 2px 5px rgba(0,255,170,0.5));
     }
 
     p.subtitle {
       font-size: 1.4rem;
-      color: #ccc;
-      text-shadow: 0 0 5px rgba(0,255,170,0.3);
+      background: linear-gradient(145deg, #00ffcc, #00b894);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 3px rgba(0,255,170,0.5);
     }
 
     .intro {
       max-width: 900px;
       margin: 4rem auto 2rem;
       padding: 2rem;
-      background: #2c2d30;
+      background: #222326;
       border-radius: 1rem;
       box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
-    }
-
-    .intro h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #00d084;
-      text-shadow: 0 0 8px rgba(0,255,170,0.3);
     }
 
     .intro p {
       font-size: 1.1rem;
       line-height: 1.7;
-      color: #e2e2e2;
+      color: #ccffee;
+      text-shadow: 0 1px 3px rgba(0,255,170,0.4);
     }
 
     .map-section {
@@ -137,51 +141,27 @@
       text-decoration: none;
       font-weight: bold;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 15px rgba(0, 255, 170, 0.2);
-      text-shadow: 0 0 6px rgba(0, 255, 170, 0.4);
     }
 
     .nav-grid a:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
     }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .logo {
-        height: 220px;
-      }
-
-      .profile {
-        width: 160px;
-        height: 160px;
-      }
-
-      .intro {
-        margin: 2rem 1rem;
-      }
-    }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="logo-container">
-      <div class="logo-bg"></div>
-      <img src="mateusz logo 2025.png" alt="Mateusz Logo" class="logo">
+    <div class="top-visual">
+      <div class="logo-container">
+        <div class="logo-bg"></div>
+        <img src="mateusz logo 2025.png" alt="Mateusz Logo" class="logo">
+      </div>
+      <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile">
     </div>
-    <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile">
-    <div style="width: 100%;">
-      <h1>Mateusz Dudzik</h1>
-      <p class="subtitle">Gas • Plumbing • Heating Engineer | Doncaster, UK</p>
-    </div>
+    <h1>Mateusz Dudzik</h1>
+    <p class="subtitle">Gas • Plumbing • Heating Engineer | Doncaster, UK</p>
+    <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
   </header>
 
   <section class="intro">
@@ -194,7 +174,7 @@
   </section>
 
   <section class="map-section">
-    <h2 style="color:#00d084; margin-bottom:1rem;">Where Natural Gas is Found</h2>
+    <h2>Where Natural Gas is Found</h2>
     <img src="gas-map.jpg" alt="World Natural Gas Map">
   </section>
 
@@ -209,4 +189,3 @@
   </div>
 </body>
 </html>
-
