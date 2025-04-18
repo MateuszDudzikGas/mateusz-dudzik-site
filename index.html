@@ -27,45 +27,44 @@
 
     .top-visual {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       position: relative;
     }
 
     .logo-container {
       position: relative;
-      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .logo-bg {
       position: absolute;
       width: 420px;
       height: 420px;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
-      filter: blur(120px);
+      filter: blur(70px);
       z-index: 0;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
     }
 
-    .logo {
+    .top-visual img.logo {
       height: 300px;
       z-index: 1;
       position: relative;
-      filter: drop-shadow(0 0 10px rgba(255,255,255,0.6));
+      filter: drop-shadow(0 0 12px rgba(255,255,255,0.6));
     }
 
-    .profile {
+    .top-visual img.profile {
       width: 200px;
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #00d084;
       box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
-      z-index: 1;
+      margin-top: 3rem;
     }
 
     .gas-safe {
@@ -144,25 +143,6 @@
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
     }
-
-    /* Animations */
-    .logo,
-    .profile,
-    .nav-grid a {
-      animation: fadeInUp 1s ease both;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
   </style>
 </head>
 
@@ -171,7 +151,7 @@
     <div class="top-visual">
       <div class="logo-container">
         <div class="logo-bg"></div>
-        <img src="mateusz firma logo.png" alt="Mateusz Logo" class="logo">
+        <img src="mateusz logo 2025.png" alt="Mateusz Logo" class="logo">
       </div>
       <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile">
     </div>
@@ -184,7 +164,7 @@
     <h2>Why Gas is Essential on Earth</h2>
     <p>
       Gas plays a critical role in heating homes, powering appliances, and providing energy across industries.
-      It's efficient, reliable, and crucial for everyday life. At the same time, we care about our planet —
+      It's efficient, reliable, and crucial for everyday life. At the same time, we care about our planet — 
       that’s why we offer modern, energy-efficient solutions that protect your wallet and the environment.
     </p>
   </section>
@@ -205,3 +185,4 @@
   </div>
 </body>
 </html>
+
