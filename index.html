@@ -14,24 +14,25 @@
 
     body {
       font-family: 'Outfit', sans-serif;
-      background: linear-gradient(to right, #1b1c1e, #282a2d);
+      background: linear-gradient(to right, #202224, #2b2d30);
       color: #f1f1f1;
     }
 
     header {
-      background: linear-gradient(to right, #111315, #1b1c1f);
+      background: linear-gradient(to right, #1a1b1d, #2a2b2d);
       text-align: center;
       padding: 4rem 2rem;
       position: relative;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     .top-visual {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 60px;
-      flex-wrap: wrap;
+      flex-direction: row;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .logo-container {
@@ -45,17 +46,17 @@
       position: absolute;
       width: 420px;
       height: 420px;
-      background: rgba(255, 255, 255, 0.07);
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
       filter: blur(70px);
       z-index: 0;
     }
 
     .top-visual img.logo {
-      height: 280px;
+      height: 300px;
       z-index: 1;
       position: relative;
-      filter: drop-shadow(0 0 20px rgba(255,255,255,0.6));
+      filter: drop-shadow(0 0 20px rgba(0,255,170,0.6));
     }
 
     .top-visual img.profile {
@@ -64,7 +65,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #00d084;
-      box-shadow: 0 0 30px rgba(0, 255, 170, 0.4);
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
     }
 
     .gas-safe {
@@ -72,48 +73,40 @@
       bottom: 20px;
       right: 20px;
       width: 130px;
-      filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
     }
 
-    h1 {
+    h1, .intro h2, .map-section h2 {
       font-size: 2.8rem;
       margin: 2rem 0 0.5rem;
-      background: linear-gradient(145deg, #ffffff, #c0c0c0);
+      background: linear-gradient(145deg, #00ffcc, #00b894);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 1px 1px 0px #000, 2px 2px 2px rgba(0,0,0,0.4);
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+      text-shadow: 0 2px 4px rgba(0,255,170,0.6), 2px 2px 6px rgba(0,255,170,0.3);
+      filter: drop-shadow(0 2px 5px rgba(0,255,170,0.5));
     }
 
     p.subtitle {
       font-size: 1.4rem;
-      color: #ddd;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+      background: linear-gradient(145deg, #00ffcc, #00b894);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 3px rgba(0,255,170,0.5);
     }
 
     .intro {
       max-width: 900px;
       margin: 4rem auto 2rem;
       padding: 2rem;
-      background: #232428;
+      background: #222326;
       border-radius: 1rem;
-      box-shadow: 0 0 25px rgba(0, 255, 170, 0.1);
-    }
-
-    .intro h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(145deg, #ffffff, #c0c0c0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 1px 1px 0px #000, 2px 2px 2px rgba(0,0,0,0.4);
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
     }
 
     .intro p {
       font-size: 1.1rem;
       line-height: 1.7;
-      color: #e2e2e2;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+      color: #ccffee;
+      text-shadow: 0 1px 3px rgba(0,255,170,0.4);
     }
 
     .map-section {
@@ -121,20 +114,11 @@
       margin: 3rem 0;
     }
 
-    .map-section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(145deg, #ffffff, #c0c0c0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 1px 1px 0px #000, 2px 2px 2px rgba(0,0,0,0.4);
-    }
-
     .map-section img {
       width: 90%;
       max-width: 800px;
       border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0, 255, 170, 0.2);
+      box-shadow: 0 0 25px rgba(0, 255, 170, 0.15);
     }
 
     .nav-grid {
@@ -156,13 +140,11 @@
       text-decoration: none;
       font-weight: bold;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-      box-shadow: 0 4px 15px rgba(0, 255, 170, 0.2);
     }
 
     .nav-grid a:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0, 255, 170, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
     }
   </style>
 </head>
