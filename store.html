@@ -4,18 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sklep - Mateusz Dudzik Gas</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    header img {
+      max-height: 80px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+    .product {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .product img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #cc0000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #a80000;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+    }
+    footer a {
+      color: red;
+    }
+  </style>
 </head>
-<body style="background-color: #000; color: #fff; font-family: Arial, sans-serif;">
-  <header style="text-align: center; padding: 20px;">
-    <img src="/images/logo.png" alt="Logo" style="max-height: 80px;" />
+<body>
+  <header>
+    <img src="/images/logo.png" alt="Logo" />
     <h1>Sklep</h1>
     <p>Nowoczesne kotły, analizatory gazu i akcesoria</p>
   </header>
 
-  <main style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 40px;">
+  <main>
     <div class="product">
-      <img src="/images/viessmann-vitodens-100.jpg" alt="Viessmann Vitodens 100-W" />
+      <img src="https://www.viessmann.co.uk/content/dam/vi-brands/UK/Products/Vitodens/Vitodens_100-W/Vitodens-100-W-2019-Vitotronic-control.jpg.transform/viessmann-xl/image.jpg" alt="Viessmann Vitodens 100-W" />
       <h3>Viessmann Vitodens 100-W</h3>
       <p>Kocioł kondensacyjny 25kW</p>
       <strong>£1,250.00</strong><br>
@@ -23,7 +76,7 @@
     </div>
 
     <div class="product">
-      <img src="/images/vaillant-ecotec.jpg" alt="Vaillant ecoTEC Plus" />
+      <img src="https://www.vaillant.co.uk/images/products/ecoTEC-plus-2012-267055-format-flex-height@690@desktop.png" alt="Vaillant ecoTEC Plus" />
       <h3>Vaillant ecoTEC Plus</h3>
       <p>Wysokowydajny kocioł 30kW</p>
       <strong>£1,400.00</strong><br>
@@ -31,17 +84,41 @@
     </div>
 
     <div class="product">
-      <img src="/images/ideal-logic.jpg" alt="Ideal Logic Combi C30" />
+      <img src="https://idealheating.com/uploads/images/_940x529_crop_center-center_none/Logic-Max-Combi-Front.png" alt="Ideal Logic Combi C30" />
       <h3>Ideal Logic Combi C30</h3>
       <p>Ekonomiczny wybór z 7-letnią gwarancją</p>
       <strong>£999.00</strong><br>
       <button onclick="addToCart('Ideal Logic Combi C30', 999)">Dodaj do koszyka</button>
     </div>
+
+    <div class="product">
+      <img src="https://idealheating.com/uploads/images/_940x529_crop_center-center_none/vogue-max.png" alt="Ideal Vogue Max 32kW">
+      <h3>Ideal Vogue Max 32kW</h3>
+      <p>Premium boiler with 12-year warranty – ultimate efficiency</p>
+      <strong>£1,650.00</strong>
+      <button onclick="addToCart('Ideal Vogue Max 32kW', 1650)">Dodaj do koszyka</button>
+    </div>
+
+    <div class="product">
+      <img src="https://www.viessmann.co.uk/content/dam/vi-brands/UK/Products/Vitodens/Vitodens_200-W/Vitodens-200-W-B2HF-front.jpg.transform/viessmann-xl/image.jpg" alt="Viessmann Vitodens 200-W" />
+      <h3>Viessmann Vitodens 200-W</h3>
+      <p>Najwyższa wydajność i sterowanie przez internet</p>
+      <strong>£2,100.00</strong><br>
+      <button onclick="addToCart('Viessmann Vitodens 200-W', 2100)">Dodaj do koszyka</button>
+    </div>
+
+    <div class="product">
+      <img src="https://www.vaillant.co.uk/images/products/ecotec-exclusive-green-iq-8718041951-267048-format-flex-height@690@desktop.png" alt="Vaillant ecoTEC Exclusive Green iQ 835" />
+      <h3>Vaillant ecoTEC Exclusive Green iQ 835</h3>
+      <p>Topowy model z technologią Green iQ i Wi-Fi</p>
+      <strong>£2,300.00</strong><br>
+      <button onclick="addToCart('Vaillant ecoTEC Exclusive Green iQ 835', 2300)">Dodaj do koszyka</button>
+    </div>
   </main>
 
-  <footer style="text-align: center; padding: 20px; background-color: #111;">
+  <footer>
     <p>&copy; 2025 Mateusz Dudzik Gas. All rights reserved.</p>
-    <a href="/" style="color: red;">Powrót na stronę główną</a>
+    <a href="/">Powrót na stronę główną</a>
   </footer>
 
   <script>
