@@ -1,59 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me – Mateusz Dudzik</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Rubik', sans-serif;
-      background: #fff;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #202224, #2b2d30);
+      color: #f1f1f1;
+    }
+
     header {
-      background: linear-gradient(90deg, #ff3333, #cc0000);
-      color: white;
-      padding: 2rem;
+      background: linear-gradient(to right, #1a1b1d, #2a2b2d);
       text-align: center;
+      padding: 4rem 2rem 2rem;
     }
-    header img {
-      width: 100px;
+
+    header img.logo {
+      height: 260px;
+      filter: drop-shadow(0 0 20px rgba(0,255,170,0.6));
     }
-    section {
+
+    h1 {
+      font-size: 2.8rem;
+      margin-top: 1.5rem;
+      background: linear-gradient(145deg, #00ffcc, #00b894);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(0,255,170,0.6), 2px 2px 6px rgba(0,255,170,0.3);
+    }
+
+    .about-section {
       max-width: 1000px;
-      margin: auto;
+      margin: 4rem auto;
+      background: #222326;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
       padding: 2rem;
     }
-    h2 {
-      color: #cc0000;
+
+    .about-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(145deg, #00ffcc, #00b894);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .about img {
-      width: 300px;
-      border-radius: 1rem;
+
+    .about-section img.profile {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
       float: right;
       margin-left: 2rem;
+      border: 4px solid #00d084;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
     }
+
+    .about-section p,
+    .about-section li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ccffee;
+      margin-bottom: 1rem;
+      text-shadow: 0 1px 3px rgba(0,255,170,0.3);
+    }
+
+    .about-section ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-section img.gas-safe {
+      display: block;
+      margin: 2rem auto 0;
+      width: 140px;
+    }
+
     footer {
-      background: #222;
-      color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 3rem 1rem;
+      background: #1c1d1f;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    footer img {
+      width: 120px;
+      margin-top: 1rem;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="Photoroom-20241202_112653 (1).png" alt="Mateusz Dudzik logo">
+    <img src="mateusz logo 2025.png" alt="Mateusz Dudzik Logo" class="logo">
     <h1>About Me</h1>
   </header>
 
-  <section class="about">
+  <section class="about-section">
     <h2>Get to Know Me</h2>
-    <img src="20250417_133155 (1).jpg" alt="Mateusz Dudzik">
+    <img src="20250417_133155 (1).jpg" alt="Mateusz Dudzik" class="profile">
     <p>My name is Mateusz Dudzik, and I am a fully certified and experienced gas, plumbing, and heating engineer with over 10 years of hands-on experience in the industry. Based in Doncaster, I serve the entire Yorkshire area with a commitment to professionalism, efficiency, and exceptional craftsmanship.</p>
 
     <p>Over the years, I’ve had the opportunity to work on a wide variety of projects—from routine boiler servicing and emergency repairs, to full-scale installations of heating systems and underfloor heating. I specialize in working with the latest high-efficiency boilers and smart heating technologies, helping my clients reduce energy bills while maintaining comfort all year round.</p>
@@ -74,13 +130,12 @@
 
     <p>Whether you need a new boiler, regular maintenance, expert advice, or a complete heating solution tailored to your home—I'm here to help with a smile, skill, and a dedication you can count on.</p>
 
-    <img src="gas-safe-logo.png" alt="Gas Safe Register">
+    <img src="gas-safe-logo.png" alt="Gas Safe Register" class="gas-safe">
   </section>
 
   <footer>
     <p>&copy; 2025 Mateusz Dudzik | Doncaster</p>
-    <img src="gas-safe-logo.png" alt="Gas Safe Register">
+    <img src="gas-safe-logo.png" alt="Gas Safe Logo">
   </footer>
 </body>
 </html>
-
