@@ -2,156 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boiler Shop – Mateusz Dudzik</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sklep - Mateusz Dudzik Gas</title>
   <style>
     body {
-      font-family: 'Rubik', sans-serif;
-      background: #f9f9f9;
-      color: #222;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
     header {
-      background: linear-gradient(90deg, #007bff, #0056b3);
-      color: white;
-      padding: 2rem;
+      text-align: center;
+      padding: 20px;
+    }
+    header img {
+      max-height: 80px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+    .product {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
       text-align: center;
     }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h2 {
-      color: #0056b3;
-    }
-    .boiler {
-      border: 1px solid #ddd;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    .boiler h3 {
-      margin-top: 0;
-    }
-    .boiler-img {
-      width: 100%;
-      max-width: 300px;
-      margin: 1rem 0;
-      border-radius: 10px;
-    }
-    .price {
-      color: #d80000;
-      font-weight: bold;
+    .product img {
+      max-width: 100%;
+      height: 160px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      border-radius: 8px;
     }
     button {
-      background: #007bff;
+      background-color: #cc0000;
       color: white;
-      padding: 0.6rem 1.2rem;
+      padding: 10px 20px;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
+      margin-top: 10px;
     }
-    .cart {
-      margin-top: 3rem;
-      padding: 2rem;
-      border-top: 2px solid #ccc;
+    button:hover {
+      background-color: #a80000;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+    }
+    footer a {
+      color: red;
+      text-decoration: none;
     }
   </style>
 </head>
-
 <body>
   <header>
-    <h1>Boiler Shop – Mateusz Dudzik</h1>
+    <img src="/images/logo.png" alt="Logo" />
+    <h1>Sklep</h1>
+    <p>Nowoczesne kotły, analizatory gazu i akcesoria</p>
   </header>
 
-  <section>
-    <h2>Viessmann</h2>
-    <div class="boiler">
-      <h3>Viessmann Vitodens 100-W 30kW</h3>
-      <img class="boiler-img" src="https://www.viessmann.co.uk/images/products/gas-boilers/vitodens-100-w/viessmann-vitodens-100-w-new-2021.jpg" alt="Vitodens 100-W">
-      <p>High-efficiency condensing boiler with Inox-Radial heat exchanger...</p>
-      <p><strong>Specs:</strong> 30kW, ERP A, WiFi remote control, 5-year warranty (extendable to 10).</p>
-      <p class="price">Price: £2,200</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="boiler">
-      <h3>Viessmann Vitodens 050-W 25kW</h3>
-      <img class="boiler-img" src="https://www.viessmann.co.uk/images/products/gas-boilers/vitodens-050-w/vitodens-050w.jpg" alt="Vitodens 050-W">
-      <p>Compact and efficient. Great for smaller homes...</p>
-      <p><strong>Specs:</strong> 25kW, Inox-Radial, WiFi ready, 7-year warranty.</p>
-      <p class="price">Price: £2,000</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="boiler">
-      <h3>Viessmann Vitodens 111-W 35kW</h3>
-      <img class="boiler-img" src="https://www.viessmann.co.uk/images/products/gas-boilers/vitodens-111-w/vitodens-111w.jpg" alt="Vitodens 111-W">
-      <p>Integrated cylinder, ideal for larger families...</p>
-      <p><strong>Specs:</strong> 35kW, 46-liter cylinder, ERP A+, WiFi, 10-year warranty.</p>
-      <p class="price">Price: £2,750</p>
-      <button>Add to Cart</button>
+  <main>
+    <!-- Viessmann Vitodens 100-W -->
+    <div class="product">
+      <img src="/images/shop/Viessmann Vitodens 100-W.jpg" alt="Viessmann Vitodens 100-W" />
+      <img src="/images/shop/Viessmann Vitodens 100-W 1.jpg" alt="Viessmann Vitodens 100-W inside" />
+      <h3>Viessmann Vitodens 100-W</h3>
+      <p>Kocioł kondensacyjny 25kW</p>
+      <strong>£1,250.00</strong><br>
+      <button onclick="addToCart('Viessmann Vitodens 100-W', 1250)">Dodaj do koszyka</button>
     </div>
 
-    <h2>Ideal</h2>
-    <div class="boiler">
-      <h3>Ideal Logic+ C30 Combi</h3>
-      <img class="boiler-img" src="https://www.idealspec.co.uk/media/catalog/product/cache/5/image/1200x/040ec09b1e35df139433887a97daa66f/2/2/221136-logic-plus-c30.png" alt="Ideal Logic+ C30">
-      <p>Compact and reliable. Includes: flue, magnetic filter...</p>
-      <p><strong>Specs:</strong> 30kW, ERP A, low energy pump, quiet operation.</p>
-      <p class="price">Price: £1,950</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="boiler">
-      <h3>Ideal Vogue Max C32</h3>
-      <img class="boiler-img" src="https://idealheating.com/uploads/media/6362e1477be20/vogue-max-combi.webp" alt="Ideal Vogue Max C32">
-      <p>Premium model with a 10-year warranty...</p>
-      <p><strong>Specs:</strong> 32kW, stainless steel heat exchanger, ERP A+, quiet operation.</p>
-      <p class="price">Price: £2,300</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="boiler">
-      <h3>Ideal Logic Max 24kW</h3>
-      <img class="boiler-img" src="https://idealheating.com/uploads/media/635fffe7b5dd5/logic-max-combi.webp" alt="Ideal Logic Max 24kW">
-      <p>Perfect for small apartments. Compact and easy to install...</p>
-      <p><strong>Specs:</strong> 24kW, ERP A, safety valve, 10-year warranty.</p>
-      <p class="price">Price: £1,800</p>
-      <button>Add to Cart</button>
+    <!-- Vaillant ecoTEC Plus -->
+    <div class="product">
+      <img src="/images/shop/Vaillant ecoTEC Plus.jpg" alt="Vaillant ecoTEC Plus" />
+      <img src="/images/shop/Vaillant ecoTEC Plus 1.jpg" alt="Vaillant ecoTEC Plus inside" />
+      <h3>Vaillant ecoTEC Plus</h3>
+      <p>Wysokowydajny kocioł 30kW</p>
+      <strong>£1,400.00</strong><br>
+      <button onclick="addToCart('Vaillant ecoTEC Plus', 1400)">Dodaj do koszyka</button>
     </div>
 
-    <h2>Vaillant</h2>
-    <div class="boiler">
-      <h3>Vaillant ecoTEC Plus 832</h3>
-      <img class="boiler-img" src="https://www.vaillant.co.uk/images/products/ecoTEC-plus/ecoTEC-Plus-Right-1400964-format-3-4@640@desktop.jpg" alt="ecoTEC Plus 832">
-      <p>Modern design with AquaComfort. Set includes: flue, filter...</p>
-      <p><strong>Specs:</strong> 32kW, ERP A+, 45 dB, touch interface.</p>
-      <p class="price">Price: £2,350</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="boiler">
-      <h3>Vaillant ecoTEC Exclusive Green iQ 843</h3>
-      <img class="boiler-img" src="https://www.vaillant.co.uk/images/products/ecoTEC-exclusive-green-iq/ecotec-exclusive-right-1400966-format-3-4@640@desktop.jpg" alt="ecoTEC Green iQ">
-      <p>Top-tier model with Green iQ tech...</p>
-      <p><strong>Specs:</strong> 43kW, ERP A+++, WiFi ready, 10-year warranty.</p>
-      <p class="price">Price: £2,950</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="boiler">
-      <h3>Vaillant ecoFIT Pure 825</h3>
-      <img class="boiler-img" src="https://www.vaillant.co.uk/images/products/ecoFIT-pure/ecofit-pure-right-1400965-format-3-4@640@desktop.jpg" alt="ecoFIT Pure 825">
-      <p>Economical model, compact design...</p>
-      <p><strong>Specs:</strong> 25kW, ERP A, low noise, 7-year warranty.</p>
-      <p class="price">Price: £1,750</p>
-      <button>Add to Cart</button>
+    <!-- Ideal Logic Combi C30 -->
+    <div class="product">
+      <img src="/images/shop/Ideal Logic Combi C30.jpg" alt="Ideal Logic Combi C30" />
+      <img src="/images/shop/Ideal Logic Combi C30 1.jpg" alt="Ideal Logic Combi C30 inside" />
+      <h3>Ideal Logic Combi C30</h3>
+      <p>Ekonomiczny wybór z 7-letnią gwarancją</p>
+      <strong>£999.00</strong><br>
+      <button onclick="addToCart('Ideal Logic Combi C30', 999)">Dodaj do koszyka</button>
     </div>
 
-    <div class="cart">
-      <h2>Cart</h2>
-      <p>Your products will appear here after adding to the cart. Online payments coming soon.</p>
+    <!-- Ideal Vogue Max 32kW -->
+    <div class="product">
+      <img src="/images/shop/Ideal Vogue Max 32kW.jpg" alt="Ideal Vogue Max 32kW" />
+      <img src="/images/shop/Ideal Vogue Max 32kW 1.jpg" alt="Ideal Vogue Max 32kW inside" />
+      <h3>Ideal Vogue Max 32kW</h3>
+      <p>Premium boiler with 12-year warranty – ultimate efficiency</p>
+      <strong>£1,650.00</strong>
+      <button onclick="addToCart('Ideal Vogue Max 32kW', 1650)">Dodaj do koszyka</button>
     </div>
-  </section>
+
+    <!-- Viessmann Vitodens 200-W -->
+    <div class="product">
+      <img src="/images/shop/Viessmann Vitodens 200-W.jpg" alt="Viessmann Vitodens 200-W" />
+      <img src="/images/shop/Viessmann Vitodens 200-W 1.jpg" alt="Viessmann Vitodens 200-W inside" />
+      <h3>Viessmann Vitodens 200-W</h3>
+      <p>Najwyższa wydajność i sterowanie przez internet</p>
+      <strong>£2,100.00</strong><br>
+      <button onclick="addToCart('Viessmann Vitodens 200-W', 2100)">Dodaj do koszyka</button>
+    </div>
+
+    <!-- Vaillant ecoTEC Exclusive Green iQ 835 -->
+    <div class="product">
+      <img src="/images/shop/Vaillant ecoTEC Exclusive Green iQ 835.jpg" alt="Vaillant ecoTEC Exclusive Green iQ 835" />
+      <img src="/images/shop/Vaillant ecoTEC Exclusive Green iQ 835 1.jpg" alt="Vaillant ecoTEC Exclusive Green iQ 835 inside" />
+      <h3>Vaillant ecoTEC Exclusive Green iQ 835</h3>
+      <p>Topowy model z technologią Green iQ i Wi-Fi</p>
+      <strong>£2,300.00</strong><br>
+      <button onclick="addToCart('Vaillant ecoTEC Exclusive Green iQ 835', 2300)">Dodaj do koszyka</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mateusz Dudzik Gas. All rights reserved.</p>
+    <a href="/">Powrót na stronę główną</a>
+  </footer>
+
+  <script>
+    function addToCart(product, price) {
+      let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+      cart.push({ product, price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(product + " dodano do koszyka!");
+    }
+  </script>
 </body>
 </html>
