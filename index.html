@@ -27,9 +27,10 @@
 
     .top-visual {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       flex-direction: row;
+      gap: 4rem;
       position: relative;
       max-width: 1000px;
       margin: 0 auto;
@@ -93,40 +94,12 @@
       text-shadow: 1px 1px 3px rgba(0,255,170,0.5);
     }
 
-    .intro {
-      max-width: 900px;
-      margin: 4rem auto 2rem;
-      padding: 2rem;
-      background: #222326;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
-    }
-
-    .intro p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #ccffee;
-      text-shadow: 0 1px 3px rgba(0,255,170,0.4);
-    }
-
-    .map-section {
-      text-align: center;
-      margin: 3rem 0;
-    }
-
-    .map-section img {
-      width: 90%;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0, 255, 170, 0.15);
-    }
-
     .nav-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 2rem;
       max-width: 1000px;
-      margin: 4rem auto;
+      margin: 3rem auto 2rem;
       padding: 2rem;
     }
 
@@ -146,6 +119,40 @@
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
     }
+
+    .intro {
+      max-width: 900px;
+      margin: 2rem auto 2rem;
+      padding: 2rem;
+      background: #222326;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ccffee;
+      text-shadow: 0 1px 3px rgba(0,255,170,0.4);
+      margin-bottom: 1rem;
+    }
+
+    .intro ul {
+      margin-left: 1.5rem;
+      list-style: disc;
+    }
+
+    .map-section {
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .map-section img {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 255, 170, 0.15);
+    }
   </style>
 </head>
 
@@ -163,20 +170,6 @@
     <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
   </header>
 
-  <section class="intro">
-    <h2>Why Gas is Essential on Earth</h2>
-    <p>
-      Gas plays a critical role in heating homes, powering appliances, and providing energy across industries.
-      It's efficient, reliable, and crucial for everyday life. At the same time, we care about our planet — 
-      that’s why we offer modern, energy-efficient solutions that protect your wallet and the environment.
-    </p>
-  </section>
-
-  <section class="map-section">
-    <h2>Where Natural Gas is Found</h2>
-    <img src="gas-map.jpg" alt="World Natural Gas Map">
-  </section>
-
   <div class="nav-grid">
     <a href="about.html">About Me</a>
     <a href="certs.html">Accreditations</a>
@@ -186,5 +179,31 @@
     <a href="diy.html">DIY Videos</a>
     <a href="contact.html">Contact</a>
   </div>
+
+  <section class="intro">
+    <h2>Why Gas is Essential on Earth</h2>
+    <p>
+      Gas plays a critical role in heating homes, powering appliances, and providing energy across industries.
+      It's efficient, reliable, and crucial for everyday life. At the same time, we care about our planet — 
+      that’s why we offer modern, energy-efficient solutions that protect your wallet and the environment.
+    </p>
+    <p>
+      <strong>Natural Gas Extraction:</strong> Most natural gas is extracted from deep underground reservoirs using advanced drilling and fracking techniques. It’s often found alongside oil deposits or in isolated gas fields. Major producers include countries like the USA, Russia, Iran, and Qatar.
+    </p>
+    <p>
+      <strong>Interesting Facts:</strong>
+      <ul>
+        <li>Natural gas is odorless – the smell is artificially added for safety.</li>
+        <li>It’s one of the cleanest-burning fossil fuels, emitting less CO₂ than coal or oil.</li>
+        <li>Natural gas can be used to power vehicles and generate electricity.</li>
+        <li>It’s stored as LNG (liquefied natural gas) for easy transportation across the globe.</li>
+      </ul>
+    </p>
+  </section>
+
+  <section class="map-section">
+    <h2>Where Natural Gas is Found</h2>
+    <img src="gas-map.jpg" alt="World Natural Gas Map">
+  </section>
 </body>
 </html>
