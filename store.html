@@ -21,7 +21,7 @@
     }
     main {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
       padding: 40px;
     }
@@ -33,9 +33,10 @@
     }
     .product img {
       max-width: 100%;
-      height: 180px;
+      height: 160px;
       object-fit: contain;
       margin-bottom: 10px;
+      border-radius: 8px;
     }
     button {
       background-color: #cc0000;
@@ -56,6 +57,7 @@
     }
     footer a {
       color: red;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -67,48 +69,60 @@
   </header>
 
   <main>
+    <!-- Viessmann Vitodens 100-W -->
     <div class="product">
-      <img src="https://www.viessmann.co.uk/content/dam/vi-brands/UK/Products/Vitodens/Vitodens_100-W/Vitodens-100-W-2019-Vitotronic-control.jpg.transform/viessmann-xl/image.jpg" alt="Viessmann Vitodens 100-W" />
+      <img src="/images/shop/Viessmann Vitodens 100-W.jpg" alt="Viessmann Vitodens 100-W" />
+      <img src="/images/shop/Viessmann Vitodens 100-W 1.jpg" alt="Viessmann Vitodens 100-W inside" />
       <h3>Viessmann Vitodens 100-W</h3>
       <p>Kocioł kondensacyjny 25kW</p>
       <strong>£1,250.00</strong><br>
       <button onclick="addToCart('Viessmann Vitodens 100-W', 1250)">Dodaj do koszyka</button>
     </div>
 
+    <!-- Vaillant ecoTEC Plus -->
     <div class="product">
-      <img src="https://www.vaillant.co.uk/images/products/ecoTEC-plus-2012-267055-format-flex-height@690@desktop.png" alt="Vaillant ecoTEC Plus" />
+      <img src="/images/shop/Vaillant ecoTEC Plus.jpg" alt="Vaillant ecoTEC Plus" />
+      <img src="/images/shop/Vaillant ecoTEC Plus 1.jpg" alt="Vaillant ecoTEC Plus inside" />
       <h3>Vaillant ecoTEC Plus</h3>
       <p>Wysokowydajny kocioł 30kW</p>
       <strong>£1,400.00</strong><br>
       <button onclick="addToCart('Vaillant ecoTEC Plus', 1400)">Dodaj do koszyka</button>
     </div>
 
+    <!-- Ideal Logic Combi C30 -->
     <div class="product">
-      <img src="https://idealheating.com/uploads/images/_940x529_crop_center-center_none/Logic-Max-Combi-Front.png" alt="Ideal Logic Combi C30" />
+      <img src="/images/shop/Ideal Logic Combi C30.jpg" alt="Ideal Logic Combi C30" />
+      <img src="/images/shop/Ideal Logic Combi C30 1.jpg" alt="Ideal Logic Combi C30 inside" />
       <h3>Ideal Logic Combi C30</h3>
       <p>Ekonomiczny wybór z 7-letnią gwarancją</p>
       <strong>£999.00</strong><br>
       <button onclick="addToCart('Ideal Logic Combi C30', 999)">Dodaj do koszyka</button>
     </div>
 
+    <!-- Ideal Vogue Max 32kW -->
     <div class="product">
-      <img src="https://idealheating.com/uploads/images/_940x529_crop_center-center_none/vogue-max.png" alt="Ideal Vogue Max 32kW">
+      <img src="/images/shop/Ideal Vogue Max 32kW.jpg" alt="Ideal Vogue Max 32kW" />
+      <img src="/images/shop/Ideal Vogue Max 32kW 1.jpg" alt="Ideal Vogue Max 32kW inside" />
       <h3>Ideal Vogue Max 32kW</h3>
       <p>Premium boiler with 12-year warranty – ultimate efficiency</p>
       <strong>£1,650.00</strong>
       <button onclick="addToCart('Ideal Vogue Max 32kW', 1650)">Dodaj do koszyka</button>
     </div>
 
+    <!-- Viessmann Vitodens 200-W -->
     <div class="product">
-      <img src="https://www.viessmann.co.uk/content/dam/vi-brands/UK/Products/Vitodens/Vitodens_200-W/Vitodens-200-W-B2HF-front.jpg.transform/viessmann-xl/image.jpg" alt="Viessmann Vitodens 200-W" />
+      <img src="/images/shop/Viessmann Vitodens 200-W.jpg" alt="Viessmann Vitodens 200-W" />
+      <img src="/images/shop/Viessmann Vitodens 200-W 1.jpg" alt="Viessmann Vitodens 200-W inside" />
       <h3>Viessmann Vitodens 200-W</h3>
       <p>Najwyższa wydajność i sterowanie przez internet</p>
       <strong>£2,100.00</strong><br>
       <button onclick="addToCart('Viessmann Vitodens 200-W', 2100)">Dodaj do koszyka</button>
     </div>
 
+    <!-- Vaillant ecoTEC Exclusive Green iQ 835 -->
     <div class="product">
-      <img src="https://www.vaillant.co.uk/images/products/ecotec-exclusive-green-iq-8718041951-267048-format-flex-height@690@desktop.png" alt="Vaillant ecoTEC Exclusive Green iQ 835" />
+      <img src="/images/shop/Vaillant ecoTEC Exclusive Green iQ 835.jpg" alt="Vaillant ecoTEC Exclusive Green iQ 835" />
+      <img src="/images/shop/Vaillant ecoTEC Exclusive Green iQ 835 1.jpg" alt="Vaillant ecoTEC Exclusive Green iQ 835 inside" />
       <h3>Vaillant ecoTEC Exclusive Green iQ 835</h3>
       <p>Topowy model z technologią Green iQ i Wi-Fi</p>
       <strong>£2,300.00</strong><br>
