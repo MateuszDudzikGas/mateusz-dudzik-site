@@ -3,178 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mateusz Dudzik | Gas Engineer Doncaster</title>
+  <title>Mateusz Dudzik | Gas & Heating Specialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #1a1a1a, #2c2c2c);
-      color: #fff;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .header {
-      padding: 2rem 1rem;
-      background: rgba(0, 0, 0, 0.5);
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #202224, #2b2d30);
+      color: #f1f1f1;
+    }
+
+    header {
+      background: linear-gradient(to right, #1a1b1d, #2a2b2d);
       text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
     }
 
     .top-visual {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      backdrop-filter: blur(12px);
-      max-width: 800px;
+      flex-direction: row;
+      position: relative;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 1rem;
-      gap: 3rem;
     }
 
-    .logo img {
-      width: 250px;
-      border-radius: 15px;
-      box-shadow: 0 0 30px rgba(0, 255, 150, 0.4);
+    .logo-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .profile-photo img {
-      width: 130px;
-      height: 130px;
-      object-fit: cover;
+    .logo-bg {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
-      border: 4px solid #00ffcc;
-      box-shadow: 0 0 20px #00ffcc;
+      filter: blur(70px);
+      z-index: 0;
     }
 
-    .name-title {
-      text-align: center;
-      margin-top: 1.5rem;
+    .top-visual img.logo {
+      height: 300px;
+      z-index: 1;
+      position: relative;
+      filter: drop-shadow(0 0 20px rgba(0,255,170,0.6));
     }
 
-    .name-title h1 {
-      font-size: 2.2rem;
-      color: #00ffcc;
-      margin: 0;
+    .top-visual img.profile {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00d084;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
     }
 
-    .name-title p {
-      font-size: 1.1rem;
-      color: #00ffcc;
+    .gas-safe {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 130px;
     }
 
-    .intro-section {
+    h1, .intro h2, .map-section h2 {
+      font-size: 2.8rem;
+      margin: 2rem 0 0.5rem;
+      background: linear-gradient(145deg, #00ffcc, #00b894);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(0,255,170,0.6), 2px 2px 6px rgba(0,255,170,0.3);
+      filter: drop-shadow(0 2px 5px rgba(0,255,170,0.5));
+    }
+
+    p.subtitle {
+      font-size: 1.4rem;
+      background: linear-gradient(145deg, #00ffcc, #00b894);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 3px rgba(0,255,170,0.5);
+    }
+
+    .intro {
       max-width: 900px;
-      margin: 3rem auto;
+      margin: 4rem auto 2rem;
       padding: 2rem;
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 255, 150, 0.1);
-      text-align: center;
+      background: #222326;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
     }
 
-    .intro-section h2 {
-      color: #00ff88;
-      font-size: 1.8rem;
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ccffee;
+      text-shadow: 0 1px 3px rgba(0,255,170,0.4);
     }
 
-    .intro-section p {
-      color: #e0e0e0;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .gas-map {
+    .map-section {
       text-align: center;
       margin: 3rem 0;
     }
 
-    .gas-map h2 {
-      color: #00ff88;
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
-
-    .gas-map img {
+    .map-section img {
       width: 90%;
-      max-width: 600px;
-      border-radius: 15px;
-      box-shadow: 0 0 25px rgba(0, 255, 170, 0.2);
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 255, 170, 0.15);
     }
 
-    .footer {
-      display: flex;
-      justify-content: center;
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 2rem;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 1.5rem;
-      margin-top: 4rem;
-      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 2rem;
     }
 
-    .footer a {
-      color: #00ffee;
+    .nav-grid a {
+      display: block;
+      background: linear-gradient(135deg, #00d084 0%, #007f66 100%);
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .footer a:hover {
-      color: #ffffff;
-    }
-
-    @media (max-width: 768px) {
-      .top-visual {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .logo img {
-        width: 200px;
-      }
-
-      .profile-photo img {
-        width: 110px;
-        height: 110px;
-      }
+    .nav-grid a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
     }
   </style>
 </head>
+
 <body>
-
-  <header class="header">
+  <header>
     <div class="top-visual">
-      <div class="logo">
-        <img src="logo3d.png" alt="Mateusz Dudzik Logo" />
+      <div class="logo-container">
+        <div class="logo-bg"></div>
+        <img src="mateusz logo 2025.png" alt="Mateusz Logo" class="logo">
       </div>
-      <div class="profile-photo">
-        <img src="profile.png" alt="Mateusz Dudzik" />
-      </div>
+      <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile">
     </div>
-
-    <div class="name-title">
-      <h1>Mateusz Dudzik</h1>
-      <p>Gas • Plumbing • Heating Engineer | Doncaster, UK</p>
-    </div>
+    <h1>Mateusz Dudzik</h1>
+    <p class="subtitle">Gas • Plumbing • Heating Engineer | Doncaster, UK</p>
+    <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
   </header>
 
-  <section class="intro-section">
-    <h2>The Importance of Gas on Earth</h2>
+  <section class="intro">
+    <h2>Why Gas is Essential on Earth</h2>
     <p>
-      Gas plays a critical role in heating homes, powering appliances, and providing energy across industries. It's efficient, reliable, and crucial for everyday life. At the same time, we care about our planet — that’s why we offer modern, energy-efficient solutions that protect your wallet and the environment.
+      Gas plays a critical role in heating homes, powering appliances, and providing energy across industries.
+      It's efficient, reliable, and crucial for everyday life. At the same time, we care about our planet — 
+      that’s why we offer modern, energy-efficient solutions that protect your wallet and the environment.
     </p>
   </section>
 
-  <section class="gas-map">
+  <section class="map-section">
     <h2>Where Natural Gas is Found</h2>
-    <img src="natural-gas-map.jpg" alt="World Natural Gas Map" />
+    <img src="gas-map.jpg" alt="World Natural Gas Map">
   </section>
 
-  <footer class="footer">
-    <a href="#quote">Quick Quote</a>
-    <a href="#boilers">Boiler Shop</a>
-    <a href="#videos">DIY Videos</a>
-    <a href="#contact">Contact</a>
-  </footer>
-
+  <div class="nav-grid">
+    <a href="about.html">About Me</a>
+    <a href="certs.html">Accreditations</a>
+    <a href="services.html">Pricing</a>
+    <a href="quote.html">Quick Quote</a>
+    <a href="shop.html">Boiler Shop</a>
+    <a href="diy.html">DIY Videos</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </body>
 </html>
-
