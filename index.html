@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mateusz Dudzik | Gas & Heating Specialist</title>
+  <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Mateusz Dudzik | Gas & Heating Specialist">
+  <meta property="og:description" content="Certified Gas Engineer in Doncaster. Installations, repairs, and energy-efficient heating.">
+  <meta property="og:image" content="preview.jpg">
+  <meta property="og:url" content="https://mateuszdudzikgas.com">
   <style>
     * {
       margin: 0;
@@ -16,6 +21,7 @@
       font-family: 'Outfit', sans-serif;
       background: linear-gradient(to right, #202224, #2b2d30);
       color: #f1f1f1;
+      overflow-x: hidden;
     }
 
     header {
@@ -31,9 +37,9 @@
       align-items: center;
       flex-direction: row;
       gap: 4rem;
-      position: relative;
       max-width: 1000px;
       margin: 0 auto;
+      animation: fadeInUp 1s ease-in-out;
     }
 
     .logo-container {
@@ -51,16 +57,17 @@
       border-radius: 50%;
       filter: blur(70px);
       z-index: 0;
+      animation: pulse 3s infinite ease-in-out;
     }
 
-    .top-visual img.logo {
+    img.logo {
       height: 300px;
       z-index: 1;
       position: relative;
       filter: drop-shadow(0 0 20px rgba(0,255,170,0.6));
     }
 
-    .top-visual img.profile {
+    img.profile {
       width: 200px;
       height: 200px;
       border-radius: 50%;
@@ -84,6 +91,7 @@
       -webkit-text-fill-color: transparent;
       text-shadow: 0 2px 4px rgba(0,255,170,0.6), 2px 2px 6px rgba(0,255,170,0.3);
       filter: drop-shadow(0 2px 5px rgba(0,255,170,0.5));
+      animation: fadeInDown 1s ease-in-out;
     }
 
     p.subtitle {
@@ -99,8 +107,9 @@
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 2rem;
       max-width: 1000px;
-      margin: 3rem auto 2rem;
+      margin: 3rem auto;
       padding: 2rem;
+      animation: fadeInUp 1s ease-in-out;
     }
 
     .nav-grid a {
@@ -118,15 +127,17 @@
     .nav-grid a:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
+      background-position: right center;
     }
 
     .intro {
       max-width: 900px;
-      margin: 2rem auto 2rem;
+      margin: 2rem auto;
       padding: 2rem;
       background: #222326;
       border-radius: 1rem;
       box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
+      animation: fadeIn 1s ease-in-out;
     }
 
     .intro p {
@@ -145,6 +156,7 @@
     .map-section {
       text-align: center;
       margin: 3rem 0;
+      animation: fadeIn 1s ease-in-out;
     }
 
     .map-section img {
@@ -153,11 +165,82 @@
       border-radius: 12px;
       box-shadow: 0 0 25px rgba(0, 255, 170, 0.15);
     }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .lang-switch a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      background: #00d084;
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .top-visual {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      img.logo {
+        height: 200px;
+      }
+
+      img.profile {
+        width: 150px;
+        height: 150px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 
 <body>
   <header>
+    <div class="lang-switch">
+      <a href="index_pl.html">🇵🇱 Polski</a>
+    </div>
     <div class="top-visual">
       <div class="logo-container">
         <div class="logo-bg"></div>
@@ -167,6 +250,7 @@
     </div>
     <h1>Mateusz Dudzik</h1>
     <p class="subtitle">Gas • Plumbing • Heating Engineer | Doncaster, UK</p>
+    <a href="quote.html" class="cta-btn">Get a Free Quote</a>
     <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
   </header>
 
