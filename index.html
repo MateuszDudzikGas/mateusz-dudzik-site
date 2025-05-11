@@ -83,7 +83,19 @@
       width: 130px;
     }
 
-    h1, .intro h2, .map-section h2 {
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .lang-switch a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h1 {
       font-size: 2.8rem;
       margin: 2rem 0 0.5rem;
       background: linear-gradient(145deg, #00ffcc, #00b894);
@@ -102,82 +114,6 @@
       text-shadow: 1px 1px 3px rgba(0,255,170,0.5);
     }
 
-    .nav-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 2rem;
-      animation: fadeInUp 1s ease-in-out;
-    }
-
-    .nav-grid a {
-      display: block;
-      background: linear-gradient(135deg, #00d084 0%, #007f66 100%);
-      color: #fff;
-      padding: 1.5rem;
-      text-align: center;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .nav-grid a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 255, 170, 0.3);
-      background-position: right center;
-    }
-
-    .intro {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #222326;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .intro p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #ccffee;
-      text-shadow: 0 1px 3px rgba(0,255,170,0.4);
-      margin-bottom: 1rem;
-    }
-
-    .intro ul {
-      margin-left: 1.5rem;
-      list-style: disc;
-    }
-
-    .map-section {
-      text-align: center;
-      margin: 3rem 0;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .map-section img {
-      width: 90%;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0, 255, 170, 0.15);
-    }
-
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-
-    .lang-switch a {
-      color: #00ffcc;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
     .cta-btn {
       display: inline-block;
       margin-top: 1rem;
@@ -192,46 +128,6 @@
 
     .cta-btn:hover {
       transform: scale(1.05);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.7; }
-      50% { transform: scale(1.1); opacity: 1; }
-    }
-
-    @media (max-width: 768px) {
-      .top-visual {
-        flex-direction: column;
-        gap: 2rem;
-      }
-
-      img.logo {
-        height: 200px;
-      }
-
-      img.profile {
-        width: 150px;
-        height: 150px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
     }
   </style>
 </head>
@@ -263,7 +159,6 @@
     <a href="diy.html">DIY Videos</a>
     <a href="contact.html">Contact</a>
   </div>
-
   <section class="intro">
     <h2>Why Gas is Essential on Earth</h2>
     <p>
@@ -289,5 +184,174 @@
     <h2>Where Natural Gas is Found</h2>
     <img src="gas-map.jpg" alt="World Natural Gas Map">
   </section>
+
+  <section class="intro" id="md-tools">
+    <h2>MD Tools – Professional Installation Tools</h2>
+    <p>Shop high-quality, installer-approved gas & plumbing tools. Fast UK dropshipping delivery and PayPal payments. Tools branded with MD logo – designed for professionals.</p>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <img src="tools/stillson.jpg" alt="Stillson Wrench 14">
+        <h3>Stillson Wrench 14”</h3>
+        <p>Durable pipe wrench for heavy-duty jobs.</p>
+        <span>£19.99</span>
+        <button onclick="addToCart('Stillson Wrench 14”', 19.99)">Add to Cart</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/socket-set.jpg" alt="Socket Set 46pcs">
+        <h3>Socket Set 46pcs</h3>
+        <p>Versatile chrome-vanadium set with carry case.</p>
+        <span>£24.99</span>
+        <button onclick="addToCart('Socket Set 46pcs', 24.99)">Add to Cart</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/bender.jpg" alt="Copper Pipe Bender">
+        <h3>Copper Pipe Bender</h3>
+        <p>Compact tool for 15mm & 22mm copper pipes.</p>
+        <span>£29.99</span>
+        <button onclick="addToCart('Copper Pipe Bender', 29.99)">Add to Cart</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/gas-detector.jpg" alt="Gas Leak Detector">
+        <h3>Gas Leak Detector</h3>
+        <p>Handheld sensor with audible & visual alert.</p>
+        <span>£34.99</span>
+        <button onclick="addToCart('Gas Leak Detector', 34.99)">Add to Cart</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/diamond-disc.jpg" alt="Diamond Cutting Disc">
+        <h3>Diamond Cutting Disc</h3>
+        <p>Ideal for tiles, ceramics and stone – 115mm.</p>
+        <span>£9.99</span>
+        <button onclick="addToCart('Diamond Cutting Disc', 9.99)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  <div class="cart-panel" id="cart">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: £<span id="cart-total">0.00</span></p>
+    <button id="checkout-btn">Checkout (PayPal)</button>
+    <!-- PayPal integration placeholder -->
+  </div>
+
+  <script>
+    let cart = [];
+
+    function addToCart(name, price) {
+      const item = cart.find(i => i.name === name);
+      if (item) {
+        item.qty++;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartItems = document.getElementById('cart-items');
+      const total = document.getElementById('cart-total');
+      cartItems.innerHTML = '';
+      let sum = 0;
+      cart.forEach(item => {
+        sum += item.price * item.qty;
+        const li = document.createElement('li');
+        li.textContent = `${item.name} x${item.qty} - £${(item.price * item.qty).toFixed(2)}`;
+        cartItems.appendChild(li);
+      });
+      total.textContent = sum.toFixed(2);
+    }
+
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+      alert('Redirecting to PayPal… (Integration coming soon)');
+    });
+  </script>
+
+  <style>
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .tool-card {
+      background: #2a2b2d;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,255,170,0.1);
+    }
+
+    .tool-card img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tool-card h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .tool-card span {
+      display: block;
+      margin: 0.5rem 0;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    .tool-card button {
+      background: #00d084;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .tool-card button:hover {
+      transform: scale(1.05);
+    }
+
+    .cart-panel {
+      background: #1e1f21;
+      padding: 1rem;
+      border-radius: 1rem;
+      max-width: 400px;
+      margin: 2rem auto;
+      box-shadow: 0 0 15px rgba(0,255,170,0.15);
+    }
+
+    .cart-panel h3 {
+      margin-bottom: 1rem;
+    }
+
+    .cart-panel ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .cart-panel ul li {
+      padding: 0.25rem 0;
+    }
+
+    #checkout-btn {
+      background: #00d084;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+  <footer style="margin-top: 4rem; background: #111213; padding: 2rem; text-align: center; color: #ccc; font-size: 0.95rem;">
+    <p><strong>Secure Shopping Guarantee:</strong> Payments are processed securely via PayPal. We do not store your payment information. Your data is protected in accordance with UK GDPR standards and HMRC requirements.</p>
+    <p>This website complies with the UK Consumer Rights Act 2015 and Distance Selling Regulations.</p>
+    <p>For returns, legal info or data access requests, contact: <a href="mailto:mateuszdudzik000@gmail.com" style="color:#00ffcc;">mateuszdudzik000@gmail.com</a></p>
+    <p>© 2025 Mateusz Dudzik – MD Tools. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
