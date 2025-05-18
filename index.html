@@ -149,42 +149,38 @@
     <a href="quote.html" class="cta-btn">Get a Free Quote</a>
     <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
   </header>
-
- <div style="text-align: center; margin: 2rem 0;">
-  <a href="about.html" class="cta-btn">About Me</a>
-  <a href="certs.html" class="cta-btn">Accreditations</a>
-  <a href="services.html" class="cta-btn">Pricing</a>
-  <a href="quote.html" class="cta-btn">Quick Quote</a>
-  <a href="shop.html" class="cta-btn">Boiler Shop</a>
-  <a href="diy.html" class="cta-btn">DIY Videos</a>
-  <a href="contact.html" class="cta-btn">Contact</a>
-</div>
-
+  <div style="text-align: center; margin: 2rem 0;">
+    <a href="about.html" class="cta-btn">About Me</a>
+    <a href="certs.html" class="cta-btn">Accreditations</a>
+    <a href="services.html" class="cta-btn">Pricing</a>
+    <a href="quote.html" class="cta-btn">Quick Quote</a>
+    <a href="shop.html" class="cta-btn">Boiler Shop</a>
+    <a href="diy.html" class="cta-btn">DIY Videos</a>
+    <a href="contact.html" class="cta-btn">Contact</a>
   </div>
+
   <section class="intro">
- <section class="intro">
-  <h2 style="font-size: 2.5rem; background: linear-gradient(145deg, #00ffcc, #00b894); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; margin-bottom: 1.5rem;">
-    We Build Smarter Installations
-  </h2>
+    <h2 style="font-size: 2.5rem; background: linear-gradient(145deg, #00ffcc, #00b894); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; margin-bottom: 1.5rem;">
+      We Build Smarter Installations
+    </h2>
 
-  <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
-    Our company specializes in <strong>modern boiler installations</strong> and complete <strong>plumbing system services</strong> across Doncaster and Yorkshire.
-    With years of hands-on experience, we supply and fit energy-efficient systems — backed by our own professional equipment brand: <strong>MATID®</strong>.
-  </p>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      Our company specializes in <strong>modern boiler installations</strong> and complete <strong>plumbing system services</strong> across Doncaster and Yorkshire.
+      With years of hands-on experience, we supply and fit energy-efficient systems — backed by our own professional equipment brand: <strong>MATID®</strong>.
+    </p>
 
-  <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
-    In a world where prices are rising, we focus on giving you more value, lower costs, and peace of mind. We don’t just install — we deliver full smart solutions.
-  </p>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      In a world where prices are rising, we focus on giving you more value, lower costs, and peace of mind. We don’t just install — we deliver full smart solutions.
+    </p>
 
-  <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
-    Our online store provides <strong>reliable, professional-grade tools</strong> branded as <span style="color:#00ffcc; font-weight: bold;">MATID®</span>.
-    Every product is tested by installers 
-  </p>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      Our online store provides <strong>reliable, professional-grade tools</strong> branded as <span style="color:#00ffcc; font-weight: bold;">MATID®</span>.
+      Every product is tested by installers 
+    </p>
 
-  <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
-    <strong>Boilers, tools, fittings –</strong> everything you need to complete a professional installation, in one place. Built by pros, for pros.
-  </p>
-
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      <strong>Boilers, tools, fittings –</strong> everything you need to complete a professional installation, in one place. Built by pros, for pros.
+    </p>
   </section>
 
   <section class="intro" id="md-tools">
@@ -228,6 +224,7 @@
       </div>
     </div>
   </section>
+
   <div class="cart-panel" id="cart">
     <h3>Your Cart</h3>
     <ul id="cart-items"></ul>
@@ -267,7 +264,6 @@
       alert('Redirecting to PayPal… (Integration coming soon)');
     });
   </script>
-
   <style>
     .tool-grid {
       display: grid;
@@ -348,6 +344,7 @@
       cursor: pointer;
     }
   </style>
+
   <footer style="margin-top: 4rem; background: #111213; padding: 2rem; text-align: center; color: #ccc; font-size: 0.95rem;">
     <p><strong>Secure Shopping Guarantee:</strong> Payments are processed securely via PayPal. We do not store your payment information. Your data is protected in accordance with UK GDPR standards and HMRC requirements.</p>
     <p>This website complies with the UK Consumer Rights Act 2015 and Distance Selling Regulations.</p>
@@ -355,5 +352,26 @@
     <p>© 2025 Mateusz Dudzik – MD Tools. All rights reserved.</p>
   </footer>
 
+  <!-- Anti-spam Honeypot (to be used in contact form) -->
+  <form method="POST" action="send.php">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" placeholder="Message..." required></textarea>
+
+    <!-- Honeypot field (hidden from humans) -->
+    <input type="text" name="website" style="display:none">
+
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    // Simple spam trap validation on frontend (optional enhancement)
+    document.querySelector("form").addEventListener("submit", function(e) {
+      if (document.querySelector('input[name="website"]').value !== "") {
+        e.preventDefault(); // bot filled hidden field
+        alert("Spam detected.");
+      }
+    });
+  </script>
 </body>
 </html>
