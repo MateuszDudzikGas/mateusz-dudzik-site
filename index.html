@@ -131,7 +131,6 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <div class="lang-switch">
@@ -149,6 +148,18 @@
     <a href="quote.html" class="cta-btn">Get a Free Quote</a>
     <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
   </header>
+
+  <!-- Pasek wyszukiwania -->
+  <div style="text-align: center; padding: 1rem;">
+    <input type="search" placeholder="Search products..." style="padding: 10px; border-radius: 8px; border: none; width: 60%;">
+  </div>
+
+  <!-- Baner: Strona w budowie -->
+  <div style="background-color: #ff0000; color: white; text-align: center; padding: 10px; font-weight: bold;">
+    🛠 Strona w trakcie budowy / Website under construction
+  </div>
+
+  <!-- Nawigacja -->
   <div style="text-align: center; margin: 2rem 0;">
     <a href="about.html" class="cta-btn">About Me</a>
     <a href="certs.html" class="cta-btn">Accreditations</a>
@@ -159,30 +170,33 @@
     <a href="contact.html" class="cta-btn">Contact</a>
   </div>
 
+  <!-- Sekcja wprowadzenia -->
   <section class="intro">
     <h2 style="font-size: 2.5rem; background: linear-gradient(145deg, #00ffcc, #00b894); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; margin-bottom: 1.5rem;">
       We Build Smarter Installations
     </h2>
-
     <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
       Our company specializes in <strong>modern boiler installations</strong> and complete <strong>plumbing system services</strong> across Doncaster and Yorkshire.
       With years of hands-on experience, we supply and fit energy-efficient systems — backed by our own professional equipment brand: <strong>MATID®</strong>.
     </p>
-
     <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
       In a world where prices are rising, we focus on giving you more value, lower costs, and peace of mind. We don’t just install — we deliver full smart solutions.
     </p>
-
     <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
-      Our online store provides <strong>reliable, professional-grade tools</strong> branded as <span style="color:#00ffcc; font-weight: bold;">MATID®</span>.
-      Every product is tested by installers 
+      Our online store provides <strong>reliable, professional-grade tools</strong> branded as <span style="color:#00ffcc; font-weight: bold;">MATID®</span>. Every product is tested by installers.
     </p>
-
     <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
       <strong>Boilers, tools, fittings –</strong> everything you need to complete a professional installation, in one place. Built by pros, for pros.
     </p>
   </section>
 
+  <!-- Sekcja FITTINGÓW MD -->
+  <section id="fittings" style="padding: 2rem; background: #1a1a1a;">
+    <h2 style="color:#00ffcc;">MD Press Fittings – Gas & Water</h2>
+    <p style="color:#ccc;">High-quality copper press fittings (M profile) for gas and water installations. Professional-grade fittings branded with the MD logo.</p>
+    <p style="color:#888;"><em>Product photos coming soon.</em></p>
+  </section>
+  <!-- Sekcja PRODUKTÓW: MD Tools -->
   <section class="intro" id="md-tools">
     <h2>MD Tools – Professional Installation Tools</h2>
     <p>Shop high-quality, installer-approved gas & plumbing tools. Fast UK dropshipping delivery and PayPal payments. Tools branded with MD logo – designed for professionals.</p>
@@ -225,6 +239,7 @@
     </div>
   </section>
 
+  <!-- KOSZYK -->
   <div class="cart-panel" id="cart">
     <h3>Your Cart</h3>
     <ul id="cart-items"></ul>
@@ -232,38 +247,7 @@
     <button id="checkout-btn">Checkout (PayPal)</button>
     <!-- PayPal integration placeholder -->
   </div>
-
-  <script>
-    let cart = [];
-
-    function addToCart(name, price) {
-      const item = cart.find(i => i.name === name);
-      if (item) {
-        item.qty++;
-      } else {
-        cart.push({ name, price, qty: 1 });
-      }
-      renderCart();
-    }
-
-    function renderCart() {
-      const cartItems = document.getElementById('cart-items');
-      const total = document.getElementById('cart-total');
-      cartItems.innerHTML = '';
-      let sum = 0;
-      cart.forEach(item => {
-        sum += item.price * item.qty;
-        const li = document.createElement('li');
-        li.textContent = `${item.name} x${item.qty} - £${(item.price * item.qty).toFixed(2)}`;
-        cartItems.appendChild(li);
-      });
-      total.textContent = sum.toFixed(2);
-    }
-
-    document.getElementById('checkout-btn').addEventListener('click', () => {
-      alert('Redirecting to PayPal… (Integration coming soon)');
-    });
-  </script>
+  <!-- STYLE dla kart, koszyka itd. -->
   <style>
     .tool-grid {
       display: grid;
@@ -345,6 +329,7 @@
     }
   </style>
 
+  <!-- STOPKA -->
   <footer style="margin-top: 4rem; background: #111213; padding: 2rem; text-align: center; color: #ccc; font-size: 0.95rem;">
     <p><strong>Secure Shopping Guarantee:</strong> Payments are processed securely via PayPal. We do not store your payment information. Your data is protected in accordance with UK GDPR standards and HMRC requirements.</p>
     <p>This website complies with the UK Consumer Rights Act 2015 and Distance Selling Regulations.</p>
@@ -352,23 +337,53 @@
     <p>© 2025 Mateusz Dudzik – MD Tools. All rights reserved.</p>
   </footer>
 
-  <!-- Anti-spam Honeypot (to be used in contact form) -->
+  <!-- FORMULARZ KONTAKTOWY Z ANTY-SPAMEM -->
   <form method="POST" action="send.php">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Your email" required>
     <textarea name="message" placeholder="Message..." required></textarea>
 
-    <!-- Honeypot field (hidden from humans) -->
+    <!-- Honeypot (ukryte pole dla botów) -->
     <input type="text" name="website" style="display:none">
 
     <button type="submit">Send</button>
   </form>
-
+  <!-- SKRYPTY: Koszyk + Anty-spam -->
   <script>
-    // Simple spam trap validation on frontend (optional enhancement)
+    let cart = [];
+
+    function addToCart(name, price) {
+      const item = cart.find(i => i.name === name);
+      if (item) {
+        item.qty++;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartItems = document.getElementById('cart-items');
+      const total = document.getElementById('cart-total');
+      cartItems.innerHTML = '';
+      let sum = 0;
+      cart.forEach(item => {
+        sum += item.price * item.qty;
+        const li = document.createElement('li');
+        li.textContent = `${item.name} x${item.qty} - £${(item.price * item.qty).toFixed(2)}`;
+        cartItems.appendChild(li);
+      });
+      total.textContent = sum.toFixed(2);
+    }
+
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+      alert('Redirecting to PayPal… (Integration coming soon)');
+    });
+
+    // Anty-spam: honeypot detection
     document.querySelector("form").addEventListener("submit", function(e) {
       if (document.querySelector('input[name="website"]').value !== "") {
-        e.preventDefault(); // bot filled hidden field
+        e.preventDefault(); // spam bot wypełnił ukryte pole
         alert("Spam detected.");
       }
     });
