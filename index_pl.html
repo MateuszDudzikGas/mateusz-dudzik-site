@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mateusz Dudzik | Instalacje Gazowe i Grzewcze</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Mateusz Dudzik | Instalacje Gazowe i Grzewcze">
+  <meta property="og:description" content="Certyfikowany inżynier gazowy z Doncaster. Montaż, serwis i nowoczesne ogrzewanie.">
+  <meta property="og:image" content="preview.jpg">
+  <meta property="og:url" content="https://mateuszdudzikgas.com">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #202224, #2b2d30);
+      color: #f1f1f1;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(to right, #1a1b1d, #2a2b2d);
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    .top-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 4rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .logo-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-bg {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      filter: blur(70px);
+      z-index: 0;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    img.logo {
+      height: 300px;
+      z-index: 1;
+      position: relative;
+      filter: drop-shadow(0 0 20px rgba(0,255,170,0.6));
+    }
+
+    img.profile {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00d084;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
+    }
+
+    .gas-safe {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 130px;
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .lang-switch a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin: 2rem 0 0.5rem;
+      background: linear-gradient(145deg, #00ffcc, #00b894);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(0,255,170,0.6), 2px 2px 6px rgba(0,255,170,0.3);
+      filter: drop-shadow(0 2px 5px rgba(0,255,170,0.5));
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    p.subtitle {
+      font-size: 1.4rem;
+      background: linear-gradient(145deg, #00ffcc, #00b894);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 3px rgba(0,255,170,0.5);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      background: #00d084;
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="lang-switch">
+      <a href="index.html">🇬🇧 English</a>
+    </div>
+    <div class="top-visual">
+      <div class="logo-container">
+        <div class="logo-bg"></div>
+        <img src="mateusz logo 2025.png" alt="Logo Mateusz" class="logo">
+      </div>
+      <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile">
+    </div>
+    <h1>Mateusz Dudzik</h1>
+    <p class="subtitle">Gaz • Hydraulika • Ogrzewanie | Doncaster, UK</p>
+    <a href="quote.html" class="cta-btn">Bezpłatna wycena</a>
+    <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
+  </header>
+
+  <!-- Pasek wyszukiwania -->
+  <div style="text-align: center; padding: 1rem;">
+    <input type="search" placeholder="Szukaj produktów..." style="padding: 10px; border-radius: 8px; border: none; width: 60%;">
+  </div>
+
+  <!-- Baner: Strona w budowie -->
+  <div style="background-color: #ff0000; color: white; text-align: center; padding: 10px; font-weight: bold;">
+    🛠 Strona jest w trakcie budowy / Website under construction
+  </div>
+
+  <!-- Nawigacja -->
+  <div style="text-align: center; margin: 2rem 0;">
+    <a href="about.html" class="cta-btn">O mnie</a>
+    <a href="certs.html" class="cta-btn">Certyfikaty</a>
+    <a href="services.html" class="cta-btn">Cennik</a>
+    <a href="quote.html" class="cta-btn">Wycena</a>
+    <a href="shop.html" class="cta-btn">Sklep z kotłami</a>
+    <a href="diy.html" class="cta-btn">Poradniki DIY</a>
+    <a href="contact.html" class="cta-btn">Kontakt</a>
+  </div>
+
+  <!-- Sekcja wprowadzenia -->
+  <section class="intro">
+    <h2 style="font-size: 2.5rem; background: linear-gradient(145deg, #00ffcc, #00b894); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; margin-bottom: 1.5rem;">
+      Budujemy nowoczesne instalacje
+    </h2>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      Nasza firma specjalizuje się w <strong>montażu nowoczesnych kotłów gazowych</strong> oraz pełnych systemów <strong>instalacji hydraulicznych</strong> w Doncaster i całym Yorkshire.
+    </p>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      Dzięki wieloletniemu doświadczeniu dostarczamy rozwiązania energooszczędne, wsparte naszymi własnymi narzędziami pod marką <strong>MATID®</strong>.
+    </p>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      W świecie rosnących kosztów stawiamy na jakość, oszczędność i profesjonalne doradztwo. Oferujemy kompleksowe podejście do instalacji.
+    </p>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      Nasz sklep online oferuje <strong>profesjonalne narzędzia instalacyjne</strong> z logo <span style="color:#00ffcc; font-weight: bold;">MATID®</span>, testowane przez instalatorów.
+    </p>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      <strong>Kotły, narzędzia, złączki –</strong> wszystko, czego potrzebujesz do fachowego montażu.
+    </p>
+  </section>
+
+  <!-- Sekcja FITTINGÓW MD -->
+  <section id="fittings" style="padding: 2rem; background: #1a1a1a;">
+    <h2 style="color:#00ffcc;">Złączki zaciskowe MD – Gaz i Woda</h2>
+    <p style="color:#ccc;">Wysokiej jakości miedziane złączki zaciskowe (profil M) do instalacji gazowych i wodnych. Marka MD dla profesjonalistów.</p>
+    <p style="color:#888;"><em>Zdjęcia produktów dostępne wkrótce.</em></p>
+  </section>
+  <!-- Sekcja PRODUKTÓW: Narzędzia MD -->
+  <section class="intro" id="md-tools">
+    <h2>Narzędzia MD – Profesjonalne wyposażenie instalatora</h2>
+    <p>Kup wysokiej jakości, sprawdzone przez instalatorów narzędzia do gazu i hydrauliki. Szybka dostawa z UK. Narzędzia sygnowane logo MD – stworzone z myślą o fachowcach.</p>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <img src="tools/stillson.jpg" alt="Klucz Stillson 14”">
+        <h3>Klucz Stillson 14”</h3>
+        <p>Solidny klucz do ciężkich prac instalacyjnych.</p>
+        <span>£19.99</span>
+        <button onclick="addToCart('Klucz Stillson 14”', 19.99)">Dodaj do koszyka</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/socket-set.jpg" alt="Zestaw nasadek 46 szt.">
+        <h3>Zestaw nasadek 46 szt.</h3>
+        <p>Uniwersalny zestaw z walizką. Stal chromowo-wanadowa.</p>
+        <span>£24.99</span>
+        <button onclick="addToCart('Zestaw nasadek 46 szt.', 24.99)">Dodaj do koszyka</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/bender.jpg" alt="Giętarka do rur miedzianych">
+        <h3>Giętarka do rur miedzianych</h3>
+        <p>Kompaktowa giętarka do rur 15mm i 22mm.</p>
+        <span>£29.99</span>
+        <button onclick="addToCart('Giętarka do rur miedzianych', 29.99)">Dodaj do koszyka</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/gas-detector.jpg" alt="Detektor gazu">
+        <h3>Detektor gazu</h3>
+        <p>Ręczny detektor z sygnałem dźwiękowym i wizualnym.</p>
+        <span>£34.99</span>
+        <button onclick="addToCart('Detektor gazu', 34.99)">Dodaj do koszyka</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/diamond-disc.jpg" alt="Tarcza diamentowa 115mm">
+        <h3>Tarcza diamentowa 115mm</h3>
+        <p>Do cięcia glazury, ceramiki i kamienia.</p>
+        <span>£9.99</span>
+        <button onclick="addToCart('Tarcza diamentowa 115mm', 9.99)">Dodaj do koszyka</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- KOSZYK -->
+  <div class="cart-panel" id="cart">
+    <h3>Twój koszyk</h3>
+    <ul id="cart-items"></ul>
+    <p>Suma: £<span id="cart-total">0.00</span></p>
+    <button id="checkout-btn">Do płatności (PayPal)</button>
+    <!-- Integracja PayPal – wkrótce -->
+  </div>
+  <!-- STYLE dla produktów, koszyka itd. -->
+  <style>
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .tool-card {
+      background: #2a2b2d;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,255,170,0.1);
+    }
+
+    .tool-card img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tool-card h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .tool-card span {
+      display: block;
+      margin: 0.5rem 0;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    .tool-card button {
+      background: #00d084;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .tool-card button:hover {
+      transform: scale(1.05);
+    }
+
+    .cart-panel {
+      background: #1e1f21;
+      padding: 1rem;
+      border-radius: 1rem;
+      max-width: 400px;
+      margin: 2rem auto;
+      box-shadow: 0 0 15px rgba(0,255,170,0.15);
+    }
+
+    .cart-panel h3 {
+      margin-bottom: 1rem;
+    }
+
+    .cart-panel ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .cart-panel ul li {
+      padding: 0.25rem 0;
+    }
+
+    #checkout-btn {
+      background: #00d084;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- STOPKA -->
+  <footer style="margin-top: 4rem; background: #111213; padding: 2rem; text-align: center; color: #ccc; font-size: 0.95rem;">
+    <p><strong>Gwarancja bezpiecznych zakupów:</strong> Płatności przetwarzane są bezpiecznie przez PayPal. Nie przechowujemy Twoich danych płatniczych. Dane chronione zgodnie z RODO i wymogami HMRC.</p>
+    <p>Strona zgodna z brytyjską ustawą o prawach konsumenta (Consumer Rights Act 2015) i przepisami sprzedaży na odległość.</p>
+    <p>W sprawach zwrotów lub dostępu do danych napisz na: <a href="mailto:mateuszdudzik000@gmail.com" style="color:#00ffcc;">mateuszdudzik000@gmail.com</a></p>
+    <p>© 2025 Mateusz Dudzik – MD Tools. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- FORMULARZ KONTAKTOWY -->
+  <form method="POST" action="send.php">
+    <input type="text" name="name" placeholder="Twoje imię" required>
+    <input type="email" name="email" placeholder="Twój e-mail" required>
+    <textarea name="message" placeholder="Wiadomość..." required></textarea>
+
+    <!-- Ukryte pole honeypot (anty-spam) -->
+    <input type="text" name="website" style="display:none">
+
+    <button type="submit">Wyślij</button>
+  </form>
+  <!-- SKRYPTY: Koszyk + Anty-spam -->
+  <script>
+    let cart = [];
+
+    function addToCart(name, price) {
+      const item = cart.find(i => i.name === name);
+      if (item) {
+        item.qty++;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartItems = document.getElementById('cart-items');
+      const total = document.getElementById('cart-total');
+      cartItems.innerHTML = '';
+      let sum = 0;
+      cart.forEach(item => {
+        sum += item.price * item.qty;
+        const li = document.createElement('li');
+        li.textContent = `${item.name} x${item.qty} - £${(item.price * item.qty).toFixed(2)}`;
+        cartItems.appendChild(li);
+      });
+      total.textContent = sum.toFixed(2);
+    }
+
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+      alert('Przekierowanie do PayPal... (Integracja w przygotowaniu)');
+    });
+
+    // Anty-spam: sprawdzenie ukrytego pola
+    document.querySelector("form").addEventListener("submit", function(e) {
+      if (document.querySelector('input[name="website"]').value !== "") {
+        e.preventDefault();
+        alert("Wykryto spam.");
+      }
+    });
+  </script>
+</body>
+</html>
