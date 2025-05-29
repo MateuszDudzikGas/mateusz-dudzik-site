@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MD Fittings | Press Solutions for Gas & Water</title>
+  <title>Mateusz Dudzik | Gas & Heating Specialist</title>
   <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <meta property="og:title" content="MD Fittings | Press Solutions for Gas & Water">
-  <meta property="og:description" content="Certified WRAS copper press fittings (M profile) for professional gas and water installations.">
+  <meta property="og:title" content="Mateusz Dudzik | Gas & Heating Specialist">
+  <meta property="og:description" content="Certified Gas Engineer in Doncaster. Installations, repairs, and energy-efficient heating.">
   <meta property="og:image" content="preview.jpg">
   <meta property="og:url" content="https://mateuszdudzikgas.com">
   <style>
@@ -19,15 +19,15 @@
 
     body {
       font-family: 'Outfit', sans-serif;
-      background: linear-gradient(to right, #161616, #1e1e1e);
+      background: linear-gradient(to right, #202224, #2b2d30);
       color: #f1f1f1;
       overflow-x: hidden;
     }
 
     header {
-      background: linear-gradient(to right, #111, #1c1c1c);
+      background: linear-gradient(to right, #1a1b1d, #2a2b2d);
       text-align: center;
-      padding: 4rem 2rem 2rem;
+      padding: 4rem 2rem;
       position: relative;
     }
 
@@ -36,7 +36,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: row;
-      gap: 3rem;
+      gap: 4rem;
       max-width: 1000px;
       margin: 0 auto;
       animation: fadeInUp 1s ease-in-out;
@@ -51,20 +51,36 @@
 
     .logo-bg {
       position: absolute;
-      width: 400px;
-      height: 400px;
-      background: rgba(255, 0, 0, 0.07);
+      width: 420px;
+      height: 420px;
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
-      filter: blur(60px);
+      filter: blur(70px);
       z-index: 0;
       animation: pulse 3s infinite ease-in-out;
     }
 
     img.logo {
-      height: 280px;
+      height: 300px;
       z-index: 1;
       position: relative;
-      filter: drop-shadow(0 0 20px rgba(255, 80, 80, 0.6));
+      filter: drop-shadow(0 0 20px rgba(0,255,170,0.6));
+    }
+
+    img.profile {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00d084;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
+    }
+
+    .gas-safe {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 130px;
     }
 
     .lang-switch {
@@ -74,38 +90,44 @@
     }
 
     .lang-switch a {
-      color: #ff4444;
+      color: #00ffcc;
       text-decoration: none;
       font-weight: bold;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin: 1.5rem 0 0.5rem;
-      background: linear-gradient(145deg, #ff4d4d, #ff2222);
+      font-size: 2.8rem;
+      margin: 2rem 0 0.5rem;
+      background: linear-gradient(145deg, #00ffcc, #00b894);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 2px 4px rgba(255, 50, 50, 0.6);
+      text-shadow: 0 2px 4px rgba(0,255,170,0.6), 2px 2px 6px rgba(0,255,170,0.3);
+      filter: drop-shadow(0 2px 5px rgba(0,255,170,0.5));
+      animation: fadeInDown 1s ease-in-out;
     }
 
     p.subtitle {
-      font-size: 1.3rem;
-      color: #ccc;
+      font-size: 1.4rem;
+      background: linear-gradient(145deg, #00ffcc, #00b894);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 3px rgba(0,255,170,0.5);
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.7; }
-      50% { transform: scale(1.1); opacity: 1; }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      background: #00d084;
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
     }
 
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInDown {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .cta-btn:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -117,99 +139,215 @@
     <div class="top-visual">
       <div class="logo-container">
         <div class="logo-bg"></div>
-        <img src="mateusz logo 2025.png" alt="MD Logo" class="logo">
+        <img src="mateusz logo 2025.png" alt="Mateusz Logo" class="logo">
       </div>
+      <img src="mateusz.jpg.jpg" alt="Mateusz Dudzik" class="profile">
     </div>
-    <h1>MD Press Fittings</h1>
-    <p class="subtitle">Certified M-Profile Copper Press Solutions for Gas & Water</p>
+    <h1>Mateusz Dudzik</h1>
+    <p class="subtitle">Gas • Plumbing • Heating Engineer | Doncaster, UK</p>
+    <a href="quote.html" class="cta-btn">Get a Free Quote</a>
+    <img src="gas-safe-logo.png" alt="Gas Safe" class="gas-safe">
   </header>
-  <!-- Sekcja startowa z fittingami MD -->
-  <section style="background: #1a1a1a; padding: 3rem 2rem; text-align: center; animation: fadeInDown 1s ease-in-out;">
-    <h2 style="font-size: 2.2rem; color: #ff4d4d; margin-bottom: 1rem;">
-      🔧 Discover the New Generation of Press Fittings
-    </h2>
-    <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #ccc;">
-      Our MD copper press fittings are engineered for maximum durability and speed. Fully certified with <strong>WRAS, CE, DVGW</strong> and compliant with UK gas & water regulations. Designed for professionals.
-    </p>
-    <div style="margin-top: 2rem;">
-      <a href="#fittings-section" style="padding: 1rem 2rem; background: #ff4444; color: #fff; font-weight: bold; text-decoration: none; border-radius: 10px; transition: background 0.3s;">
-        Browse Fittings Now
-      </a>
-    </div>
-  </section>
 
   <!-- Pasek wyszukiwania -->
-  <div style="text-align: center; padding: 1.5rem 2rem;">
-    <input type="search" placeholder="Search fittings..." style="padding: 12px; border-radius: 10px; border: none; width: 60%; font-size: 1rem;">
+  <div style="text-align: center; padding: 1rem;">
+    <input type="search" placeholder="Search products..." style="padding: 10px; border-radius: 8px; border: none; width: 60%;">
   </div>
 
-  <!-- Informacja o budowie strony -->
+  <!-- Baner: Strona w budowie -->
   <div style="background-color: #ff0000; color: white; text-align: center; padding: 10px; font-weight: bold;">
-    🛠 Website under construction – full range of MD fittings launching soon!
+    🛠 Strona w trakcie budowy / Website under construction
   </div>
-  <!-- Sekcja DLACZEGO MD -->
-  <section style="padding: 3rem 2rem; background: #111;">
-    <h2 style="text-align: center; font-size: 2rem; color: #00ffcc;">Why Choose MD Press Fittings?</h2>
-    <div style="max-width: 1000px; margin: 2rem auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: center;">
-      <div>
-        <h3 style="color:#ff4d4d;">WRAS Certified</h3>
-        <p style="color: #ccc;">Fully approved for UK water systems. Leak-tested and safe under pressure.</p>
-      </div>
-      <div>
-        <h3 style="color:#ff4d4d;">CE & DVGW Approved</h3>
-        <p style="color: #ccc;">European certification for heating and gas systems. M-profile compatible.</p>
-      </div>
-      <div>
-        <h3 style="color:#ff4d4d;">OEM Branding</h3>
-        <p style="color: #ccc;">Each fitting carries the MD logo – tested by UK engineers and trusted daily.</p>
-      </div>
-    </div>
+
+  <!-- Nawigacja -->
+  <div style="text-align: center; margin: 2rem 0;">
+    <a href="about.html" class="cta-btn">About Me</a>
+    <a href="certs.html" class="cta-btn">Accreditations</a>
+    <a href="services.html" class="cta-btn">Pricing</a>
+    <a href="quote.html" class="cta-btn">Quick Quote</a>
+    <a href="shop.html" class="cta-btn">Boiler Shop</a>
+    <a href="diy.html" class="cta-btn">DIY Videos</a>
+    <a href="contact.html" class="cta-btn">Contact</a>
+  </div>
+
+  <!-- Sekcja wprowadzenia -->
+  <section class="intro">
+    <h2 style="font-size: 2.5rem; background: linear-gradient(145deg, #00ffcc, #00b894); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; margin-bottom: 1.5rem;">
+      We Build Smarter Installations
+    </h2>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      Our company specializes in <strong>modern boiler installations</strong> and complete <strong>plumbing system services</strong> across Doncaster and Yorkshire.
+      With years of hands-on experience, we supply and fit energy-efficient systems — backed by our own professional equipment brand: <strong>MATID®</strong>.
+    </p>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      In a world where prices are rising, we focus on giving you more value, lower costs, and peace of mind. We don’t just install — we deliver full smart solutions.
+    </p>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      Our online store provides <strong>reliable, professional-grade tools</strong> branded as <span style="color:#00ffcc; font-weight: bold;">MATID®</span>. Every product is tested by installers.
+    </p>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #ccffee;">
+      <strong>Boilers, tools, fittings –</strong> everything you need to complete a professional installation, in one place. Built by pros, for pros.
+    </p>
   </section>
 
-  <!-- Sekcja wyboru kategorii GAZ / WODA -->
-  <section id="fittings-section" style="background: #1e1e1e; padding: 3rem 2rem; text-align: center;">
-    <h2 style="font-size: 2rem; color: #00ffcc; margin-bottom: 1.5rem;">Browse Fitting Categories</h2>
-    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-      <a href="fitingi-gaz.html" style="background: #ff4444; padding: 1rem 2rem; border-radius: 10px; color: white; text-decoration: none; font-weight: bold;">Fittings for Gas 🔥</a>
-      <a href="fitingi-woda.html" style="background: #00b894; padding: 1rem 2rem; border-radius: 10px; color: white; text-decoration: none; font-weight: bold;">Fittings for Water 💧</a>
-    </div>
+  <!-- Sekcja FITTINGÓW MD -->
+  <section id="fittings" style="padding: 2rem; background: #1a1a1a;">
+    <h2 style="color:#00ffcc;">MD Press Fittings – Gas & Water</h2>
+    <p style="color:#ccc;">High-quality copper press fittings (M profile) for gas and water installations. Professional-grade fittings branded with the MD logo.</p>
+    <p style="color:#888;"><em>Product photos coming soon.</em></p>
   </section>
-  <!-- Placeholder produktów MD -->
-  <section style="padding: 3rem 2rem; background: #151515;">
-    <h2 style="color: #ff4d4d; text-align: center; font-size: 2rem;">Coming Soon: Full Product List</h2>
-    <p style="text-align: center; max-width: 800px; margin: 1rem auto; color: #ccc;">
-      Our online shop is being updated with all sizes and types of MD fittings – including couplings, elbows, tees, reducers, and end caps. Each fitting will be selectable by diameter.
-    </p>
-    <p style="text-align: center; color: #888;">Stay tuned! 🚧</p>
+  <!-- Sekcja PRODUKTÓW: MD Tools -->
+  <section class="intro" id="md-tools">
+    <h2>MD Tools – Professional Installation Tools</h2>
+    <p>Shop high-quality, installer-approved gas & plumbing tools. Fast UK dropshipping delivery and PayPal payments. Tools branded with MD logo – designed for professionals.</p>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <img src="tools/stillson.jpg" alt="Stillson Wrench 14">
+        <h3>Stillson Wrench 14”</h3>
+        <p>Durable pipe wrench for heavy-duty jobs.</p>
+        <span>£19.99</span>
+        <button onclick="addToCart('Stillson Wrench 14”', 19.99)">Add to Cart</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/socket-set.jpg" alt="Socket Set 46pcs">
+        <h3>Socket Set 46pcs</h3>
+        <p>Versatile chrome-vanadium set with carry case.</p>
+        <span>£24.99</span>
+        <button onclick="addToCart('Socket Set 46pcs', 24.99)">Add to Cart</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/bender.jpg" alt="Copper Pipe Bender">
+        <h3>Copper Pipe Bender</h3>
+        <p>Compact tool for 15mm & 22mm copper pipes.</p>
+        <span>£29.99</span>
+        <button onclick="addToCart('Copper Pipe Bender', 29.99)">Add to Cart</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/gas-detector.jpg" alt="Gas Leak Detector">
+        <h3>Gas Leak Detector</h3>
+        <p>Handheld sensor with audible & visual alert.</p>
+        <span>£34.99</span>
+        <button onclick="addToCart('Gas Leak Detector', 34.99)">Add to Cart</button>
+      </div>
+      <div class="tool-card">
+        <img src="tools/diamond-disc.jpg" alt="Diamond Cutting Disc">
+        <h3>Diamond Cutting Disc</h3>
+        <p>Ideal for tiles, ceramics and stone – 115mm.</p>
+        <span>£9.99</span>
+        <button onclick="addToCart('Diamond Cutting Disc', 9.99)">Add to Cart</button>
+      </div>
+    </div>
   </section>
 
   <!-- KOSZYK -->
-  <div class="cart-panel" id="cart" style="margin: 3rem auto; max-width: 400px; background: #1e1e1e; padding: 1.5rem; border-radius: 1rem; text-align: center;">
-    <h3 style="color: #00ffcc; margin-bottom: 1rem;">🛒 Your Cart</h3>
-    <ul id="cart-items" style="list-style: none; padding: 0; color: #ccc;"></ul>
-    <p style="margin: 1rem 0; font-weight: bold; color: #fff;">Total: £<span id="cart-total">0.00</span></p>
-    <button id="checkout-btn" style="background: #00d084; border: none; padding: 0.75rem 1.5rem; font-weight: bold; border-radius: 0.5rem; cursor: pointer;">Checkout (PayPal)</button>
+  <div class="cart-panel" id="cart">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: £<span id="cart-total">0.00</span></p>
+    <button id="checkout-btn">Checkout (PayPal)</button>
+    <!-- PayPal integration placeholder -->
   </div>
+  <!-- STYLE dla kart, koszyka itd. -->
+  <style>
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .tool-card {
+      background: #2a2b2d;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,255,170,0.1);
+    }
+
+    .tool-card img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tool-card h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .tool-card span {
+      display: block;
+      margin: 0.5rem 0;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    .tool-card button {
+      background: #00d084;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .tool-card button:hover {
+      transform: scale(1.05);
+    }
+
+    .cart-panel {
+      background: #1e1f21;
+      padding: 1rem;
+      border-radius: 1rem;
+      max-width: 400px;
+      margin: 2rem auto;
+      box-shadow: 0 0 15px rgba(0,255,170,0.15);
+    }
+
+    .cart-panel h3 {
+      margin-bottom: 1rem;
+    }
+
+    .cart-panel ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .cart-panel ul li {
+      padding: 0.25rem 0;
+    }
+
+    #checkout-btn {
+      background: #00d084;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+
   <!-- STOPKA -->
   <footer style="margin-top: 4rem; background: #111213; padding: 2rem; text-align: center; color: #ccc; font-size: 0.95rem;">
-    <p><strong>Secure Shopping Guarantee:</strong> Payments processed via PayPal. No card data stored. Data protected under UK GDPR & Distance Selling Regulations.</p>
-    <p>Contact: <a href="mailto:mateuszdudzik000@gmail.com" style="color:#00ffcc;">mateuszdudzik000@gmail.com</a></p>
-    <p>© 2025 Mateusz Dudzik – MD Fittings. All rights reserved.</p>
+    <p><strong>Secure Shopping Guarantee:</strong> Payments are processed securely via PayPal. We do not store your payment information. Your data is protected in accordance with UK GDPR standards and HMRC requirements.</p>
+    <p>This website complies with the UK Consumer Rights Act 2015 and Distance Selling Regulations.</p>
+    <p>For returns, legal info or data access requests, contact: <a href="mailto:mateuszdudzik000@gmail.com" style="color:#00ffcc;">mateuszdudzik000@gmail.com</a></p>
+    <p>© 2025 Mateusz Dudzik – MD Tools. All rights reserved.</p>
   </footer>
 
-  <!-- FORMULARZ KONTAKTOWY -->
-  <form method="POST" action="send.php" style="padding: 2rem; max-width: 600px; margin: 2rem auto; background: #1a1a1a; border-radius: 1rem;">
-    <h3 style="color: #00ffcc;">Contact Us</h3>
-    <input type="text" name="name" placeholder="Your name" required style="width: 100%; padding: 10px; margin-top: 1rem; border-radius: 8px; border: none;">
-    <input type="email" name="email" placeholder="Your email" required style="width: 100%; padding: 10px; margin-top: 1rem; border-radius: 8px; border: none;">
-    <textarea name="message" placeholder="Message..." required style="width: 100%; padding: 10px; margin-top: 1rem; border-radius: 8px; border: none;"></textarea>
+  <!-- FORMULARZ KONTAKTOWY Z ANTY-SPAMEM -->
+  <form method="POST" action="send.php">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" placeholder="Message..." required></textarea>
 
-    <!-- Honeypot (ukryte pole) -->
+    <!-- Honeypot (ukryte pole dla botów) -->
     <input type="text" name="website" style="display:none">
 
-    <button type="submit" style="margin-top: 1rem; padding: 10px 20px; border: none; background: #00d084; font-weight: bold; border-radius: 8px;">Send</button>
+    <button type="submit">Send</button>
   </form>
-
   <!-- SKRYPTY: Koszyk + Anty-spam -->
   <script>
     let cart = [];
@@ -239,13 +377,13 @@
     }
 
     document.getElementById('checkout-btn').addEventListener('click', () => {
-      alert('Redirecting to PayPal… (Coming soon)');
+      alert('Redirecting to PayPal… (Integration coming soon)');
     });
 
-    // Anty-spam: honeypot
+    // Anty-spam: honeypot detection
     document.querySelector("form").addEventListener("submit", function(e) {
       if (document.querySelector('input[name="website"]').value !== "") {
-        e.preventDefault();
+        e.preventDefault(); // spam bot wypełnił ukryte pole
         alert("Spam detected.");
       }
     });
