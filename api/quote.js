@@ -1,69 +1,96 @@
 import formidable from "formidable";
 import nodemailer from "nodemailer";
 
-export const config = { api: { bodyParser: false } };
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
 
 const MAX_FILES = 4;
-const MAX_MB_EACH = 5;
+const MAX_MB_EACH = 8; // wysoka jakość, ale jeszcze bezpieczna
 
 function parseForm(req) {
   const form = formidable({
     multiples: true,
     maxFiles: MAX_FILES,
     maxFileSize: MAX_MB_EACH * 1024 * 1024,
-    filter: ({ mimetype }) => !!mimetype && mimetype.startsWith("image/"),
+    keepExtensions: true,
+    filter: ({ mimetype }) => {
+      return !!mimetype && mimetype.startsWith("image/");
+    },
   });
 
   return new Promise((resolve, reject) => {
     form.parse(req, (err, fields, files) => {
-      if (err) return reject(err);
-      resolve({ fields, files });
+      if (err) reject(err);
+      else resolve({ fields, files });
     });
   });
 }
 
-// helper – bierze pierwszy element z array albo string
-const v = (x) => (Array.isArray(x) ? x[0] : x || "");
-
 export default async function handler(req, res) {
   try {
     if (req.method !== "POST") {
-      return res.status(200).send("OK");
+      return res.status(405).json({ error: "Method not allowed" });
     }
 
     const { fields, files } = await parseForm(req);
 
     let photos = files.photos || [];
     if (!Array.isArray(photos)) photos = [photos];
-
     if (photos.length > MAX_FILES) {
-      return res.status(400).json({ error: `Max ${MAX_FILES} photos.` });
+      return res.status(400).json({ error: `Max ${MAX_FILES} photos allowed.` });
     }
 
-    const name = v(fields.name);
-    const phone = v(fields.phone);
-    const email = v(fields.email);
-    const postcode = v(fields.postcode);
-    const service = v(fields.service);
-    const message = v(fields.message);
+    // === POLA ===
+    const name = String(fields.name || "").trim();
+    const phone = String(fields.phone || "").trim();
+    const email = String(fields.email || "").trim();
+    const postcode = String(fields.postcode || "").trim();
+    const service = String(fields.service || "").trim();
+    const message = String(fields.message || "").trim();
 
+    if (!name || !phone || !email || !postcode || !service || !message) {
+      return res.status(400).json({ error: "Missing required fields." });
+    }
+
+    // === ENV CLEAN (KRYTYCZNE) ===
+    const SMTP_HOST = String(process.env.SMTP_HOST || "")
+      .trim()
+      .replace(/^"+|"+$/g, "");
+
+    const SMTP_USER = String(process.env.SMTP_USER || "").trim();
+    const SMTP_PASS = String(process.env.SMTP_PASS || "").trim();
+    const SMTP_PORT = Number(process.env.SMTP_PORT || 465);
+    const TO_EMAIL = String(process.env.TO_EMAIL || SMTP_USER).trim();
+
+    if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+      console.error("SMTP ENV MISSING");
+      return res.status(500).json({ error: "Email configuration error." });
+    }
+
+    // === TRANSPORT ===
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: 465,
+      host: SMTP_HOST,
+      port: SMTP_PORT,
       secure: true,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: SMTP_USER,
+        pass: SMTP_PASS,
       },
     });
 
-    const attachments = photos.map((f, i) => ({
-      filename: f.originalFilename || `photo-${i + 1}.jpg`,
-      path: f.filepath,
-      contentType: f.mimetype || "image/jpeg",
+    // === ZAŁĄCZNIKI ===
+    const attachments = photos.map((file, i) => ({
+      filename: file.originalFilename || `photo-${i + 1}.jpg`,
+      path: file.filepath,
+      contentType: file.mimetype || "image/jpeg",
     }));
 
-    const text = `NEW COMBI SWAP ENQUIRY
+    // === TREŚĆ ===
+    const text = `
+NEW COMBI → COMBI SWAP ENQUIRY
 
 Name: ${name}
 Phone: ${phone}
@@ -75,12 +102,12 @@ ${service}
 
 Message:
 ${message}
-`;
+    `.trim();
 
     await transporter.sendMail({
-      from: `"Website Enquiries" <${process.env.SMTP_USER}>`,
-      to: process.env.TO_EMAIL || process.env.SMTP_USER,
-      replyTo: email || undefined,
+      from: `"Mateusz Dudzik Website" <${SMTP_USER}>`,
+      to: TO_EMAIL,
+      replyTo: email,
       subject: `Boiler Swap Enquiry — ${postcode} — ${name}`,
       text,
       attachments,
@@ -90,7 +117,8 @@ ${message}
   } catch (err) {
     console.error("API ERROR:", err);
     return res.status(500).json({
-      error: err.message || "Upload failed",
+      error: "Upload failed. Please try again.",
     });
   }
 }
+
