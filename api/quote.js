@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 export const config = { api: { bodyParser: false } };
 
 const MAX_FILES = 4;
-const MAX_MB_EACH = 5; // bezpiecznie pod Gmaila
+const MAX_MB_EACH = 5;
 
 function parseForm(req) {
   const form = formidable({
@@ -22,10 +22,13 @@ function parseForm(req) {
   });
 }
 
+// helper – bierze pierwszy element z array albo string
+const v = (x) => (Array.isArray(x) ? x[0] : x || "");
+
 export default async function handler(req, res) {
   try {
     if (req.method !== "POST") {
-      return res.status(405).json({ error: "Method not allowed" });
+      return res.status(200).send("OK");
     }
 
     const { fields, files } = await parseForm(req);
@@ -37,18 +40,16 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: `Max ${MAX_FILES} photos.` });
     }
 
-    const {
-      name = "",
-      phone = "",
-      email = "",
-      postcode = "",
-      service = "",
-      message = "",
-    } = fields;
+    const name = v(fields.name);
+    const phone = v(fields.phone);
+    const email = v(fields.email);
+    const postcode = v(fields.postcode);
+    const service = v(fields.service);
+    const message = v(fields.message);
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 465),
+      port: 465,
       secure: true,
       auth: {
         user: process.env.SMTP_USER,
@@ -78,7 +79,7 @@ ${message}
 
     await transporter.sendMail({
       from: `"Website Enquiries" <${process.env.SMTP_USER}>`,
-      to: process.env.TO_EMAIL,
+      to: process.env.TO_EMAIL || process.env.SMTP_USER,
       replyTo: email || undefined,
       subject: `Boiler Swap Enquiry — ${postcode} — ${name}`,
       text,
@@ -87,9 +88,9 @@ ${message}
 
     return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error(err);
+    console.error("API ERROR:", err);
     return res.status(500).json({
-      error: "Upload failed. Please try again.",
+      error: err.message || "Upload failed",
     });
   }
 }
