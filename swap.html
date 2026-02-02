@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,12 +101,44 @@
       cursor:pointer;
     }
     .btn-primary{background:var(--accent);color:#000;border:none}
+    .btn[disabled]{opacity:.65;cursor:not-allowed}
+
     .result{margin-top:1rem;padding:1rem;border-radius:14px;display:none}
     .ok{background:rgba(0,208,132,.16);border:1px solid rgba(0,208,132,.28)}
     .err{background:rgba(255,0,80,.12);border:1px solid rgba(255,0,80,.25)}
 
     /* small helper text */
     .small{font-size:.95rem;color:var(--muted2);line-height:1.5;margin-top:.6rem}
+
+    /* upload ui */
+    .uploadBox{
+      margin-top:.5rem;
+      padding:.9rem;
+      border-radius:14px;
+      border:1px dashed rgba(255,255,255,.18);
+      background:rgba(255,255,255,.03);
+    }
+    .uploadTop{
+      display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;
+    }
+    .uploadHint{color:var(--muted2);font-size:.95rem;line-height:1.4}
+    .preview{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;
+    }
+    .thumb{
+      width:110px;height:110px;object-fit:cover;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:0 0 0 1px rgba(0,0,0,.25) inset;
+    }
+    .fileBadge{
+      display:inline-block;
+      padding:.25rem .6rem;border-radius:999px;
+      font-weight:900;font-size:.9rem;
+      background:rgba(0,208,132,.14);
+      border:1px solid rgba(0,208,132,.25);
+      color:var(--muted);
+    }
   </style>
 </head>
 
@@ -137,7 +168,6 @@
       </p>
 
       <div class="grid">
-        <!-- Ideal Instinct2 -->
         <div class="boiler">
           <div class="brand">Ideal Instinct² Combi — 5-year warranty</div>
           <div class="meta">Accredited: Ideal • Reliable budget option</div>
@@ -150,7 +180,6 @@
           <span class="badge">Budget & solid</span>
         </div>
 
-        <!-- Ideal Logic+ -->
         <div class="boiler">
           <div class="brand">Ideal Logic+ Combi — 7-year warranty</div>
           <div class="meta">Accredited: Ideal • Mid-range option</div>
@@ -161,7 +190,6 @@
           </ul>
         </div>
 
-        <!-- Ideal Logic Max -->
         <div class="boiler">
           <div class="brand">Ideal Logic Max Combi — 12-year warranty</div>
           <div class="meta">Accredited: Ideal • Long warranty, premium Logic</div>
@@ -174,7 +202,6 @@
           <span class="badge">Best value warranty</span>
         </div>
 
-        <!-- Ideal Vogue -->
         <div class="boiler">
           <div class="brand">Ideal Vogue Max Combi — 12-year warranty</div>
           <div class="meta">Accredited: Ideal • Premium Ideal range</div>
@@ -186,7 +213,6 @@
           <span class="badge">Premium Ideal</span>
         </div>
 
-        <!-- Vaillant -->
         <div class="boiler">
           <div class="brand">Vaillant ecoTEC plus — 10-year warranty</div>
           <div class="meta">Accredited: Vaillant • Premium brand</div>
@@ -198,7 +224,6 @@
           <span class="badge">Premium</span>
         </div>
 
-        <!-- Viessmann -->
         <div class="boiler">
           <div class="brand">Viessmann Vitodens 100-W — 7-year warranty</div>
           <div class="meta">Accredited: Viessmann • Efficient and robust</div>
@@ -222,10 +247,11 @@
       <div class="h1">Request your Combi Swap</div>
       <p class="lead">
         Choose your boiler option, add your details, and describe your current setup.
-        I’ll confirm price scope (if anything extra is needed) and suggest a date from 1 March.
+        Upload up to <strong>4 photos</strong> (boiler, flue, meter, location) to confirm scope fast.
       </p>
 
-      <form id="swapForm">
+      <!-- IMPORTANT: enctype for uploads -->
+      <form id="swapForm" enctype="multipart/form-data" novalidate>
         <div class="row">
           <div>
             <label>Full name</label>
@@ -276,13 +302,37 @@
         <label>Details (current boiler, flue position, property type, any issues)</label>
         <textarea name="message" required placeholder="Example: Current boiler model, flue location, number of bathrooms, any low pressure/dirty system, etc."></textarea>
 
+        <!-- PHOTO UPLOAD -->
+        <label>Upload up to 4 photos</label>
+        <div class="uploadBox">
+          <div class="uploadTop">
+            <div class="uploadHint">
+              Recommended: boiler front, inside (if safe), flue outside, gas meter / cupboard wide shot.
+              <div style="margin-top:.4rem;">
+                <span class="fileBadge" id="fileCount">0 / 4 selected</span>
+                <span class="fileBadge" id="fileRule" style="margin-left:.4rem;">Max 8MB each</span>
+              </div>
+            </div>
+          </div>
+
+          <input
+            id="photos"
+            name="photos"
+            type="file"
+            accept="image/*"
+            multiple
+          />
+
+          <div class="preview" id="photoPreview"></div>
+        </div>
+
         <!-- Honeypot -->
         <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
 
-        <button class="btn btn-primary" type="submit">Send swap request</button>
+        <button id="submitBtn" class="btn btn-primary" type="submit">Send swap request</button>
 
         <div id="resultOk" class="result ok"><strong>Sent!</strong> Thanks — I’ll contact you shortly.</div>
-        <div id="resultErr" class="result err"><strong>Oops.</strong> Something went wrong. Please try again.</div>
+        <div id="resultErr" class="result err"><strong>Oops.</strong> <span id="errText">Something went wrong. Please try again.</span></div>
 
         <p class="small">
           <strong>Warranty:</strong> warranty length applies when registered after installation and serviced annually in line with manufacturer requirements.
@@ -295,6 +345,56 @@
     const form = document.getElementById('swapForm');
     const ok = document.getElementById('resultOk');
     const err = document.getElementById('resultErr');
+    const errText = document.getElementById('errText');
+    const btn = document.getElementById('submitBtn');
+
+    const photoInput = document.getElementById('photos');
+    const preview = document.getElementById('photoPreview');
+    const fileCount = document.getElementById('fileCount');
+
+    const MAX_FILES = 4;
+    const MAX_MB_EACH = 8;
+
+    function setError(message){
+      errText.textContent = message;
+      err.style.display = "block";
+    }
+
+    photoInput.addEventListener('change', () => {
+      preview.innerHTML = "";
+      err.style.display = "none";
+      ok.style.display = "none";
+
+      const files = Array.from(photoInput.files || []);
+      fileCount.textContent = `${files.length} / ${MAX_FILES} selected`;
+
+      if (files.length > MAX_FILES) {
+        photoInput.value = "";
+        fileCount.textContent = `0 / ${MAX_FILES} selected`;
+        setError(`Please select up to ${MAX_FILES} photos.`);
+        return;
+      }
+
+      for (const f of files) {
+        const mb = f.size / (1024 * 1024);
+        if (mb > MAX_MB_EACH) {
+          photoInput.value = "";
+          preview.innerHTML = "";
+          fileCount.textContent = `0 / ${MAX_FILES} selected`;
+          setError(`One of the photos is too large. Max ${MAX_MB_EACH}MB each.`);
+          return;
+        }
+      }
+
+      files.forEach((file) => {
+        const url = URL.createObjectURL(file);
+        const img = document.createElement("img");
+        img.src = url;
+        img.alt = file.name;
+        img.className = "thumb";
+        preview.appendChild(img);
+      });
+    });
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -304,19 +404,53 @@
       // honeypot anti-spam
       if (form.website.value.trim() !== "") return;
 
-      const data = Object.fromEntries(new FormData(form).entries());
+      // basic required validation
+      if (!form.checkValidity()) {
+        setError("Please fill in all required fields.");
+        return;
+      }
+
+      // file validation again (safety)
+      const files = Array.from(photoInput.files || []);
+      if (files.length > MAX_FILES) {
+        setError(`Please select up to ${MAX_FILES} photos.`);
+        return;
+      }
+      for (const f of files) {
+        const mb = f.size / (1024 * 1024);
+        if (mb > MAX_MB_EACH) {
+          setError(`One of the photos is too large. Max ${MAX_MB_EACH}MB each.`);
+          return;
+        }
+      }
+
+      const fd = new FormData(form);
+
+      // Ensure photos key is correct (FormData already includes files because input has name="photos")
+      // But we keep this as is.
+
+      btn.disabled = true;
+      const oldBtnText = btn.textContent;
+      btn.textContent = "Sending...";
 
       try {
         const res = await fetch("/api/quote", {
           method: "POST",
-          headers: {"Content-Type":"application/json"},
-          body: JSON.stringify(data)
+          body: fd
         });
-        if (!res.ok) throw new Error("Bad response");
+
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(data?.error || "Bad response");
+
         ok.style.display = "block";
         form.reset();
-      } catch {
-        err.style.display = "block";
+        preview.innerHTML = "";
+        fileCount.textContent = `0 / ${MAX_FILES} selected`;
+      } catch (e2) {
+        setError(e2?.message || "Something went wrong. Please try again.");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = oldBtnText;
       }
     });
   </script>
