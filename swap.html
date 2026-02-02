@@ -291,7 +291,7 @@
               Recommended: boiler front, inside (if safe), flue outside, gas meter / cupboard wide shot.
               <div style="margin-top:.4rem;">
                 <span class="fileBadge" id="fileCount">0 / 4 selected</span>
-                <span class="fileBadge" id="fileRule" style="margin-left:.4rem;">Optimised automatically</span>
+                <span class="fileBadge" id="fileRule" style="margin-left:.4rem;">High quality (auto optimised)</span>
               </div>
             </div>
           </div>
@@ -326,9 +326,11 @@
     const fileCount = document.getElementById('fileCount');
 
     const MAX_FILES = 4;
-    const MAX_UPLOAD_MB_TOTAL = 12; // po kompresji
-    const MAX_DIM = 1600;
-    const JPEG_QUALITY = 0.75;
+
+    // HIGH QUALITY SETTINGS (as requested)
+    const MAX_UPLOAD_MB_TOTAL = 18; // after compression
+    const MAX_DIM = 2400;           // max long edge
+    const JPEG_QUALITY = 0.88;      // jpeg quality
 
     function setError(message){
       errText.textContent = message;
@@ -350,6 +352,8 @@
       const blob = await new Promise((resolve) =>
         canvas.toBlob(resolve, "image/jpeg", quality)
       );
+
+      if (!blob) throw new Error("Could not process image. Please try a different photo.");
 
       const newName = (file.name || "photo").replace(/\.(png|jpg|jpeg|webp)$/i, "") + ".jpg";
       return new File([blob], newName, { type: "image/jpeg" });
@@ -403,7 +407,6 @@
       btn.textContent = "Optimising photos...";
 
       try {
-        // compress photos
         const compressed = [];
         for (const f of files) {
           const cf = await compressImage(f);
@@ -441,4 +444,3 @@
   </script>
 </body>
 </html>
-
